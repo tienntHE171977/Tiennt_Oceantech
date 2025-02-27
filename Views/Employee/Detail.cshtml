@@ -1,0 +1,68 @@
+﻿@model Tiennthe171977_Oceanteach.Models.Employee
+
+@{
+    ViewBag.Title = "Chi tiết Nhân Viên";
+}
+
+<h2 class="text-center mt-3">Chi tiết Nhân Viên</h2>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Thông tin nhân viên
+        </div>
+        <div class="card-body">
+            @if (Model != null)
+            {
+                <table class="table">
+                    <tr>
+                        <th>ID:</th>
+                        <td>@Model.EmployeeId</td>
+                    </tr>
+                    <tr>
+                        <th>Họ Tên:</th>
+                        <td>@Model.HoTen</td>
+                    </tr>
+                    <tr>
+                        <th>Ngày Sinh:</th>
+                        <td>@Model.NgaySinh?.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                    <tr>
+                        <th>Tuổi:</th>
+                        <td>@Model.Tuoi</td>
+                    </tr>
+                    <tr>
+                        <th>Dân Tộc:</th>
+                        <td>@(Model.DanToc?.TenDanToc ?? "Không có")</td>
+                    </tr>
+                    <tr>
+                        <th>Nghề Nghiệp:</th>
+                        <td>@(Model.NgheNghiep?.TenNgheNghiep ?? "Không có")</td>
+                    </tr>
+                    <tr>
+                        <th>CCCD:</th>
+                        <td>@(string.IsNullOrEmpty(Model.Cccd) ? "Không có" : Model.Cccd)</td>
+                    </tr>
+                    <tr>
+                        <th>Số Điện Thoại:</th>
+                        <td>@(string.IsNullOrEmpty(Model.SoDienThoai)? "Không có" : Model.SoDienThoai)</td>
+                    </tr>
+                    <tr>
+                        <th>Địa chỉ:</th>
+                        <td>
+                            @(Model.Xa?.TenXa ?? "Không có") - @(Model.Huyen?.TenHuyen ?? "Không có") - @(Model.Tinh?.TenTinh ?? "Không có")
+                            <br />
+                            Cụ thể: @(Model.DiaChiCuThe ?? "Không có")
+                        </td>
+                    </tr>
+                </table>
+            }
+            else
+            {
+                <p class="text-danger">Không tìm thấy nhân viên.</p>
+            }
+        </div>
+    </div>
+
+    <a href="@Url.Action("Index", "Employee")" class="btn btn-secondary mt-3">Quay lại danh sách</a>
+</div>
