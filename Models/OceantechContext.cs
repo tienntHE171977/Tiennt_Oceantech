@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Tiennthe171977_Oceanteach.Models;
 
@@ -17,27 +15,15 @@ public partial class OceantechContext : DbContext
 
     public virtual DbSet<DanToc> DanTocs { get; set; }
 
-   
-
     public virtual DbSet<DanhMucHuyen> DanhMucHuyens { get; set; }
-
-    
 
     public virtual DbSet<DanhMucTinh> DanhMucTinhs { get; set; }
 
-    
-
     public virtual DbSet<DanhMucXa> DanhMucXas { get; set; }
-
-    
 
     public virtual DbSet<Employee> Employees { get; set; }
 
-    
-
     public virtual DbSet<NgheNghiep> NgheNghieps { get; set; }
-
-    
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -57,8 +43,6 @@ public partial class OceantechContext : DbContext
             entity.Property(e => e.TenDanToc).HasMaxLength(100);
         });
 
-
-
         modelBuilder.Entity<DanhMucHuyen>(entity =>
         {
             entity.HasKey(e => e.HuyenId).HasName("PK__DanhMucH__D8F9C322BD6A6F2F");
@@ -74,8 +58,6 @@ public partial class OceantechContext : DbContext
                 .HasConstraintName("FK__DanhMucHu__TinhI__398D8EEE");
         });
 
-
-
         modelBuilder.Entity<DanhMucTinh>(entity =>
         {
             entity.HasKey(e => e.TinhId).HasName("PK__DanhMucT__823CCF8C146AB860");
@@ -85,8 +67,6 @@ public partial class OceantechContext : DbContext
             entity.Property(e => e.TinhId).HasColumnName("TinhID");
             entity.Property(e => e.TenTinh).HasMaxLength(100);
         });
-
-
 
         modelBuilder.Entity<DanhMucXa>(entity =>
         {
@@ -102,8 +82,6 @@ public partial class OceantechContext : DbContext
                 .HasForeignKey(d => d.HuyenId)
                 .HasConstraintName("FK__DanhMucXa__Huyen__3C69FB99");
         });
-
-
 
         modelBuilder.Entity<Employee>(entity =>
         {
@@ -145,8 +123,6 @@ public partial class OceantechContext : DbContext
                 .HasConstraintName("FK__Employee__XaID__46E78A0C");
         });
 
-
-
         modelBuilder.Entity<NgheNghiep>(entity =>
         {
             entity.HasKey(e => e.NgheNghiepId).HasName("PK__NgheNghi__DDB652F9C1E3AC3D");
@@ -156,8 +132,7 @@ public partial class OceantechContext : DbContext
             entity.Property(e => e.NgheNghiepId).HasColumnName("NgheNghiepID");
             entity.Property(e => e.TenNgheNghiep).HasMaxLength(100);
         });
-
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

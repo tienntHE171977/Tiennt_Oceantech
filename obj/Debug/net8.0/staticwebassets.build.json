@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U1oJbX+nwRlYg0qCZZZ0eAxHCHoe4MZ/Tge3OAIKljA=",
+  "Hash": "gO7jH7A1RBoYxdAybAXCcRvvWUlwUb4brwfukdnRXjY=",
   "Source": "Tiennthe171977_Oceanteach",
   "BasePath": "_content/Tiennthe171977_Oceanteach",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "ri4o52rlph",
-      "Integrity": "HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU=",
+      "Fingerprint": "jwxsd5vygg",
+      "Integrity": "XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Tiennthe171977_Oceanteach.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "ri4o52rlph",
-      "Integrity": "HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU=",
+      "Fingerprint": "jwxsd5vygg",
+      "Integrity": "XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Tiennthe171977_Oceanteach.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "k5cby9tuo3",
+      "Integrity": "SIhDntcqgi8C5vWpfCUNGekWL9mgpVqrcOe/6JLWp2g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "lkla6qhjhf",
+      "Integrity": "SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mpyigms19s",
-      "Integrity": "xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=",
+      "Fingerprint": "w32bddy3fk",
+      "Integrity": "lL+GDGAoGK+Op+DHxoNug3teULJwOmSzw/1Ci+qhXow=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -178,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ve6x09088i",
-      "Integrity": "SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=",
+      "Fingerprint": "ukr8rq4hcf",
+      "Integrity": "nmCV8PupZgxff+0/D85vowkWBiXZ9n240BPepV3MRgs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9b9oa1qrmt",
-      "Integrity": "22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=",
+      "Fingerprint": "6l4ir0ityv",
+      "Integrity": "ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "agp80tu62r",
-      "Integrity": "JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4=",
+      "Fingerprint": "g7gn64p57m",
+      "Integrity": "NCicLbYsWr2TAKEZ76tQXBED+zd8J8B+79yY9agiehg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
@@ -346,8 +346,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "unj9p35syc",
-      "Integrity": "ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A=",
+      "Fingerprint": "5p029spbuu",
+      "Integrity": "96ayIUEnpKr7n5BIsFK5vJ3qXMXFgvRl9/CBcHs6/Ts=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
@@ -388,8 +388,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q2ku51ktnl",
-      "Integrity": "3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo=",
+      "Fingerprint": "rq6ctze2gc",
+      "Integrity": "3UncpZbzETG3vvLXbVr9rgYeDr0pCIuO1bxPeaCFb90=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
@@ -430,8 +430,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n1oizzvkh6",
-      "Integrity": "O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0=",
+      "Fingerprint": "dy6jgresuo",
+      "Integrity": "9eX2dpELXvYs+6il2MHwf5OOPVOZjxVK1b1GWgL0B0k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
@@ -472,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7na4sro3qu",
-      "Integrity": "4zbWr0QNFhpUwGkn4WdGWXt80KnhRFv0qXkZyVnhajY=",
+      "Fingerprint": "d06gk6agnl",
+      "Integrity": "bY5RaYO+ZGYWvnH7fVCkF/dpcq28Mm45zp/Tk7GVWOc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
@@ -514,8 +514,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f8imaxxbri",
-      "Integrity": "z0OApR88UEocYXTXHU7Ueycaiib9XbDUmel9Gx0gbx4=",
+      "Fingerprint": "z7kmom2977",
+      "Integrity": "359CMPAICGkV+zve4A4HJMha3bwqTFTjl+QC1KJK5DQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
@@ -556,8 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0wve5yxp74",
-      "Integrity": "8NXw3kF49FkQVPMdjnGDqoXXRU0TwzsLfCGbK9U8gnk=",
+      "Fingerprint": "ys82iahrqq",
+      "Integrity": "7txTpZaZLCH87eQC6zi0a+9pIOUsyjDkH+sEBFhmk/M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
@@ -598,8 +598,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "npxfuf8dg6",
-      "Integrity": "a5KlgysZ4fQXw4rzIvXDHErFDPeHRSLccP7kX6HuvSQ=",
+      "Fingerprint": "y53cy5s2zj",
+      "Integrity": "BnHmEJpgor1n0UuwNdXG2VhHdV1r9MibuqBVHsgp9a8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
@@ -640,8 +640,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tey0rigmnh",
-      "Integrity": "NbFZxZLmBVNLzb/7B0WdFfb6+8jXHGX6XY190uwgbec=",
+      "Fingerprint": "k4k93gkcca",
+      "Integrity": "3M7FwBkqmA+iEvey6cK4wO86Dm0CvMBoaXmR7Wc/35A=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
@@ -682,8 +682,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "16095smhkz",
-      "Integrity": "5+ExmMkiaI3keYQRLhNibJ5ZXnNuWRbwrXOAZoTXMFg=",
+      "Fingerprint": "2yn17lgxub",
+      "Integrity": "ekoF4YNq4OUU4BoZ6FG2LTKD68LJvW49arNgykHOZfM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
@@ -724,8 +724,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b4skse8du6",
-      "Integrity": "peAGH8Gu/ZL9VnbUGSMN69Ji5MxwbvOb53gDXU2cPaQ=",
+      "Fingerprint": "v40j9oid5j",
+      "Integrity": "kQ9DKC5xtj2f08LQ1bIxUrckCBalpPtfj0odaFUNtqw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
@@ -766,8 +766,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u3xrusw2ol",
-      "Integrity": "Wi5ZuFSHLfx6dlEgjvW3BY9TC/1NqdBjj+XFifSSqN4=",
+      "Fingerprint": "ik6i2hrs65",
+      "Integrity": "wseUsl7uipUzPYc/DBMMTMFA7hBTcxpw29RKOxLzXSc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
@@ -808,8 +808,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "l2av4jpuoj",
-      "Integrity": "vQTf4d3WJi9vmWQNA4kJnjoedgEhMFXFDEMXqtHtgzk=",
+      "Fingerprint": "km7d8c54lu",
+      "Integrity": "JJA4s1jA1veyMWtC78eWU6qwj7fdarH6fMxQ7jS5Gsw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
@@ -850,8 +850,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "25iw1kog22",
-      "Integrity": "KuvCVS19rfTjoLgMyDDCdOkRRlhNrY4psEM4uezts2M=",
+      "Fingerprint": "89qbw8ngem",
+      "Integrity": "rAnWnVnzChxAAi8NS+Ilr1mE7Sj+do+X/DqyilNsznM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
@@ -892,8 +892,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m39kt2b5c9",
-      "Integrity": "EuDXUJYKnfZuO8dSLN0f5iVbVasz36AROuAU3NJ3JBo=",
+      "Fingerprint": "e84s87xrhi",
+      "Integrity": "kqd5ZnpD0y/hn43WfNqUazDmsMc73OkiAhGDFWBGkBw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
@@ -934,8 +934,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "um2aeqy4ik",
-      "Integrity": "Kj4irQWPwfSb5NFeos/h0IroI5/nIg0HtAjQ+w4v6TE=",
+      "Fingerprint": "jqwzsa9uv6",
+      "Integrity": "hVv0IJy8sIv1uIlVQOHnZFNAGprmLfDV+x0anYPmxYU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
@@ -976,8 +976,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "o4kw7cc6tf",
-      "Integrity": "6IStRQerBchYSw6J2GWTOWGOnDRrWXmaG0r6nCwN5s4=",
+      "Fingerprint": "t7l74kfg6o",
+      "Integrity": "11QTcvPf4F2Awk4fIkNZtgj25f1EjE0DtqL9qGD9P8o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
@@ -1018,8 +1018,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zwph15dxgs",
-      "Integrity": "c4Ll6eSIg6Eothk8pCWAF8aE923EvtU11pqjBy+NjNM=",
+      "Fingerprint": "4908xmbfjr",
+      "Integrity": "uAMYHAQlaHq1buKLwrk7FF4qxvcLWntS2/DpdKucfmU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
@@ -1081,8 +1081,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fwhahm2icz",
-      "Integrity": "H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=",
+      "Fingerprint": "9dtrmcwwnz",
+      "Integrity": "k6zr9zSRHHafzttvOi3CZGJJBUil2e/29iRG/dvttjU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
@@ -1102,8 +1102,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dd6z7egasc",
-      "Integrity": "/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",
+      "Fingerprint": "ehgnz7f14e",
+      "Integrity": "zp0HUArZHsK1JMJwdk7EyaM+eDINjTdOxADt5Ij2JRs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
@@ -1165,8 +1165,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ay5nd8zt9x",
-      "Integrity": "4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E=",
+      "Fingerprint": "pbv66sk2vd",
+      "Integrity": "FVol2+emM3Zhuo4btVIK4V7674J7+bgF8PFJXStilmI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
@@ -1207,8 +1207,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pzqfkb6aqo",
-      "Integrity": "m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw=",
+      "Fingerprint": "a2zcz6vlsr",
+      "Integrity": "frjPgWNGEFzHvazsY4Z6BskuMt0TwH5CApC+liKB7NE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
@@ -1228,8 +1228,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b7iojwaux1",
-      "Integrity": "JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=",
+      "Fingerprint": "l1zq2mitth",
+      "Integrity": "6e0N+WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
@@ -1270,8 +1270,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "47otxtyo56",
-      "Integrity": "wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=",
+      "Fingerprint": "5xanfeohey",
+      "Integrity": "90FoMWeBnzThWo8ig/jfGArk9CionI5qsf7js1u4BnU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
@@ -1291,8 +1291,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4v8eqarkd7",
-      "Integrity": "YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=",
+      "Fingerprint": "48y08845bh",
+      "Integrity": "RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
@@ -1321,51 +1321,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "362"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1376,7 +1331,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "380"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1339,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"SIhDntcqgi8C5vWpfCUNGekWL9mgpVqrcOe/6JLWp2g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:53:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1353,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-SIhDntcqgi8C5vWpfCUNGekWL9mgpVqrcOe/6JLWp2g="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.k5cby9tuo3.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SIhDntcqgi8C5vWpfCUNGekWL9mgpVqrcOe/6JLWp2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:53:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k5cby9tuo3"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SIhDntcqgi8C5vWpfCUNGekWL9mgpVqrcOe/6JLWp2g="
         }
       ]
     },
@@ -1425,7 +1425,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1470,7 +1470,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1495,7 +1495,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "229"
         },
         {
           "Name": "Content-Type",
@@ -1503,11 +1503,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1517,12 +1517,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw="
         }
       ]
     },
     {
-      "Route": "js/site.xtxxf3hu2r.js",
+      "Route": "js/site.lkla6qhjhf.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1532,7 +1532,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "229"
         },
         {
           "Name": "Content-Type",
@@ -1540,11 +1540,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1554,7 +1554,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
+          "Value": "lkla6qhjhf"
         },
         {
           "Name": "label",
@@ -1562,7 +1562,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-SzYOJgDHCh3aGbMykbm0zVP+92wMw4P+Xu3/g2HhSSw="
         }
       ]
     },
@@ -1577,7 +1577,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "204136"
+          "Value": "242458"
         },
         {
           "Name": "Content-Type",
@@ -1585,11 +1585,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+          "Value": "\"lL+GDGAoGK+Op+DHxoNug3teULJwOmSzw/1Ci+qhXow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1599,7 +1599,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+          "Value": "sha256-lL+GDGAoGK+Op+DHxoNug3teULJwOmSzw/1Ci+qhXow="
         }
       ]
     },
@@ -1626,7 +1626,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1671,7 +1671,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1686,7 +1686,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1696,7 +1696,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162726"
         },
         {
           "Name": "Content-Type",
@@ -1704,11 +1704,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1718,7 +1718,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
+          "Value": "6gzpyzhau4"
         },
         {
           "Name": "label",
@@ -1726,7 +1726,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
         }
       ]
     },
@@ -1741,7 +1741,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162726"
         },
         {
           "Name": "Content-Type",
@@ -1749,11 +1749,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1763,7 +1763,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
         }
       ]
     },
@@ -1790,7 +1790,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1835,7 +1835,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1850,51 +1850,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "204136"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mpyigms19s"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
@@ -1905,7 +1860,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "203803"
+          "Value": "242099"
         },
         {
           "Name": "Content-Type",
@@ -1913,11 +1868,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
+          "Value": "\"nmCV8PupZgxff+0/D85vowkWBiXZ9n240BPepV3MRgs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1927,7 +1882,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
+          "Value": "sha256-nmCV8PupZgxff+0/D85vowkWBiXZ9n240BPepV3MRgs="
         }
       ]
     },
@@ -1954,7 +1909,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1999,7 +1954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2014,7 +1969,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.9b9oa1qrmt.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2024,7 +1979,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162825"
+          "Value": "162831"
         },
         {
           "Name": "Content-Type",
@@ -2032,11 +1987,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
+          "Value": "\"ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2046,7 +2001,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9b9oa1qrmt"
+          "Value": "6l4ir0ityv"
         },
         {
           "Name": "label",
@@ -2054,7 +2009,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
+          "Value": "sha256-ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8="
         }
       ]
     },
@@ -2069,7 +2024,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162825"
+          "Value": "162831"
         },
         {
           "Name": "Content-Type",
@@ -2077,11 +2032,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
+          "Value": "\"ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2091,7 +2046,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
+          "Value": "sha256-ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8="
         }
       ]
     },
@@ -2118,7 +2073,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2163,7 +2118,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2178,7 +2133,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ve6x09088i.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ukr8rq4hcf.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2188,7 +2143,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "203803"
+          "Value": "242099"
         },
         {
           "Name": "Content-Type",
@@ -2196,11 +2151,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
+          "Value": "\"nmCV8PupZgxff+0/D85vowkWBiXZ9n240BPepV3MRgs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2210,7 +2165,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ve6x09088i"
+          "Value": "ukr8rq4hcf"
         },
         {
           "Name": "label",
@@ -2218,13 +2173,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
+          "Value": "sha256-nmCV8PupZgxff+0/D85vowkWBiXZ9n240BPepV3MRgs="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.agp80tu62r.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.w32bddy3fk.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2233,7 +2188,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70538"
+          "Value": "242458"
         },
         {
           "Name": "Content-Type",
@@ -2241,11 +2196,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4=\""
+          "Value": "\"lL+GDGAoGK+Op+DHxoNug3teULJwOmSzw/1Ci+qhXow=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2255,15 +2210,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "agp80tu62r"
+          "Value": "w32bddy3fk"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-grid.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4="
+          "Value": "sha256-lL+GDGAoGK+Op+DHxoNug3teULJwOmSzw/1Ci+qhXow="
         }
       ]
     },
@@ -2278,7 +2233,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70538"
+          "Value": "84948"
         },
         {
           "Name": "Content-Type",
@@ -2286,11 +2241,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4=\""
+          "Value": "\"NCicLbYsWr2TAKEZ76tQXBED+zd8J8B+79yY9agiehg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2300,7 +2255,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4="
+          "Value": "sha256-NCicLbYsWr2TAKEZ76tQXBED+zd8J8B+79yY9agiehg="
         }
       ]
     },
@@ -2327,7 +2282,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2364,7 +2319,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2387,6 +2342,96 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.g7gn64p57m.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NCicLbYsWr2TAKEZ76tQXBED+zd8J8B+79yY9agiehg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:54:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g7gn64p57m"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-grid.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NCicLbYsWr2TAKEZ76tQXBED+zd8J8B+79yY9agiehg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"96ayIUEnpKr7n5BIsFK5vJ3qXMXFgvRl9/CBcHs6/Ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5p029spbuu"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-grid.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-96ayIUEnpKr7n5BIsFK5vJ3qXMXFgvRl9/CBcHs6/Ts="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
@@ -2397,7 +2442,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51319"
+          "Value": "51325"
         },
         {
           "Name": "Content-Type",
@@ -2405,11 +2450,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A=\""
+          "Value": "\"96ayIUEnpKr7n5BIsFK5vJ3qXMXFgvRl9/CBcHs6/Ts=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2419,7 +2464,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A="
+          "Value": "sha256-96ayIUEnpKr7n5BIsFK5vJ3qXMXFgvRl9/CBcHs6/Ts="
         }
       ]
     },
@@ -2446,7 +2491,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2491,7 +2536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2506,51 +2551,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.unj9p35syc.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "51319"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "unj9p35syc"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-grid.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
@@ -2561,7 +2561,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70612"
+          "Value": "85021"
         },
         {
           "Name": "Content-Type",
@@ -2569,11 +2569,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo=\""
+          "Value": "\"3UncpZbzETG3vvLXbVr9rgYeDr0pCIuO1bxPeaCFb90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2583,7 +2583,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo="
+          "Value": "sha256-3UncpZbzETG3vvLXbVr9rgYeDr0pCIuO1bxPeaCFb90="
         }
       ]
     },
@@ -2610,7 +2610,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2655,7 +2655,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2680,7 +2680,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51394"
+          "Value": "51400"
         },
         {
           "Name": "Content-Type",
@@ -2688,11 +2688,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0=\""
+          "Value": "\"9eX2dpELXvYs+6il2MHwf5OOPVOZjxVK1b1GWgL0B0k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2702,7 +2702,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0="
+          "Value": "sha256-9eX2dpELXvYs+6il2MHwf5OOPVOZjxVK1b1GWgL0B0k="
         }
       ]
     },
@@ -2729,7 +2729,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2766,7 +2766,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2789,7 +2789,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.n1oizzvkh6.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2799,7 +2799,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51394"
+          "Value": "51400"
         },
         {
           "Name": "Content-Type",
@@ -2807,11 +2807,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0=\""
+          "Value": "\"9eX2dpELXvYs+6il2MHwf5OOPVOZjxVK1b1GWgL0B0k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2821,7 +2821,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n1oizzvkh6"
+          "Value": "dy6jgresuo"
         },
         {
           "Name": "label",
@@ -2829,12 +2829,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0="
+          "Value": "sha256-9eX2dpELXvYs+6il2MHwf5OOPVOZjxVK1b1GWgL0B0k="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.q2ku51ktnl.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.rq6ctze2gc.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2844,7 +2844,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70612"
+          "Value": "85021"
         },
         {
           "Name": "Content-Type",
@@ -2852,11 +2852,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo=\""
+          "Value": "\"3UncpZbzETG3vvLXbVr9rgYeDr0pCIuO1bxPeaCFb90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2866,7 +2866,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "q2ku51ktnl"
+          "Value": "rq6ctze2gc"
         },
         {
           "Name": "label",
@@ -2874,52 +2874,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.7na4sro3qu.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5850"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4zbWr0QNFhpUwGkn4WdGWXt80KnhRFv0qXkZyVnhajY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7na4sro3qu"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4zbWr0QNFhpUwGkn4WdGWXt80KnhRFv0qXkZyVnhajY="
+          "Value": "sha256-3UncpZbzETG3vvLXbVr9rgYeDr0pCIuO1bxPeaCFb90="
         }
       ]
     },
@@ -2934,7 +2889,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5850"
+          "Value": "6780"
         },
         {
           "Name": "Content-Type",
@@ -2942,11 +2897,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4zbWr0QNFhpUwGkn4WdGWXt80KnhRFv0qXkZyVnhajY=\""
+          "Value": "\"bY5RaYO+ZGYWvnH7fVCkF/dpcq28Mm45zp/Tk7GVWOc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2956,7 +2911,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4zbWr0QNFhpUwGkn4WdGWXt80KnhRFv0qXkZyVnhajY="
+          "Value": "sha256-bY5RaYO+ZGYWvnH7fVCkF/dpcq28Mm45zp/Tk7GVWOc="
         }
       ]
     },
@@ -2983,7 +2938,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3028,7 +2983,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3043,6 +2998,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.d06gk6agnl.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6780"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bY5RaYO+ZGYWvnH7fVCkF/dpcq28Mm45zp/Tk7GVWOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:54:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d06gk6agnl"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bY5RaYO+ZGYWvnH7fVCkF/dpcq28Mm45zp/Tk7GVWOc="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
@@ -3053,7 +3053,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4646"
+          "Value": "4653"
         },
         {
           "Name": "Content-Type",
@@ -3061,11 +3061,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z0OApR88UEocYXTXHU7Ueycaiib9XbDUmel9Gx0gbx4=\""
+          "Value": "\"359CMPAICGkV+zve4A4HJMha3bwqTFTjl+QC1KJK5DQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3075,7 +3075,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z0OApR88UEocYXTXHU7Ueycaiib9XbDUmel9Gx0gbx4="
+          "Value": "sha256-359CMPAICGkV+zve4A4HJMha3bwqTFTjl+QC1KJK5DQ="
         }
       ]
     },
@@ -3102,7 +3102,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3139,7 +3139,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3162,7 +3162,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.f8imaxxbri.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3172,7 +3172,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4646"
+          "Value": "4653"
         },
         {
           "Name": "Content-Type",
@@ -3180,11 +3180,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z0OApR88UEocYXTXHU7Ueycaiib9XbDUmel9Gx0gbx4=\""
+          "Value": "\"359CMPAICGkV+zve4A4HJMha3bwqTFTjl+QC1KJK5DQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3194,7 +3194,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f8imaxxbri"
+          "Value": "z7kmom2977"
         },
         {
           "Name": "label",
@@ -3202,52 +3202,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z0OApR88UEocYXTXHU7Ueycaiib9XbDUmel9Gx0gbx4="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.0wve5yxp74.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5827"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8NXw3kF49FkQVPMdjnGDqoXXRU0TwzsLfCGbK9U8gnk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0wve5yxp74"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-8NXw3kF49FkQVPMdjnGDqoXXRU0TwzsLfCGbK9U8gnk="
+          "Value": "sha256-359CMPAICGkV+zve4A4HJMha3bwqTFTjl+QC1KJK5DQ="
         }
       ]
     },
@@ -3262,7 +3217,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5827"
+          "Value": "6757"
         },
         {
           "Name": "Content-Type",
@@ -3270,11 +3225,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8NXw3kF49FkQVPMdjnGDqoXXRU0TwzsLfCGbK9U8gnk=\""
+          "Value": "\"7txTpZaZLCH87eQC6zi0a+9pIOUsyjDkH+sEBFhmk/M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3284,7 +3239,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8NXw3kF49FkQVPMdjnGDqoXXRU0TwzsLfCGbK9U8gnk="
+          "Value": "sha256-7txTpZaZLCH87eQC6zi0a+9pIOUsyjDkH+sEBFhmk/M="
         }
       ]
     },
@@ -3311,7 +3266,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3356,7 +3311,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3381,7 +3336,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4718"
+          "Value": "4725"
         },
         {
           "Name": "Content-Type",
@@ -3389,11 +3344,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"a5KlgysZ4fQXw4rzIvXDHErFDPeHRSLccP7kX6HuvSQ=\""
+          "Value": "\"BnHmEJpgor1n0UuwNdXG2VhHdV1r9MibuqBVHsgp9a8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3403,7 +3358,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-a5KlgysZ4fQXw4rzIvXDHErFDPeHRSLccP7kX6HuvSQ="
+          "Value": "sha256-BnHmEJpgor1n0UuwNdXG2VhHdV1r9MibuqBVHsgp9a8="
         }
       ]
     },
@@ -3430,7 +3385,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3467,7 +3422,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3490,7 +3445,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.npxfuf8dg6.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3500,7 +3455,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4718"
+          "Value": "4725"
         },
         {
           "Name": "Content-Type",
@@ -3508,11 +3463,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"a5KlgysZ4fQXw4rzIvXDHErFDPeHRSLccP7kX6HuvSQ=\""
+          "Value": "\"BnHmEJpgor1n0UuwNdXG2VhHdV1r9MibuqBVHsgp9a8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3522,7 +3477,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "npxfuf8dg6"
+          "Value": "y53cy5s2zj"
         },
         {
           "Name": "label",
@@ -3530,7 +3485,52 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-a5KlgysZ4fQXw4rzIvXDHErFDPeHRSLccP7kX6HuvSQ="
+          "Value": "sha256-BnHmEJpgor1n0UuwNdXG2VhHdV1r9MibuqBVHsgp9a8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.ys82iahrqq.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7txTpZaZLCH87eQC6zi0a+9pIOUsyjDkH+sEBFhmk/M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:54:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ys82iahrqq"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7txTpZaZLCH87eQC6zi0a+9pIOUsyjDkH+sEBFhmk/M="
         }
       ]
     },
@@ -3545,7 +3545,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "71584"
+          "Value": "84531"
         },
         {
           "Name": "Content-Type",
@@ -3553,11 +3553,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NbFZxZLmBVNLzb/7B0WdFfb6+8jXHGX6XY190uwgbec=\""
+          "Value": "\"3M7FwBkqmA+iEvey6cK4wO86Dm0CvMBoaXmR7Wc/35A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3567,7 +3567,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NbFZxZLmBVNLzb/7B0WdFfb6+8jXHGX6XY190uwgbec="
+          "Value": "sha256-3M7FwBkqmA+iEvey6cK4wO86Dm0CvMBoaXmR7Wc/35A="
         }
       ]
     },
@@ -3594,7 +3594,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3639,7 +3639,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3654,8 +3654,8 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.16095smhkz.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.k4k93gkcca.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3664,7 +3664,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "53479"
+          "Value": "84531"
         },
         {
           "Name": "Content-Type",
@@ -3672,11 +3672,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5+ExmMkiaI3keYQRLhNibJ5ZXnNuWRbwrXOAZoTXMFg=\""
+          "Value": "\"3M7FwBkqmA+iEvey6cK4wO86Dm0CvMBoaXmR7Wc/35A=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3686,7 +3686,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "16095smhkz"
+          "Value": "k4k93gkcca"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3M7FwBkqmA+iEvey6cK4wO86Dm0CvMBoaXmR7Wc/35A="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53485"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ekoF4YNq4OUU4BoZ6FG2LTKD68LJvW49arNgykHOZfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2yn17lgxub"
         },
         {
           "Name": "label",
@@ -3694,7 +3739,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5+ExmMkiaI3keYQRLhNibJ5ZXnNuWRbwrXOAZoTXMFg="
+          "Value": "sha256-ekoF4YNq4OUU4BoZ6FG2LTKD68LJvW49arNgykHOZfM="
         }
       ]
     },
@@ -3709,7 +3754,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "53479"
+          "Value": "53485"
         },
         {
           "Name": "Content-Type",
@@ -3717,11 +3762,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5+ExmMkiaI3keYQRLhNibJ5ZXnNuWRbwrXOAZoTXMFg=\""
+          "Value": "\"ekoF4YNq4OUU4BoZ6FG2LTKD68LJvW49arNgykHOZfM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3731,7 +3776,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5+ExmMkiaI3keYQRLhNibJ5ZXnNuWRbwrXOAZoTXMFg="
+          "Value": "sha256-ekoF4YNq4OUU4BoZ6FG2LTKD68LJvW49arNgykHOZfM="
         }
       ]
     },
@@ -3758,7 +3803,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3795,7 +3840,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3818,51 +3863,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.b4skse8du6.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "71451"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"peAGH8Gu/ZL9VnbUGSMN69Ji5MxwbvOb53gDXU2cPaQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "b4skse8du6"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-peAGH8Gu/ZL9VnbUGSMN69Ji5MxwbvOb53gDXU2cPaQ="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
@@ -3873,7 +3873,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "71451"
+          "Value": "84387"
         },
         {
           "Name": "Content-Type",
@@ -3881,11 +3881,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"peAGH8Gu/ZL9VnbUGSMN69Ji5MxwbvOb53gDXU2cPaQ=\""
+          "Value": "\"kQ9DKC5xtj2f08LQ1bIxUrckCBalpPtfj0odaFUNtqw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3895,7 +3895,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-peAGH8Gu/ZL9VnbUGSMN69Ji5MxwbvOb53gDXU2cPaQ="
+          "Value": "sha256-kQ9DKC5xtj2f08LQ1bIxUrckCBalpPtfj0odaFUNtqw="
         }
       ]
     },
@@ -3922,7 +3922,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3967,7 +3967,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3992,7 +3992,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "53407"
+          "Value": "53413"
         },
         {
           "Name": "Content-Type",
@@ -4000,11 +4000,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Wi5ZuFSHLfx6dlEgjvW3BY9TC/1NqdBjj+XFifSSqN4=\""
+          "Value": "\"wseUsl7uipUzPYc/DBMMTMFA7hBTcxpw29RKOxLzXSc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4014,7 +4014,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Wi5ZuFSHLfx6dlEgjvW3BY9TC/1NqdBjj+XFifSSqN4="
+          "Value": "sha256-wseUsl7uipUzPYc/DBMMTMFA7hBTcxpw29RKOxLzXSc="
         }
       ]
     },
@@ -4041,7 +4041,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4086,7 +4086,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4101,7 +4101,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.u3xrusw2ol.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4111,7 +4111,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "53407"
+          "Value": "53413"
         },
         {
           "Name": "Content-Type",
@@ -4119,11 +4119,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Wi5ZuFSHLfx6dlEgjvW3BY9TC/1NqdBjj+XFifSSqN4=\""
+          "Value": "\"wseUsl7uipUzPYc/DBMMTMFA7hBTcxpw29RKOxLzXSc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4133,7 +4133,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u3xrusw2ol"
+          "Value": "ik6i2hrs65"
         },
         {
           "Name": "label",
@@ -4141,13 +4141,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Wi5ZuFSHLfx6dlEgjvW3BY9TC/1NqdBjj+XFifSSqN4="
+          "Value": "sha256-wseUsl7uipUzPYc/DBMMTMFA7hBTcxpw29RKOxLzXSc="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.tey0rigmnh.css",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.v40j9oid5j.css",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4156,7 +4156,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "71584"
+          "Value": "84387"
         },
         {
           "Name": "Content-Type",
@@ -4164,11 +4164,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NbFZxZLmBVNLzb/7B0WdFfb6+8jXHGX6XY190uwgbec=\""
+          "Value": "\"kQ9DKC5xtj2f08LQ1bIxUrckCBalpPtfj0odaFUNtqw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:54:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4178,15 +4178,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tey0rigmnh"
+          "Value": "v40j9oid5j"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NbFZxZLmBVNLzb/7B0WdFfb6+8jXHGX6XY190uwgbec="
+          "Value": "sha256-kQ9DKC5xtj2f08LQ1bIxUrckCBalpPtfj0odaFUNtqw="
         }
       ]
     },
@@ -4201,7 +4201,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "208492"
+          "Value": "243571"
         },
         {
           "Name": "Content-Type",
@@ -4209,11 +4209,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vQTf4d3WJi9vmWQNA4kJnjoedgEhMFXFDEMXqtHtgzk=\""
+          "Value": "\"JJA4s1jA1veyMWtC78eWU6qwj7fdarH6fMxQ7jS5Gsw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4223,7 +4223,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vQTf4d3WJi9vmWQNA4kJnjoedgEhMFXFDEMXqtHtgzk="
+          "Value": "sha256-JJA4s1jA1veyMWtC78eWU6qwj7fdarH6fMxQ7jS5Gsw="
         }
       ]
     },
@@ -4250,7 +4250,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4295,7 +4295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4310,7 +4310,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/js/bootstrap.bundle.l2av4jpuoj.js",
+      "Route": "lib/bootstrap/dist/js/bootstrap.bundle.km7d8c54lu.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4320,7 +4320,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "208492"
+          "Value": "243571"
         },
         {
           "Name": "Content-Type",
@@ -4328,11 +4328,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vQTf4d3WJi9vmWQNA4kJnjoedgEhMFXFDEMXqtHtgzk=\""
+          "Value": "\"JJA4s1jA1veyMWtC78eWU6qwj7fdarH6fMxQ7jS5Gsw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4342,7 +4342,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "l2av4jpuoj"
+          "Value": "km7d8c54lu"
         },
         {
           "Name": "label",
@@ -4350,12 +4350,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vQTf4d3WJi9vmWQNA4kJnjoedgEhMFXFDEMXqtHtgzk="
+          "Value": "sha256-JJA4s1jA1veyMWtC78eWU6qwj7fdarH6fMxQ7jS5Gsw="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.25iw1kog22.js",
+      "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4365,7 +4365,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "78468"
+          "Value": "78474"
         },
         {
           "Name": "Content-Type",
@@ -4373,11 +4373,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KuvCVS19rfTjoLgMyDDCdOkRRlhNrY4psEM4uezts2M=\""
+          "Value": "\"rAnWnVnzChxAAi8NS+Ilr1mE7Sj+do+X/DqyilNsznM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4387,7 +4387,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "25iw1kog22"
+          "Value": "89qbw8ngem"
         },
         {
           "Name": "label",
@@ -4395,7 +4395,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KuvCVS19rfTjoLgMyDDCdOkRRlhNrY4psEM4uezts2M="
+          "Value": "sha256-rAnWnVnzChxAAi8NS+Ilr1mE7Sj+do+X/DqyilNsznM="
         }
       ]
     },
@@ -4410,7 +4410,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "78468"
+          "Value": "78474"
         },
         {
           "Name": "Content-Type",
@@ -4418,11 +4418,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KuvCVS19rfTjoLgMyDDCdOkRRlhNrY4psEM4uezts2M=\""
+          "Value": "\"rAnWnVnzChxAAi8NS+Ilr1mE7Sj+do+X/DqyilNsznM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4432,7 +4432,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KuvCVS19rfTjoLgMyDDCdOkRRlhNrY4psEM4uezts2M="
+          "Value": "sha256-rAnWnVnzChxAAi8NS+Ilr1mE7Sj+do+X/DqyilNsznM="
         }
       ]
     },
@@ -4459,7 +4459,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4504,7 +4504,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4519,6 +4519,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/js/bootstrap.esm.e84s87xrhi.js",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "156674"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kqd5ZnpD0y/hn43WfNqUazDmsMc73OkiAhGDFWBGkBw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:52:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e84s87xrhi"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/js/bootstrap.esm.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kqd5ZnpD0y/hn43WfNqUazDmsMc73OkiAhGDFWBGkBw="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
@@ -4529,7 +4574,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "139019"
+          "Value": "156674"
         },
         {
           "Name": "Content-Type",
@@ -4537,11 +4582,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EuDXUJYKnfZuO8dSLN0f5iVbVasz36AROuAU3NJ3JBo=\""
+          "Value": "\"kqd5ZnpD0y/hn43WfNqUazDmsMc73OkiAhGDFWBGkBw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4551,7 +4596,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EuDXUJYKnfZuO8dSLN0f5iVbVasz36AROuAU3NJ3JBo="
+          "Value": "sha256-kqd5ZnpD0y/hn43WfNqUazDmsMc73OkiAhGDFWBGkBw="
         }
       ]
     },
@@ -4578,7 +4623,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4623,7 +4668,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4638,8 +4683,8 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/js/bootstrap.esm.m39kt2b5c9.js",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4648,7 +4693,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "139019"
+          "Value": "72022"
         },
         {
           "Name": "Content-Type",
@@ -4656,11 +4701,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EuDXUJYKnfZuO8dSLN0f5iVbVasz36AROuAU3NJ3JBo=\""
+          "Value": "\"hVv0IJy8sIv1uIlVQOHnZFNAGprmLfDV+x0anYPmxYU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4670,15 +4715,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "m39kt2b5c9"
+          "Value": "jqwzsa9uv6"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/js/bootstrap.esm.js"
+          "Value": "lib/bootstrap/dist/js/bootstrap.esm.min.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EuDXUJYKnfZuO8dSLN0f5iVbVasz36AROuAU3NJ3JBo="
+          "Value": "sha256-hVv0IJy8sIv1uIlVQOHnZFNAGprmLfDV+x0anYPmxYU="
         }
       ]
     },
@@ -4693,7 +4738,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "72016"
+          "Value": "72022"
         },
         {
           "Name": "Content-Type",
@@ -4701,11 +4746,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Kj4irQWPwfSb5NFeos/h0IroI5/nIg0HtAjQ+w4v6TE=\""
+          "Value": "\"hVv0IJy8sIv1uIlVQOHnZFNAGprmLfDV+x0anYPmxYU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4715,7 +4760,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Kj4irQWPwfSb5NFeos/h0IroI5/nIg0HtAjQ+w4v6TE="
+          "Value": "sha256-hVv0IJy8sIv1uIlVQOHnZFNAGprmLfDV+x0anYPmxYU="
         }
       ]
     },
@@ -4742,7 +4787,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4779,7 +4824,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4802,51 +4847,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.um2aeqy4ik.js",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72016"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Kj4irQWPwfSb5NFeos/h0IroI5/nIg0HtAjQ+w4v6TE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "um2aeqy4ik"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/js/bootstrap.esm.min.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Kj4irQWPwfSb5NFeos/h0IroI5/nIg0HtAjQ+w4v6TE="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
@@ -4857,7 +4857,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "148168"
+          "Value": "152984"
         },
         {
           "Name": "Content-Type",
@@ -4865,11 +4865,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6IStRQerBchYSw6J2GWTOWGOnDRrWXmaG0r6nCwN5s4=\""
+          "Value": "\"11QTcvPf4F2Awk4fIkNZtgj25f1EjE0DtqL9qGD9P8o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4879,7 +4879,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6IStRQerBchYSw6J2GWTOWGOnDRrWXmaG0r6nCwN5s4="
+          "Value": "sha256-11QTcvPf4F2Awk4fIkNZtgj25f1EjE0DtqL9qGD9P8o="
         }
       ]
     },
@@ -4906,7 +4906,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4951,7 +4951,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4966,6 +4966,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59517"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uAMYHAQlaHq1buKLwrk7FF4qxvcLWntS2/DpdKucfmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4908xmbfjr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/js/bootstrap.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uAMYHAQlaHq1buKLwrk7FF4qxvcLWntS2/DpdKucfmU="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
@@ -4976,7 +5021,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "59511"
+          "Value": "59517"
         },
         {
           "Name": "Content-Type",
@@ -4984,11 +5029,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c4Ll6eSIg6Eothk8pCWAF8aE923EvtU11pqjBy+NjNM=\""
+          "Value": "\"uAMYHAQlaHq1buKLwrk7FF4qxvcLWntS2/DpdKucfmU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4998,7 +5043,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-c4Ll6eSIg6Eothk8pCWAF8aE923EvtU11pqjBy+NjNM="
+          "Value": "sha256-uAMYHAQlaHq1buKLwrk7FF4qxvcLWntS2/DpdKucfmU="
         }
       ]
     },
@@ -5025,7 +5070,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5062,7 +5107,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5085,52 +5130,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/js/bootstrap.min.zwph15dxgs.js",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "59511"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"c4Ll6eSIg6Eothk8pCWAF8aE923EvtU11pqjBy+NjNM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zwph15dxgs"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/js/bootstrap.min.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-c4Ll6eSIg6Eothk8pCWAF8aE923EvtU11pqjBy+NjNM="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/js/bootstrap.o4kw7cc6tf.js",
+      "Route": "lib/bootstrap/dist/js/bootstrap.t7l74kfg6o.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5140,7 +5140,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "148168"
+          "Value": "152984"
         },
         {
           "Name": "Content-Type",
@@ -5148,11 +5148,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6IStRQerBchYSw6J2GWTOWGOnDRrWXmaG0r6nCwN5s4=\""
+          "Value": "\"11QTcvPf4F2Awk4fIkNZtgj25f1EjE0DtqL9qGD9P8o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5162,7 +5162,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4kw7cc6tf"
+          "Value": "t7l74kfg6o"
         },
         {
           "Name": "label",
@@ -5170,7 +5170,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6IStRQerBchYSw6J2GWTOWGOnDRrWXmaG0r6nCwN5s4="
+          "Value": "sha256-11QTcvPf4F2Awk4fIkNZtgj25f1EjE0DtqL9qGD9P8o="
         }
       ]
     },
@@ -5197,7 +5197,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5234,7 +5234,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5257,7 +5257,7 @@
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.fwhahm2icz.js",
+      "Route": "lib/jquery/dist/jquery.9dtrmcwwnz.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5267,7 +5267,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "288580"
+          "Value": "298505"
         },
         {
           "Name": "Content-Type",
@@ -5275,11 +5275,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\""
+          "Value": "\"k6zr9zSRHHafzttvOi3CZGJJBUil2e/29iRG/dvttjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5289,7 +5289,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fwhahm2icz"
+          "Value": "9dtrmcwwnz"
         },
         {
           "Name": "label",
@@ -5297,7 +5297,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          "Value": "sha256-k6zr9zSRHHafzttvOi3CZGJJBUil2e/29iRG/dvttjU="
         }
       ]
     },
@@ -5312,7 +5312,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "288580"
+          "Value": "298505"
         },
         {
           "Name": "Content-Type",
@@ -5320,11 +5320,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\""
+          "Value": "\"k6zr9zSRHHafzttvOi3CZGJJBUil2e/29iRG/dvttjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5334,7 +5334,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          "Value": "sha256-k6zr9zSRHHafzttvOi3CZGJJBUil2e/29iRG/dvttjU="
         }
       ]
     },
@@ -5361,7 +5361,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5384,7 +5384,7 @@
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.min.dd6z7egasc.js",
+      "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5394,7 +5394,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "89501"
+          "Value": "89503"
         },
         {
           "Name": "Content-Type",
@@ -5402,11 +5402,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+          "Value": "\"zp0HUArZHsK1JMJwdk7EyaM+eDINjTdOxADt5Ij2JRs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5416,7 +5416,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dd6z7egasc"
+          "Value": "ehgnz7f14e"
         },
         {
           "Name": "label",
@@ -5424,7 +5424,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          "Value": "sha256-zp0HUArZHsK1JMJwdk7EyaM+eDINjTdOxADt5Ij2JRs="
         }
       ]
     },
@@ -5439,7 +5439,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "89501"
+          "Value": "89503"
         },
         {
           "Name": "Content-Type",
@@ -5447,11 +5447,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+          "Value": "\"zp0HUArZHsK1JMJwdk7EyaM+eDINjTdOxADt5Ij2JRs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5461,7 +5461,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          "Value": "sha256-zp0HUArZHsK1JMJwdk7EyaM+eDINjTdOxADt5Ij2JRs="
         }
       ]
     },
@@ -5488,7 +5488,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5525,7 +5525,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5570,7 +5570,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5585,51 +5585,6 @@
       ]
     },
     {
-      "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "52977"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ay5nd8zt9x"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/jquery-validation/dist/additional-methods.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E="
-        }
-      ]
-    },
-    {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
@@ -5640,7 +5595,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "52977"
+          "Value": "60615"
         },
         {
           "Name": "Content-Type",
@@ -5648,11 +5603,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E=\""
+          "Value": "\"FVol2+emM3Zhuo4btVIK4V7674J7+bgF8PFJXStilmI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5662,7 +5617,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E="
+          "Value": "sha256-FVol2+emM3Zhuo4btVIK4V7674J7+bgF8PFJXStilmI="
         }
       ]
     },
@@ -5689,7 +5644,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5734,7 +5689,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5749,6 +5704,96 @@
       ]
     },
     {
+      "Route": "lib/jquery-validation/dist/additional-methods.pbv66sk2vd.js",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "60615"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FVol2+emM3Zhuo4btVIK4V7674J7+bgF8PFJXStilmI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:52:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pbv66sk2vd"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-validation/dist/additional-methods.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FVol2+emM3Zhuo4btVIK4V7674J7+bgF8PFJXStilmI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery-validation/dist/jquery.validate.a2zcz6vlsr.js",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70582"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"frjPgWNGEFzHvazsY4Z6BskuMt0TwH5CApC+liKB7NE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 16:52:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a2zcz6vlsr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery-validation/dist/jquery.validate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-frjPgWNGEFzHvazsY4Z6BskuMt0TwH5CApC+liKB7NE="
+        }
+      ]
+    },
+    {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
@@ -5759,7 +5804,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51171"
+          "Value": "70582"
         },
         {
           "Name": "Content-Type",
@@ -5767,11 +5812,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw=\""
+          "Value": "\"frjPgWNGEFzHvazsY4Z6BskuMt0TwH5CApC+liKB7NE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5781,52 +5826,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw="
-        }
-      ]
-    },
-    {
-      "Route": "lib/jquery-validation/dist/jquery.validate.min.b7iojwaux1.js",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24601"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "b7iojwaux1"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/jquery-validation/dist/jquery.validate.min.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA="
+          "Value": "sha256-frjPgWNGEFzHvazsY4Z6BskuMt0TwH5CApC+liKB7NE="
         }
       ]
     },
@@ -5841,7 +5841,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "24601"
+          "Value": "24604"
         },
         {
           "Name": "Content-Type",
@@ -5849,11 +5849,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA=\""
+          "Value": "\"6e0N+WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5863,13 +5863,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JwUksNJ6/R07ZiLRoXbGeNrtlFZMFDKX4hemPiHOmCA="
+          "Value": "sha256-6e0N+WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w="
         }
       ]
     },
     {
-      "Route": "lib/jquery-validation/dist/jquery.validate.pzqfkb6aqo.js",
-      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
+      "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5878,7 +5878,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51171"
+          "Value": "24604"
         },
         {
           "Name": "Content-Type",
@@ -5886,11 +5886,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw=\""
+          "Value": "\"6e0N+WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:29 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5900,15 +5900,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pzqfkb6aqo"
+          "Value": "l1zq2mitth"
         },
         {
           "Name": "label",
-          "Value": "lib/jquery-validation/dist/jquery.validate.js"
+          "Value": "lib/jquery-validation/dist/jquery.validate.min.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-m0l81WDPiG7CcG7CDsTuZzvcGvyFmrQY5DLIxx3aRGw="
+          "Value": "sha256-6e0N+WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w="
         }
       ]
     },
@@ -5935,7 +5935,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5972,7 +5972,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5995,7 +5995,7 @@
       ]
     },
     {
-      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.47otxtyo56.js",
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.5xanfeohey.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6005,7 +6005,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19385"
+          "Value": "19813"
         },
         {
           "Name": "Content-Type",
@@ -6013,11 +6013,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=\""
+          "Value": "\"90FoMWeBnzThWo8ig/jfGArk9CionI5qsf7js1u4BnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6027,7 +6027,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "47otxtyo56"
+          "Value": "5xanfeohey"
         },
         {
           "Name": "label",
@@ -6035,7 +6035,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ="
+          "Value": "sha256-90FoMWeBnzThWo8ig/jfGArk9CionI5qsf7js1u4BnU="
         }
       ]
     },
@@ -6050,7 +6050,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19385"
+          "Value": "19813"
         },
         {
           "Name": "Content-Type",
@@ -6058,11 +6058,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=\""
+          "Value": "\"90FoMWeBnzThWo8ig/jfGArk9CionI5qsf7js1u4BnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Fri, 28 Feb 2025 16:52:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6072,12 +6072,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ="
+          "Value": "sha256-90FoMWeBnzThWo8ig/jfGArk9CionI5qsf7js1u4BnU="
         }
       ]
     },
     {
-      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.4v8eqarkd7.js",
+      "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6087,7 +6087,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5824"
+          "Value": "5831"
         },
         {
           "Name": "Content-Type",
@@ -6095,11 +6095,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=\""
+          "Value": "\"RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6109,7 +6109,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4v8eqarkd7"
+          "Value": "48y08845bh"
         },
         {
           "Name": "label",
@@ -6117,7 +6117,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4="
+          "Value": "sha256-RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk="
         }
       ]
     },
@@ -6132,7 +6132,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5824"
+          "Value": "5831"
         },
         {
           "Name": "Content-Type",
@@ -6140,11 +6140,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=\""
+          "Value": "\"RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6154,7 +6154,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4="
+          "Value": "sha256-RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk="
         }
       ]
     },
@@ -6181,7 +6181,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6226,7 +6226,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:03:30 GMT"
+          "Value": "Thu, 27 Feb 2025 18:04:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6251,7 +6251,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1143"
+          "Value": "1185"
         },
         {
           "Name": "Content-Type",
@@ -6259,11 +6259,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU=\""
+          "Value": "\"XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:25:58 GMT"
+          "Value": "Fri, 28 Feb 2025 17:00:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6273,12 +6273,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU="
+          "Value": "sha256-XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc="
         }
       ]
     },
     {
-      "Route": "Tiennthe171977_Oceanteach.ri4o52rlph.bundle.scp.css",
+      "Route": "Tiennthe171977_Oceanteach.jwxsd5vygg.bundle.scp.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Tiennthe171977_Oceanteach.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6288,7 +6288,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1143"
+          "Value": "1185"
         },
         {
           "Name": "Content-Type",
@@ -6296,11 +6296,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU=\""
+          "Value": "\"XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:25:58 GMT"
+          "Value": "Fri, 28 Feb 2025 17:00:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6310,7 +6310,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ri4o52rlph"
+          "Value": "jwxsd5vygg"
         },
         {
           "Name": "label",
@@ -6318,12 +6318,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU="
+          "Value": "sha256-XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc="
         }
       ]
     },
     {
-      "Route": "Tiennthe171977_Oceanteach.ri4o52rlph.styles.css",
+      "Route": "Tiennthe171977_Oceanteach.jwxsd5vygg.styles.css",
       "AssetFile": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Tiennthe171977_Oceanteach.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6333,7 +6333,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1143"
+          "Value": "1185"
         },
         {
           "Name": "Content-Type",
@@ -6341,11 +6341,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU=\""
+          "Value": "\"XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:25:58 GMT"
+          "Value": "Fri, 28 Feb 2025 17:00:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6355,7 +6355,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ri4o52rlph"
+          "Value": "jwxsd5vygg"
         },
         {
           "Name": "label",
@@ -6363,7 +6363,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU="
+          "Value": "sha256-XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc="
         }
       ]
     },
@@ -6378,7 +6378,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1143"
+          "Value": "1185"
         },
         {
           "Name": "Content-Type",
@@ -6386,11 +6386,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU=\""
+          "Value": "\"XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 13:25:58 GMT"
+          "Value": "Fri, 28 Feb 2025 17:00:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6400,7 +6400,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HXaKkh2S6HnmVGmwiqb8pJWGMzPirsZo7jX6+v5uFwU="
+          "Value": "sha256-XZQxnn6rZjCJtNJf1OIKmJ4ek5H0CDP1kBUTVkmfiCc="
         }
       ]
     }

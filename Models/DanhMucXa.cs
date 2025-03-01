@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Tiennthe171977_Oceanteach.Models;
+﻿namespace Tiennthe171977_Oceanteach.Models;
 
 public partial class DanhMucXa
 {
@@ -10,8 +7,6 @@ public partial class DanhMucXa
     public string TenXa { get; set; } = null!;
 
     public int? HuyenId { get; set; }
-
-    
 
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 

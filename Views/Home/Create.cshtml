@@ -1,109 +1,107 @@
 ﻿@model Tiennthe171977_Oceanteach.Models.Employee
 @{
-    ViewBag.Title = "Chỉnh sửa Nhân Viên";
+    ViewBag.Title = "Thêm Nhân Viên";
 }
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
-<h2>Chỉnh sửa Nhân Viên</h2>
+<h2>Thêm Nhân Viên</h2>
+
 @if (!ViewData.ModelState.IsValid)
 {
     <div class="alert alert-danger">
         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
     </div>
 }
+
 <div class="container mt-4">
-    <form asp-action="Edit" method="post">
-        <input type="hidden" asp-for="EmployeeId" />
+    <form asp-action="Create" method="post">
         <div class="row g-3">
             <div class="col-md-4">
-                <label for="hoten" class="form-label">1. họ tên:</label>
-                <input type="text" class="form-control" asp-for="HoTen" required />
+                <label for="hoten" class="form-label">1. Họ tên:</label>
+                <input type="text" class="form-control" id="hoten" asp-for="HoTen" required />
                 <span asp-validation-for="HoTen" class="text-danger"></span>
             </div>
 
             <div class="col-md-4">
-                <label for="ngaysinh" class="form-label">2. ngày sinh:</label>
-                <input type="date" class="form-control" asp-for="NgaySinh" required />
+                <label for="ngaysinh" class="form-label">2. Ngày sinh:</label>
+                <input type="date" class="form-control" id="ngaysinh" asp-for="NgaySinh" required />
                 <span asp-validation-for="NgaySinh" class="text-danger"></span>
             </div>
 
             <div class="col-md-2">
-                <label for="tuoi" class="form-label">3. tuổi:</label>
-                <input type="number" class="form-control" asp-for="Tuoi" min="18" max="100" required title="Tuổi phải từ 18 đến 100" />
+                <label for="tuoi" class="form-label">3. Tuổi:</label>
+                <input type="number" class="form-control" id="tuoi" asp-for="Tuoi" min="18" max="100" required title="Tuổi phải từ 18 đến 100" />
                 <span asp-validation-for="Tuoi" class="text-danger"></span>
             </div>
 
             <div class="col-md-2">
-                <label for="dantoc" class="form-label">4. dân tộc:</label>
-                <select class="form-select" asp-for="DanTocId" asp-items="ViewBag.DanTocList">
-                    <option value="">chọn dân tộc</option>
+                <label for="dantoc" class="form-label">4. Dân tộc:</label>
+                <select class="form-select" id="dantoc" asp-for="DanTocId" asp-items="ViewBag.DanTocList">
+                    <option value="">Chọn dân tộc</option>
                 </select>
                 <span asp-validation-for="DanTocId" class="text-danger"></span>
             </div>
 
             <div class="col-md-4">
-                <label for="nghenghiep" class="form-label">5. nghề nghiệp:</label>
-                <select class="form-select" asp-for="NgheNghiepId" asp-items="ViewBag.NgheNghiepList">
-                    <option value="">chọn nghề nghiệp</option>
+                <label for="nghenghiep" class="form-label">5. Nghề nghiệp:</label>
+                <select class="form-select" id="nghenghiep" asp-for="NgheNghiepId" asp-items="ViewBag.NgheNghiepList">
+                    <option value="">Chọn nghề nghiệp</option>
                 </select>
                 <span asp-validation-for="NgheNghiepId" class="text-danger"></span>
             </div>
 
             <div class="col-md-4">
-                <label for="cccd" class="form-label">6. căn cước công dân:</label>
+                <label for="cccd" class="form-label">6. Căn cước công dân:</label>
                 <input type="text" id="cccd" class="form-control" asp-for="Cccd" pattern="[0-9]{12}" title="CCCD phải là 12 chữ số" />
                 <span asp-validation-for="Cccd" class="text-danger"></span>
                 <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="khongcccd" onchange="toggleCCCD()" />
+                    <input class="form-check-input" type="checkbox" id="khongcccd" onchange="toggleCCCD()" @(string.IsNullOrEmpty(Model.Cccd) ? "checked" : "") />
                     <label class="form-check-label" for="khongcccd">Không có CCCD</label>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <label for="sodienthoai" class="form-label">7. số điện thoại:</label>
+                <label for="sdt" class="form-label">7. Số điện thoại:</label>
                 <input type="text" class="form-control" id="sdt" asp-for="SoDienThoai" pattern="0[3579][0-9]{8}" title="Số điện thoại phải bắt đầu bằng 03, 05, 07, 09 và có 10 chữ số" />
                 <span asp-validation-for="SoDienThoai" class="text-danger"></span>
                 <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="ksdt" onchange="toggleSDT()" />
+                    <input class="form-check-input" type="checkbox" id="ksdt" onchange="toggleSDT()" @(string.IsNullOrEmpty(Model.SoDienThoai) ? "checked" : "") />
                     <label class="form-check-label" for="ksdt">Không có SĐT</label>
                 </div>
             </div>
 
             <div class="row g-3">
                 <div class="col-md-4">
-                    <label for="diachi" class="form-label">8. địa chỉ:</label>
+                    <label class="form-label">8. Địa chỉ:</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <select class="form-select" asp-for="TinhId" asp-items="ViewBag.TinhList" onchange="loadHuyen(this.value)">
-                        <option value="">chọn tỉnh/ thành phố</option>
+                    <select class="form-select" id="TinhId" asp-for="TinhId" asp-items="ViewBag.TinhList" onchange="loadHuyen(this.value)">
+                        <option value="">Chọn tỉnh/thành phố</option>
                     </select>
                     <span asp-validation-for="TinhId" class="text-danger"></span>
                 </div>
                 <div class="col">
-                    <select class="form-select" asp-for="HuyenId" onchange="loadXa(this.value)">
-                        <option value="">chọn quận/ huyện</option>
+                    <select class="form-select" id="HuyenId" asp-for="HuyenId" onchange="loadXa(this.value)">
+                        <option value="">Chọn quận/huyện</option>
                     </select>
                     <span asp-validation-for="HuyenId" class="text-danger"></span>
                 </div>
                 <div class="col">
-                    <select class="form-select" asp-for="XaId">
-                        <option value="">chọn xã/ phường</option>
+                    <select class="form-select" id="XaId" asp-for="XaId">
+                        <option value="">Chọn xã/phường</option>
                     </select>
                     <span asp-validation-for="XaId" class="text-danger"></span>
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" asp-for="DiaChiCuThe" placeholder="cụ thể" />
+                    <input type="text" class="form-control" asp-for="DiaChiCuThe" placeholder="Cụ thể" />
                     <span asp-validation-for="DiaChiCuThe" class="text-danger"></span>
                 </div>
             </div>
 
-            <div class="col-12 text-end">
-                <button type="submit" class="btn btn-primary">Xác nhận</button>
+            <div class="col-12 text-end mt-3">
+                <button type="submit" class="btn btn-primary">Thêm</button>
                 <a class="btn btn-secondary" href="@Url.Action("Index", "Employee")">Hủy</a>
             </div>
         </div>
@@ -114,20 +112,11 @@
 </div>
 
 @section Scripts {
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
     <script>
         $(document).ready(function () {
-            var tinhId = '@Model.TinhId';
-            var huyenId = '@Model.HuyenId';
-            var xaId = '@Model.XaId';
-
-            if (tinhId) {
-                loadHuyen(tinhId, huyenId);
-            }
-            if (huyenId) {
-                loadXa(huyenId, xaId);
-            }
-
             toggleCCCD();
             toggleSDT();
         });
@@ -209,7 +198,6 @@
             }
         });
 
-        
         document.getElementById("sdt").addEventListener("input", function () {
             const sdt = this.value;
             if (sdt && !/^0[3579]\d{8}$/.test(sdt)) {
@@ -221,7 +209,7 @@
 
         document.getElementById("ngaysinh").addEventListener("change", function () {
             const ngaySinh = new Date(this.value);
-            const ngayHienTai = new Date(); 
+            const ngayHienTai = new Date();
             if (ngaySinh > ngayHienTai) {
                 this.setCustomValidity("Ngày sinh không được là ngày trong tương lai.");
             } else {
