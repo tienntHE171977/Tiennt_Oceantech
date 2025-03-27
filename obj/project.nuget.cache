@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lw6KQ/4LKAQ=",
+  "dgSpecHash": "f3915ZTU6+w=",
   "success": true,
   "projectFilePath": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach.csproj",
   "expectedPackageFiles": [
@@ -161,8 +161,7 @@
     "C:\\Users\\FPT\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\FPT\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
-    "C:\\Users\\FPT\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
+    "C:\\Users\\FPT\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
