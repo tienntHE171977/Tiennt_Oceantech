@@ -1,4 +1,7 @@
-﻿namespace Tiennthe171977_Oceanteach.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Tiennthe171977_Oceanteach.Models;
 
 public partial class DanhMucTinh
 {
@@ -9,4 +12,6 @@ public partial class DanhMucTinh
     public virtual ICollection<DanhMucHuyen> DanhMucHuyens { get; set; } = new List<DanhMucHuyen>();
 
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
+
+    public virtual ICollection<VanBang> VanBangs { get; set; } = new List<VanBang>();
 }

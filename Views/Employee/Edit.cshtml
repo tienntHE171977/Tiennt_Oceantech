@@ -6,115 +6,139 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
-<h2>Chỉnh sửa Nhân Viên</h2>
-@if (!ViewData.ModelState.IsValid)
-{
-    <div class="alert alert-danger">
-        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-    </div>
-}
 <div class="container mt-4">
-    <form asp-action="Edit" method="post">
-        <input type="hidden" asp-for="EmployeeId" />
-        <div class="row g-3">
-            <div class="col-md-4">
-                <label for="hoten" class="form-label">1. họ tên:</label>
-                <input type="text" class="form-control" asp-for="HoTen" required />
-                <span asp-validation-for="HoTen" class="text-danger"></span>
-            </div>
+    <div class="row">
+        <!-- Cột bên trái -->
+        <div class="col-md-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link @(ViewBag.ActiveTab == "ThongTin" ? "text-primary fw-bold" : "")"
+                       href="@Url.Action("Edit", "Employee", new { id = Model.EmployeeId })">
+                        › Thông tin nhân viên
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewBag.ActiveTab == "VanBang" ? "text-primary fw-bold" : "")"
+                       href="@Url.Action("EditVanBang", "Employee", new { id = Model.EmployeeId })">
+                        › Văn bằng
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="col-md-4">
-                <label for="ngaysinh" class="form-label">2. ngày sinh:</label>
-                <input type="date" class="form-control" asp-for="NgaySinh" required />
-                <span asp-validation-for="NgaySinh" class="text-danger"></span>
-            </div>
-
-            <div class="col-md-2">
-                <label for="tuoi" class="form-label">3. tuổi:</label>
-                <input type="number" class="form-control" asp-for="Tuoi" min="18" max="100" required title="Tuổi phải từ 18 đến 100" />
-                <span asp-validation-for="Tuoi" class="text-danger"></span>
-            </div>
-
-            <div class="col-md-2">
-                <label for="dantoc" class="form-label">4. dân tộc:</label>
-                <select class="form-select" asp-for="DanTocId" asp-items="ViewBag.DanTocList">
-                    <option value="">chọn dân tộc</option>
-                </select>
-                <span asp-validation-for="DanTocId" class="text-danger"></span>
-            </div>
-
-            <div class="col-md-4">
-                <label for="nghenghiep" class="form-label">5. nghề nghiệp:</label>
-                <select class="form-select" asp-for="NgheNghiepId" asp-items="ViewBag.NgheNghiepList">
-                    <option value="">chọn nghề nghiệp</option>
-                </select>
-                <span asp-validation-for="NgheNghiepId" class="text-danger"></span>
-            </div>
-
-            <div class="col-md-4">
-                <label for="cccd" class="form-label">6. căn cước công dân:</label>
-                <input type="text" id="cccd" class="form-control" asp-for="Cccd" pattern="[0-9]{12}" title="CCCD phải là 12 chữ số" />
-                <span asp-validation-for="Cccd" class="text-danger"></span>
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="khongcccd" onchange="toggleCCCD()" />
-                    <label class="form-check-label" for="khongcccd">Không có CCCD</label>
+        <!-- Cột bên phải -->
+        <div class="col-md-9">
+            <h2>Chỉnh sửa Nhân Viên</h2>
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                 </div>
-            </div>
+            }
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="EmployeeId" />
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="hoten" class="form-label">1. họ tên:</label>
+                        <input type="text" class="form-control" asp-for="HoTen" required />
+                        <span asp-validation-for="HoTen" class="text-danger"></span>
+                    </div>
 
-            <div class="col-md-4">
-                <label for="sodienthoai" class="form-label">7. số điện thoại:</label>
-                <input type="text" class="form-control" id="sdt" asp-for="SoDienThoai" pattern="0[3579][0-9]{8}" title="Số điện thoại phải bắt đầu bằng 03, 05, 07, 09 và có 10 chữ số" />
-                <span asp-validation-for="SoDienThoai" class="text-danger"></span>
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="ksdt" onchange="toggleSDT()" />
-                    <label class="form-check-label" for="ksdt">Không có SĐT</label>
-                </div>
-            </div>
+                    <div class="col-md-4">
+                        <label for="ngaysinh" class="form-label">2. ngày sinh:</label>
+                        <input type="date" class="form-control" asp-for="NgaySinh" required />
+                        <span asp-validation-for="NgaySinh" class="text-danger"></span>
+                    </div>
 
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <label for="diachi" class="form-label">8. địa chỉ:</label>
-                </div>
-            </div>
+                    <div class="col-md-2">
+                        <label for="tuoi" class="form-label">3. tuổi:</label>
+                        <input type="number" class="form-control" asp-for="Tuoi" min="18" max="100" required title="Tuổi phải từ 18 đến 100" />
+                        <span asp-validation-for="Tuoi" class="text-danger"></span>
+                    </div>
 
-            <div class="row">
-                <div class="col">
-                    <select class="form-select" asp-for="TinhId" asp-items="ViewBag.TinhList" onchange="loadHuyen(this.value)">
-                        <option value="">chọn tỉnh/ thành phố</option>
-                    </select>
-                    <span asp-validation-for="TinhId" class="text-danger"></span>
-                </div>
-                <div class="col">
-                    <select class="form-select" asp-for="HuyenId" onchange="loadXa(this.value)">
-                        <option value="">chọn quận/ huyện</option>
-                    </select>
-                    <span asp-validation-for="HuyenId" class="text-danger"></span>
-                </div>
-                <div class="col">
-                    <select class="form-select" asp-for="XaId">
-                        <option value="">chọn xã/ phường</option>
-                    </select>
-                    <span asp-validation-for="XaId" class="text-danger"></span>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" asp-for="DiaChiCuThe" placeholder="cụ thể" />
-                    <span asp-validation-for="DiaChiCuThe" class="text-danger"></span>
-                </div>
-            </div>
+                    <div class="col-md-2">
+                        <label for="dantoc" class="form-label">4. dân tộc:</label>
+                        <select class="form-select" asp-for="DanTocId" asp-items="ViewBag.DanTocList">
+                            <option value="">chọn dân tộc</option>
+                        </select>
+                        <span asp-validation-for="DanTocId" class="text-danger"></span>
+                    </div>
 
-            <div class="col-12 text-end">
-                <button type="submit" class="btn btn-primary">Xác nhận</button>
-                <a class="btn btn-secondary" href="@Url.Action("Index", "Employee")">Hủy</a>
+                    <div class="col-md-4">
+                        <label for="nghenghiep" class="form-label">5. nghề nghiệp:</label>
+                        <select class="form-select" asp-for="NgheNghiepId" asp-items="ViewBag.NgheNghiepList">
+                            <option value="">chọn nghề nghiệp</option>
+                        </select>
+                        <span asp-validation-for="NgheNghiepId" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="cccd" class="form-label">6. căn cước công dân:</label>
+                        <input type="text" id="cccd" class="form-control" asp-for="Cccd" pattern="[0-9]{12}" title="CCCD phải là 12 chữ số" />
+                        <span asp-validation-for="Cccd" class="text-danger"></span>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="khongcccd" onchange="toggleCCCD()"
+                            @(string.IsNullOrEmpty(Model.Cccd) ? "checked" : "") />
+                            <label class="form-check-label" for="khongcccd">Không có CCCD</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="sodienthoai" class="form-label">7. số điện thoại:</label>
+                        <input type="text" class="form-control" id="sdt" asp-for="SoDienThoai" pattern="0[3579][0-9]{8}" title="Số điện thoại phải bắt đầu bằng 03, 05, 07, 09 và có 10 chữ số" />
+                        <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="ksdt" onchange="toggleSDT()"
+                            @(string.IsNullOrEmpty(Model.SoDienThoai) ? "checked" : "") />
+                            <label class="form-check-label" for="ksdt">Không có SĐT</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="diachi" class="form-label">8. địa chỉ:</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-select" asp-for="TinhId" asp-items="ViewBag.TinhList" onchange="loadHuyen(this.value)">
+                                <option value="">chọn tỉnh/ thành phố</option>
+                            </select>
+                            <span asp-validation-for="TinhId" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" asp-for="HuyenId" onchange="loadXa(this.value)">
+                                <option value="">chọn quận/ huyện</option>
+                            </select>
+                            <span asp-validation-for="HuyenId" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" asp-for="XaId">
+                                <option value="">chọn xã/ phường</option>
+                            </select>
+                            <span asp-validation-for="XaId" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" asp-for="DiaChiCuThe" placeholder="cụ thể" />
+                            <span asp-validation-for="DiaChiCuThe" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-end">
+                        <button type="submit" class="btn btn-primary">Xác nhận</button>
+                        <a class="btn btn-secondary" href="@Url.Action("Index", "Employee")">Hủy</a>
+                    </div>
+                </div>
+            </form>
+            <div class="mt-4">
+                <a href="@Url.Action("Index", "Employee")" class="text-decoration-none">Danh sách Employee</a>
             </div>
         </div>
-    </form>
-    <div class="mt-4">
-        <a href="@Url.Action("Index", "Employee")" class="text-decoration-none">Danh sách Employee</a>
     </div>
 </div>
 
-@section Scripts {
-    
+    @section Scripts {
     <script>
         $(document).ready(function () {
             var tinhId = '@Model.TinhId';
@@ -130,6 +154,12 @@
 
             toggleCCCD();
             toggleSDT();
+
+            $("form").on("submit", function (e) {
+                if (!validateForm()) {
+                    e.preventDefault();
+                }
+            });
         });
 
         function loadHuyen(tinhId, selectedHuyenId = '') {
@@ -178,7 +208,7 @@
             });
         }
 
-        function toggleCCCD() {
+                function toggleCCCD() {
             var checkbox = document.getElementById("khongcccd");
             var cccdInput = document.getElementById("cccd");
             if (checkbox.checked) {
@@ -200,33 +230,35 @@
             }
         }
 
-        document.getElementById("cccd").addEventListener("input", function () {
-            const cccd = this.value;
-            if (cccd && !/^\d{12}$/.test(cccd)) {
-                this.setCustomValidity("CCCD phải là 12 chữ số.");
-            } else {
-                this.setCustomValidity("");
-            }
+        $(document).ready(function () {
+            // Đồng bộ trạng thái checkbox và trường nhập liệu khi trang được tải
+            toggleCCCD();
+            toggleSDT();
         });
 
-        
-        document.getElementById("sdt").addEventListener("input", function () {
-            const sdt = this.value;
-            if (sdt && !/^0[3579]\d{8}$/.test(sdt)) {
-                this.setCustomValidity("Số điện thoại không hợp lệ.");
-            } else {
-                this.setCustomValidity("");
-            }
-        });
 
-        document.getElementById("ngaysinh").addEventListener("change", function () {
-            const ngaySinh = new Date(this.value);
-            const ngayHienTai = new Date(); 
-            if (ngaySinh > ngayHienTai) {
-                this.setCustomValidity("Ngày sinh không được là ngày trong tương lai.");
-            } else {
-                this.setCustomValidity("");
+        function validateForm() {
+            var isValid = true;
+
+            // Kiểm tra CCCD
+            var cccdInput = document.getElementById("cccd");
+            var cccdCheckbox = document.getElementById("khongcccd");
+            if (cccdInput.value.trim() === "" && !cccdCheckbox.checked) {
+                alert("Vui lòng nhập CCCD hoặc tích vào 'Không có CCCD'.");
+                isValid = false;
             }
-        });
+
+            // Kiểm tra Số điện thoại
+            var sdtInput = document.getElementById("sdt");
+            var sdtCheckbox = document.getElementById("ksdt");
+            if (sdtInput.value.trim() === "" && !sdtCheckbox.checked) {
+                alert("Vui lòng nhập Số điện thoại hoặc tích vào 'Không có SĐT'.");
+                isValid = false;
+            }
+
+            return isValid;
+        }
     </script>
+}
+
 }

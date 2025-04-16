@@ -45,7 +45,7 @@
                     </tr>
                     <tr>
                         <th>Số Điện Thoại:</th>
-                        <td>@(string.IsNullOrEmpty(Model.SoDienThoai)? "Không có" : Model.SoDienThoai)</td>
+                        <td>@(string.IsNullOrEmpty(Model.SoDienThoai) ? "Không có" : Model.SoDienThoai)</td>
                     </tr>
                     <tr>
                         <th>Địa chỉ:</th>
@@ -55,6 +55,37 @@
                             Cụ thể: @(Model.DiaChiCuThe ?? "Không có")
                         </td>
                     </tr>
+                </table>
+                <h3 class="mt-4">Danh sách Văn Bằng</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên Văn Bằng</th>
+                            <th>Ngày Cấp</th>
+                            <th>Ngày Hết Hạn</th>
+                            <th>Đơn vị cấp </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.VanBangs != null && Model.VanBangs.Any())
+                        {
+                            @foreach (var vanBang in Model.VanBangs)
+                            {
+                                <tr>
+                                    <td>@vanBang.TenVanBang</td>
+                                    <td>@vanBang.NgayCap.ToString("dd/MM/yyyy")</td>
+                                    <td>@(vanBang.NgayHetHan?.ToString("dd/MM/yyyy") ?? "Không có")</td>
+                                    <td>@(vanBang.DonViCapNavigation?.TenTinh ?? "Không có")</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center text-danger">Không có văn bằng nào.</td>
+                            </tr>
+                        }
+                    </tbody>
                 </table>
             }
             else

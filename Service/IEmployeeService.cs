@@ -14,5 +14,15 @@ namespace Tiennthe171977_Oceanteach.Service
         Task<List<DanToc>> GetDanTocsAsync();
         Task<List<NgheNghiep>> GetNgheNghiepsAsync();
         Task<bool> ValidateLocationAsync(int? tinhId, int? huyenId, int? xaId);
+        Task<bool> UpdateEmployeeAsync(Employee employee);
+        Task<bool> DeleteEmployeeAsync(int employeeId);
+        Task<bool> DeleteVanBangAsync(int vanBangId);
+        Task<Employee?> GetEmployeeByIdAsync(int id); 
+        Task<List<Employee>> GetEmployeesAsync(int page, int pageSize); 
+        Task<int> GetTotalEmployeesCountAsync();
+        Task<bool> AddVanBangAsync(int employeeId, VanBang vanBang);
+        Task<bool> DeleteVanBangAsync(int employeeId, int vanBangId);
+        Task<List<VanBang>> GetVanBangsByEmployeeIdAsync(int employeeId);
+        Task<bool> UpdateVanBangAsync(int employeeId, VanBang vanBang);
     }
 }

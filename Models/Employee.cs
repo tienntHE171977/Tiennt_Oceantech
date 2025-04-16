@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Tiennthe171977_Oceanteach.Models;
 
@@ -38,7 +40,6 @@ public partial class Employee
 
     [StringLength(200, ErrorMessage = "Địa chỉ cụ thể không được vượt quá 200 ký tự")]
     public string? DiaChiCuThe { get; set; }
-
     public virtual DanToc? DanToc { get; set; }
 
     public virtual DanhMucHuyen? Huyen { get; set; }
@@ -47,29 +48,33 @@ public partial class Employee
 
     public virtual DanhMucTinh? Tinh { get; set; }
 
-    public virtual DanhMucXa? Xa { get; set; }
+    public virtual List<VanBang> VanBangs { get; set; } = new List<VanBang>();
 
-    // Phương thức validation tùy chỉnh cho Ngày sinh
+    public virtual DanhMucXa? Xa { get; set; }
     public static ValidationResult? ValidateNgaySinh(DateOnly? ngaySinh, ValidationContext context)
     {
-        if (ngaySinh.HasValue)
+        if (!ngaySinh.HasValue)
         {
-            DateOnly today = DateOnly.FromDateTime(DateTime.Today);
-            if (ngaySinh.Value > today)
-            {
-                return new ValidationResult("Ngày sinh không được là ngày trong tương lai.");
-            }
-
-            // Tính tuổi từ ngày sinh để kiểm tra tính hợp lệ với Tuoi
-            int calculatedAge = today.Year - ngaySinh.Value.Year;
-            if (ngaySinh.Value > today.AddYears(-calculatedAge)) calculatedAge--;
-
-            var employee = (Employee)context.ObjectInstance;
-            if (employee.Tuoi.HasValue && employee.Tuoi != calculatedAge)
-            {
-                return new ValidationResult("Tuổi không khớp với ngày sinh.");
-            }
+            return new ValidationResult("Ngày sinh là bắt buộc.");
         }
+
+        var employee = (Employee)context.ObjectInstance;
+        int calculatedAge = DateTime.Now.Year - ngaySinh.Value.Year;
+
+        // Nếu ngày sinh chưa đến trong năm hiện tại, giảm tuổi đi 1
+        if (ngaySinh.Value > DateOnly.FromDateTime(DateTime.Now.AddYears(-calculatedAge)))
+        {
+            calculatedAge--;
+        }
+
+        if (employee.Tuoi.HasValue && employee.Tuoi != calculatedAge)
+        {
+            return new ValidationResult("Tuổi không khớp với ngày sinh.");
+        }
+
         return ValidationResult.Success;
     }
+
+    public int ValidVanBangCount => VanBangs.Count(vb => !vb.NgayHetHan.HasValue || vb.NgayHetHan > DateOnly.FromDateTime(DateTime.Now));
+    public int TotalVanBangCount => VanBangs.Count;
 }

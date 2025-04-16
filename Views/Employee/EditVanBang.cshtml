@@ -1,0 +1,25 @@
+﻿@model List<Tiennthe171977_Oceanteach.Models.VanBang>
+
+<h2>Danh sách Văn Bằng</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên Văn Bằng</th>
+            <th>Ngày Cấp</th>
+            <th>Ngày Hết Hạn</th>
+            <th>Đơn Vị Cấp</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vanBang in Model)
+        {
+            <tr>
+                <td>@vanBang.TenVanBang</td>
+                <td>@vanBang.NgayCap</td>
+                <td>@vanBang.NgayHetHan</td>
+                <td>@vanBang.DonViCap</td>
+            </tr>
+        }
+    </tbody>
+</table>

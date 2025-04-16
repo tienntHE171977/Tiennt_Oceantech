@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Tiennthe171977_Oceanteach.Models;
 
 namespace Tiennthe171977_Oceanteach.Models;
 
@@ -25,11 +28,15 @@ public partial class OceantechContext : DbContext
 
     public virtual DbSet<NgheNghiep> NgheNghieps { get; set; }
 
+    public virtual DbSet<VanBang> VanBangs { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
         optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+
     }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -132,7 +139,28 @@ public partial class OceantechContext : DbContext
             entity.Property(e => e.NgheNghiepId).HasColumnName("NgheNghiepID");
             entity.Property(e => e.TenNgheNghiep).HasMaxLength(100);
         });
+
+        modelBuilder.Entity<VanBang>(entity =>
+        {
+            entity.HasKey(e => e.VanBangId).HasName("PK__VanBang__BD0FB507AF0B5D07");
+
+            entity.ToTable("VanBang", tb => tb.HasTrigger("trg_CheckMaxVanBang"));
+
+            entity.Property(e => e.VanBangId).HasColumnName("VanBangID");
+            entity.Property(e => e.EmployeeId).HasColumnName("EmployeeID");
+            entity.Property(e => e.TenVanBang).HasMaxLength(100);
+
+            entity.HasOne(d => d.DonViCapNavigation).WithMany(p => p.VanBangs)
+                .HasForeignKey(d => d.DonViCap)
+                .HasConstraintName("FK__VanBang__DonViCa__5CD6CB2B");
+
+            entity.HasOne(d => d.Employee).WithMany(p => p.VanBangs)
+                .HasForeignKey(d => d.EmployeeId)
+                .HasConstraintName("FK__VanBang__Employe__5DCAEF64");
+        });
+
+        OnModelCreatingPartial(modelBuilder);
     }
 
-     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

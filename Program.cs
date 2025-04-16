@@ -13,6 +13,7 @@ builder.Services.AddDbContext<OceantechContext>(options =>
 
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeBusiness, EmployeeBusiness>();
+builder.Services.AddLogging();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +29,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Create}/{id?}");
+    pattern: "{controller=Employee}/{action=Index}/{id?}");
 
 app.Run();

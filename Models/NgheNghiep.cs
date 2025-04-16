@@ -1,4 +1,7 @@
-﻿namespace Tiennthe171977_Oceanteach.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Tiennthe171977_Oceanteach.Models;
 
 public partial class NgheNghiep
 {
