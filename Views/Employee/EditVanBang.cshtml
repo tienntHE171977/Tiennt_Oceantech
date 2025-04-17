@@ -1,25 +1,219 @@
 ﻿@model List<Tiennthe171977_Oceanteach.Models.VanBang>
+@{
+    var employeeId = ViewBag.EmployeeId;
+    var danhSachTinh = ViewBag.DanhSachTinh as List<Tiennthe171977_Oceanteach.Models.DanhMucTinh>;
+    var employeeName = ViewBag.EmployeeName;
+    Layout = "_Layout";
+}
 
-<h2>Danh sách Văn Bằng</h2>
+<div class="container mt-4">
+    <h2 class="mb-3">Danh sách Văn Bằng @(employeeName != null ? $"của {employeeName}" : "")</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Tên Văn Bằng</th>
-            <th>Ngày Cấp</th>
-            <th>Ngày Hết Hạn</th>
-            <th>Đơn Vị Cấp</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var vanBang in Model)
-        {
-            <tr>
-                <td>@vanBang.TenVanBang</td>
-                <td>@vanBang.NgayCap</td>
-                <td>@vanBang.NgayHetHan</td>
-                <td>@vanBang.DonViCap</td>
-            </tr>
+    @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var modelState in ViewData.ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                }
+            </ul>
+        </div>
+    }
+
+    <form method="post" asp-action="UpdateVanBangs" asp-controller="Employee">
+        <input type="hidden" name="employeeId" value="@employeeId" />
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="width: 25%">Tên Văn Bằng</th>
+                        <th style="width: 20%">Ngày Cấp</th>
+                        <th style="width: 20%">Ngày Hết Hạn</th>
+                        <th style="width: 25%">Đơn Vị Cấp</th>
+                        <th style="width: 10%">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="vanBangTableBody">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                <input type="text" name="vanBangs[@i].TenVanBang" value="@Model[i].TenVanBang" class="form-control" required />
+                            </td>
+                            <td>
+                                <input type="date" name="vanBangs[@i].NgayCap" value="@Model[i].NgayCap.ToString("yyyy-MM-dd")" class="form-control" required />
+                            </td>
+                            <td>
+                                <input type="date" name="vanBangs[@i].NgayHetHan" value="@(Model[i].NgayHetHan?.ToString("yyyy-MM-dd"))" class="form-control" />
+                            </td>
+                            <td>
+                                <select class="form-select" name="vanBangs[@i].DonViCap" required>
+                                    <option value="">-- Chọn đơn vị cấp --</option>
+                                    @foreach (var tinh in danhSachTinh)
+                                    {
+                                        if (tinh.TinhId == Model[i].DonViCap)
+                                        {
+                                            <option value="@tinh.TinhId" selected="selected">@tinh.TenTinh</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@tinh.TinhId">@tinh.TenTinh</option>
+                                        }
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                <input type="hidden" name="vanBangs[@i].VanBangId" value="@Model[i].VanBangId" />
+                                <input type="hidden" name="vanBangs[@i].EmployeeId" value="@Model[i].EmployeeId" />
+                                <button type="button" class="btn btn-danger btn-sm"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        data-vanbangid="@Model[i].VanBangId"
+                                        data-employeeid="@Model[i].EmployeeId">
+                                    <i class="bi bi-trash"></i> Xóa
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <button type="button" class="btn btn-primary" onclick="addVanBang()">
+                <i class="bi bi-plus-circle"></i> Thêm Văn Bằng
+            </button>
+            <div>
+                <a href="@Url.Action("Detail", "Employee", new { id = employeeId })" class="btn btn-secondary me-2">
+                    <i class="bi bi-arrow-left"></i> Quay lại
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save"></i> Lưu tất cả
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Modal Thêm Văn Bằng -->
+<div class="modal fade" id="addVanBangModal" tabindex="-1" aria-labelledby="addVanBangModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" asp-action="AddVanBang" asp-controller="Employee">
+                <input type="hidden" name="EmployeeId" value="@employeeId" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addVanBangModalLabel">Thêm Văn Bằng Mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Tên Văn Bằng <span class="text-danger">*</span></label>
+                        <input type="text" name="TenVanBang" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Ngày Cấp <span class="text-danger">*</span></label>
+                        <input type="date" name="NgayCap" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Ngày Hết Hạn</label>
+                        <input type="date" name="NgayHetHan" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Đơn Vị Cấp <span class="text-danger">*</span></label>
+                        <select class="form-select" name="DonViCap" required>
+                            <option value="">-- Chọn đơn vị cấp --</option>
+                            @foreach (var tinh in danhSachTinh)
+                            {
+                                <option value="@tinh.TinhId">@tinh.TenTinh</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xóa Văn Bằng -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" asp-action="DeleteVanBang" asp-controller="Employee">
+                <input type="hidden" id="deleteVanBangId" name="vanBangId" />
+                <input type="hidden" id="deleteEmployeeId" name="employeeId" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa văn bằng này không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let rowIndex = @Model.Count;
+
+        function addVanBang() {
+            // Hiển thị modal thêm văn bằng
+            const addModal = new bootstrap.Modal(document.getElementById('addVanBangModal'));
+            addModal.show();
         }
-    </tbody>
-</table>
+
+        // Xử lý modal xóa
+        document.getElementById('deleteModal').addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const vanBangId = button.getAttribute('data-vanbangid');
+            const employeeId = button.getAttribute('data-employeeid');
+
+            document.getElementById('deleteVanBangId').value = vanBangId;
+            document.getElementById('deleteEmployeeId').value = employeeId;
+        });
+
+        // Validation cho form
+        document.querySelectorAll('input[name$=".NgayCap"], input[name$=".NgayHetHan"]').forEach(input => {
+            input.addEventListener('change', validateDates);
+        });
+         function validateDates(e) {
+            const row = e.target.closest('tr');
+            if (!row) return;
+
+            const ngayCapInput = row.querySelector('input[name$=".NgayCap"]');
+            const ngayHetHanInput = row.querySelector('input[name$=".NgayHetHan"]');
+
+            if (ngayCapInput && ngayHetHanInput && ngayHetHanInput.value) {
+                const ngayCap = new Date(ngayCapInput.value);
+                const ngayHetHan = new Date(ngayHetHanInput.value);
+
+                // Chỉ kiểm tra ngày hết hạn phải sau ngày cấp
+                if (ngayHetHan <= ngayCap) {
+                    alert('Ngày hết hạn phải sau ngày cấp.');
+                    ngayHetHanInput.value = '';
+                }
+
+                // Xóa phần kiểm tra với ngày hiện tại
+                // if (ngayHetHan <= today) {
+                //     alert('Ngày hết hạn phải lớn hơn ngày hiện tại.');
+                //     ngayHetHanInput.value = '';
+                // }
+            }
+        }
+    </script>
+}

@@ -1,6 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using Tiennthe171977_Oceanteach.Models;
 using Tiennthe171977_Oceanteach.Service;
+using System.Linq;
+using System.Globalization;
+using System;
 
 namespace Tiennthe171977_Oceanteach.Business
 {
@@ -61,11 +65,82 @@ namespace Tiennthe171977_Oceanteach.Business
         }
         public async Task<bool> AddVanBangAsync(int employeeId, VanBang vanBang)
         {
-            return await _employeeService.AddVanBangAsync(employeeId, vanBang);
+            try
+            {
+                // Kiểm tra điều kiện
+                if (string.IsNullOrEmpty(vanBang.TenVanBang))
+                {
+                    throw new ValidationException("Tên văn bằng không được để trống.");
+                }
+
+                if (vanBang.NgayHetHan.HasValue && vanBang.NgayHetHan <= vanBang.NgayCap)
+                {
+                    throw new ValidationException("Ngày hết hạn phải sau ngày cấp.");
+                }
+
+                if (!vanBang.DonViCap.HasValue)
+                {
+                    throw new ValidationException("Đơn vị cấp không được để trống.");
+                }
+                var currentDate = DateOnly.FromDateTime(DateTime.Now);
+
+                // Kiểm tra số lượng văn bằng còn hiệu lực
+                var validVanBangs = await _context.VanBangs
+                    .Where(vb => vb.EmployeeId == employeeId)
+                    .Where(vb =>
+                        // Văn bằng không có ngày hết hạn 
+                        (vb.NgayHetHan == null) ||
+                        // Hoặc văn bằng còn hiệu lực (ngày hết hạn lớn hơn hoặc bằng ngày hiện tại)
+                        (vb.NgayHetHan.HasValue && vb.NgayHetHan.Value >= currentDate))
+                    .ToListAsync();
+
+                // Giới hạn tối đa 3 văn bằng còn hiệu lực
+                if (validVanBangs.Count >= 3)
+                {
+                    throw new ValidationException("Nhân viên đã có 3 văn bằng còn hạn.");
+                }
+
+                // Thêm văn bằng
+                return await _employeeService.AddVanBangAsync(employeeId, vanBang);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
+
         public async Task<bool> UpdateVanBangAsync(int employeeId, VanBang vanBang)
         {
-            return await _employeeService.UpdateVanBangAsync(employeeId, vanBang);
+            try
+            {
+                // Validate dữ liệu
+                if (string.IsNullOrEmpty(vanBang.TenVanBang))
+                {
+                    throw new Exception("Tên văn bằng không được để trống.");
+                }
+
+                //if (vanBang.NgayHetHan.HasValue && vanBang.NgayHetHan <= DateOnly.FromDateTime(DateTime.Now))
+                //{
+                //    throw new Exception("Ngày hết hạn phải lớn hơn ngày hiện tại.");
+                //}
+
+                if (vanBang.NgayHetHan.HasValue && vanBang.NgayHetHan <= vanBang.NgayCap)
+                {
+                    throw new Exception("Ngày hết hạn phải sau ngày cấp.");
+                }
+
+                if (!vanBang.DonViCap.HasValue)
+                {
+                    throw new Exception("Đơn vị cấp không được để trống.");
+                }
+
+                return await _employeeService.UpdateVanBangAsync(employeeId, vanBang);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         public async Task<bool> DeleteVanBangAsync(int employeeId, int vanBangId)
         {

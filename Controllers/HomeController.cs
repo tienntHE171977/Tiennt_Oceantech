@@ -29,7 +29,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             return View(new Employee());
         }
 
-        public IActionResult Privacy()
+        public IActionResult Location()
         {
             return View();
         }

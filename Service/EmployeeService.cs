@@ -54,23 +54,45 @@ namespace Tiennthe171977_Oceanteach.Service
 
         public async Task<bool> AddVanBangAsync(int employeeId, VanBang vanBang)
         {
-            var employee = await _context.Employees
-                .Include(e => e.VanBangs)
-                .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
-
-            if (employee == null) return false;
-
-            // Kiểm tra số lượng văn bằng còn hạn
-            int validVanBangCount = employee.VanBangs.Count(vb => !vb.NgayHetHan.HasValue || vb.NgayHetHan > DateOnly.FromDateTime(DateTime.Now));
-            if (validVanBangCount >= 3)
+            var employeeExists = await _context.Employees.AnyAsync(e => e.EmployeeId == employeeId);
+            if (!employeeExists)
             {
-                return false; // Không thể thêm nếu đã có 3 văn bằng còn hạn
+                Console.WriteLine("[ERROR] Nhân viên không tồn tại.");
+                return false;
             }
 
-            employee.VanBangs.Add(vanBang);
-            await _context.SaveChangesAsync();
-            return true;
+            var newVanBang = new VanBang
+            {
+                TenVanBang = vanBang.TenVanBang,
+                NgayCap = vanBang.NgayCap,
+                NgayHetHan = vanBang.NgayHetHan,
+                DonViCap = vanBang.DonViCap,
+                EmployeeId = employeeId
+            };
+
+            _context.Entry(newVanBang).State = EntityState.Added;
+
+            try
+            {
+                var result = await _context.SaveChangesAsync();
+
+                Console.WriteLine($"[DEBUG] SaveChangesAsync affected {result} row(s)");
+                return result > 0;
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                Console.WriteLine($"[ERROR] Lỗi concurrency: {ex.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR] Lỗi chung: {ex.Message}");
+                throw;
+            }
         }
+
+
+
         public async Task<bool> DeleteVanBangAsync(int vanBangId)
         {
             var vanBang = await _context.VanBangs.FindAsync(vanBangId);
@@ -144,8 +166,39 @@ namespace Tiennthe171977_Oceanteach.Service
 
         public async Task<bool> UpdateVanBangAsync(int employeeId, VanBang vanBang)
         {
-            var existingVanBang = await _context.VanBangs.FirstOrDefaultAsync(vb => vb.VanBangId == vanBang.VanBangId && vb.EmployeeId == employeeId);
+            var existingVanBang = await _context.VanBangs
+                .FirstOrDefaultAsync(vb => vb.VanBangId == vanBang.VanBangId && vb.EmployeeId == employeeId);
+
             if (existingVanBang == null) return false;
+
+            // Kiểm tra nếu từ hết hạn -> còn hạn thì cần xem số lượng văn bằng còn hạn hiện tại
+            bool currentlyExpired = existingVanBang.NgayHetHan.HasValue &&
+                                  existingVanBang.NgayHetHan <= DateOnly.FromDateTime(DateTime.Now);
+            bool willBeValid = !vanBang.NgayHetHan.HasValue ||
+                               vanBang.NgayHetHan > DateOnly.FromDateTime(DateTime.Now);
+
+            if (currentlyExpired && willBeValid)
+            {
+                // Kiểm tra số lượng văn bằng còn hạn
+                var employee = await _context.Employees
+                    .Include(e => e.VanBangs)
+                    .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+
+                int validVanBangCount = employee.VanBangs.Count(vb =>
+                    vb.VanBangId != vanBang.VanBangId &&
+                    (!vb.NgayHetHan.HasValue || vb.NgayHetHan > DateOnly.FromDateTime(DateTime.Now)));
+
+                if (validVanBangCount >= 3)
+                {
+                    throw new Exception("Nhân viên đã có 3 văn bằng còn hạn, không thể cập nhật thêm.");
+                }
+            }
+
+            // Validate ngày cấp và ngày hết hạn
+            if (vanBang.NgayHetHan.HasValue && vanBang.NgayHetHan <= vanBang.NgayCap)
+            {
+                throw new Exception("Ngày hết hạn phải sau ngày cấp.");
+            }
 
             existingVanBang.TenVanBang = vanBang.TenVanBang;
             existingVanBang.NgayCap = vanBang.NgayCap;

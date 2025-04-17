@@ -13,7 +13,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
         {
             _employeeBusiness = employeeBusiness;
         }
-
+        
         public async Task<IActionResult> Index(int page = 1)
         {
             const int pageSize = 10;
@@ -110,33 +110,97 @@ namespace Tiennthe171977_Oceanteach.Controllers
         [HttpGet]
         public async Task<IActionResult> EditVanBang(int employeeId)
         {
-            var vanBangs = await _employeeBusiness.GetVanBangsByEmployeeIdAsync(employeeId);
-            if (vanBangs == null || !vanBangs.Any())
+            var employee = await _employeeBusiness.GetEmployeeByIdAsync(employeeId);
+            if (employee == null)
             {
-                return NotFound("Không tìm thấy văn bằng nào cho nhân viên này.");
+                return NotFound("Không tìm thấy nhân viên.");
             }
 
+            var vanBangs = await _employeeBusiness.GetVanBangsByEmployeeIdAsync(employeeId);
             ViewBag.EmployeeId = employeeId;
-            return View(vanBangs);
+            ViewBag.EmployeeName = employee.HoTen;
+
+            // Tải danh sách tỉnh cho dropdown
+            ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
+
+            return View(vanBangs ?? new List<VanBang>());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditVanBang(VanBang vanBang)
+        public async Task<IActionResult> AddVanBang(VanBang vanBang)
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.TinhList = new SelectList(await _employeeBusiness.GetDanhMucTinhsAsync(), "TinhId", "TenTinh", vanBang.DonViCap);
-                return View(vanBang);
+                return await HandleInvalidModelState(vanBang);
             }
 
-            var result = await _employeeBusiness.UpdateVanBangAsync(vanBang.EmployeeId ?? 0, vanBang);
-            if (!result)
+            try
             {
-                return NotFound("Không tìm thấy văn bằng để cập nhật.");
+                var result = await _employeeBusiness.AddVanBangAsync(vanBang.EmployeeId ?? 0, vanBang);
+                if (!result)
+                {
+                    ModelState.AddModelError("", "Không thể thêm văn bằng.");
+                    return await HandleInvalidModelState(vanBang);
+                }
+
+                return RedirectToAction("EditVanBang", new { employeeId = vanBang.EmployeeId });
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Lỗi: {ex.Message}");
+                return await HandleInvalidModelState(vanBang);
+            }
+        }
+
+        private async Task<IActionResult> HandleInvalidModelState(VanBang vanBang)
+        {
+            ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
+            var vanBangs = await _employeeBusiness.GetVanBangsByEmployeeIdAsync(vanBang.EmployeeId ?? 0);
+            ViewBag.EmployeeId = vanBang.EmployeeId;
+            
+
+            return View("EditVanBang", vanBangs);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateVanBangs(int employeeId, List<VanBang> vanBangs)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
+                ViewBag.EmployeeId = employeeId;
+                return View("EditVanBang", vanBangs);
             }
 
-            return RedirectToAction("EditVanBang", new { employeeId = vanBang.EmployeeId });
+            try
+            {
+                foreach (var vanBang in vanBangs)
+                {
+                    if (vanBang.VanBangId > 0)
+                    {
+                        // Cập nhật văn bằng đã tồn tại
+                        await _employeeBusiness.UpdateVanBangAsync(employeeId, vanBang);
+                    }
+                    else
+                    {
+                        // Thêm mới văn bằng
+                        vanBang.EmployeeId = employeeId;
+                        await _employeeBusiness.AddVanBangAsync(employeeId, vanBang);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Lỗi khi cập nhật văn bằng: {ex.Message}");
+                ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
+                ViewBag.EmployeeId = employeeId;
+                return View("EditVanBang", vanBangs);
+            }
+
+            return RedirectToAction("EditVanBang", new { employeeId });
         }
 
         [HttpPost]

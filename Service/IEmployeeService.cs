@@ -16,7 +16,7 @@ namespace Tiennthe171977_Oceanteach.Service
         Task<bool> ValidateLocationAsync(int? tinhId, int? huyenId, int? xaId);
         Task<bool> UpdateEmployeeAsync(Employee employee);
         Task<bool> DeleteEmployeeAsync(int employeeId);
-        Task<bool> DeleteVanBangAsync(int vanBangId);
+        
         Task<Employee?> GetEmployeeByIdAsync(int id); 
         Task<List<Employee>> GetEmployeesAsync(int page, int pageSize); 
         Task<int> GetTotalEmployeesCountAsync();
