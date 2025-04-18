@@ -24,5 +24,9 @@ namespace Tiennthe171977_Oceanteach.Service
         Task<bool> DeleteVanBangAsync(int employeeId, int vanBangId);
         Task<List<VanBang>> GetVanBangsByEmployeeIdAsync(int employeeId);
         Task<bool> UpdateVanBangAsync(int employeeId, VanBang vanBang);
+        Task<List<Employee>> GetEmployeesByIdsAsync(List<int> ids);
+        Task<List<Employee>> SearchEmployeesAsync(string searchTerm);
+        Task<DanToc> GetDanTocByIdAsync(int id);
+        Task<NgheNghiep> GetNgheNghiepByIdAsync(int id);
     }
 }

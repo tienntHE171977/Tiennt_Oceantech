@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tiennthe171977_Oceanteach")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47c2faddbe5ed8ba4337799861fa6975455fefdc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2b855e3d8dfd556bcdde9c454ffddc97e94ac5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tiennthe171977_Oceanteach")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tiennthe171977_Oceanteach")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

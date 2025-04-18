@@ -1,39 +1,980 @@
-﻿<div class="container mt-4">
+﻿@{
+    ViewData["Title"] = "Quản lý Địa điểm";
+}
+
+<div class="container-fluid">
+    <h2 class="mb-4">Quản lý Địa điểm</h2>
+
     <div class="row">
-        <!-- TỈNH -->
+        <!-- Quản lý Tỉnh -->
         <div class="col-md-4">
-            <h5>Danh sách Tỉnh</h5>
-            <ul id="tinh-list" class="list-group mb-3">
-                <!-- Danh sách tỉnh render ở đây -->
-            </ul>
-            <div class="input-group mb-2">
-                <input type="text" id="tinh-name" class="form-control" placeholder="Tên tỉnh...">
-                <button class="btn btn-primary" onclick="addTinh()">Thêm</button>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Quản lý Tỉnh</h5>
+                </div>
+                <div class="card-body">
+                    <form id="tinhForm">
+                        <input type="hidden" id="tinhID" value="0" />
+                        <div class="mb-3">
+                            <label for="tenTinh" class="form-label">Tên Tỉnh</label>
+                            <input type="text" class="form-control" id="tenTinh" required />
+                        </div>
+                        <div class="d-flex">
+                            <button type="button" id="btnThemTinh" class="btn btn-primary me-2">Thêm</button>
+                            <button type="button" id="btnCapNhatTinh" class="btn btn-success me-2" disabled>Cập nhật</button>
+                            <button type="button" id="btnHuyTinh" class="btn btn-secondary" disabled>Hủy</button>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <h6>Danh sách Tỉnh</h6>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="searchTinh" placeholder="Tìm kiếm tỉnh..." />
+                            <button class="btn btn-outline-secondary" type="button" id="btnSearchTinh">Tìm</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tên Tỉnh</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="danhSachTinh">
+                                    <!-- Danh sách tỉnh sẽ được load bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- HUYỆN -->
+        <!-- Quản lý Huyện -->
         <div class="col-md-4">
-            <h5>Danh sách Huyện</h5>
-            <ul id="huyen-list" class="list-group mb-3">
-                <!-- Danh sách huyện render ở đây -->
-            </ul>
-            <div class="input-group mb-2">
-                <input type="text" id="huyen-name" class="form-control" placeholder="Tên huyện...">
-                <button class="btn btn-success" onclick="addHuyen()">Thêm</button>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Quản lý Huyện</h5>
+                </div>
+                <div class="card-body">
+                    <form id="huyenForm">
+                        <input type="hidden" id="huyenID" value="0" />
+                        <div class="mb-3">
+                            <label for="tinhIDHuyen" class="form-label">Chọn Tỉnh</label>
+                            <select class="form-select" id="tinhIDHuyen" required>
+                                <option value="">-- Chọn Tỉnh --</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tenHuyen" class="form-label">Tên Huyện</label>
+                            <input type="text" class="form-control" id="tenHuyen" required />
+                        </div>
+                        <div class="d-flex">
+                            <button type="button" id="btnThemHuyen" class="btn btn-primary me-2">Thêm</button>
+                            <button type="button" id="btnCapNhatHuyen" class="btn btn-success me-2" disabled>Cập nhật</button>
+                            <button type="button" id="btnHuyHuyen" class="btn btn-secondary" disabled>Hủy</button>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <h6>Danh sách Huyện</h6>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="filterTinhIDHuyen">
+                                <option value="">Tất cả Tỉnh</option>
+                            </select>
+                            <input type="text" class="form-control" id="searchHuyen" placeholder="Tìm kiếm huyện..." />
+                            <button class="btn btn-outline-secondary" type="button" id="btnSearchHuyen">Tìm</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tên Huyện</th>
+                                        <th>Thuộc Tỉnh</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="danhSachHuyen">
+                                    <!-- Danh sách huyện sẽ được load bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- XÃ -->
+        <!-- Quản lý Xã -->
         <div class="col-md-4">
-            <h5>Danh sách Xã</h5>
-            <ul id="xa-list" class="list-group mb-3">
-                <!-- Danh sách xã render ở đây -->
-            </ul>
-            <div class="input-group mb-2">
-                <input type="text" id="xa-name" class="form-control" placeholder="Tên xã...">
-                <button class="btn btn-info" onclick="addXa()">Thêm</button>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Quản lý Xã</h5>
+                </div>
+                <div class="card-body">
+                    <form id="xaForm">
+                        <input type="hidden" id="xaID" value="0" />
+                        <div class="mb-3">
+                            <label for="tinhIDXa" class="form-label">Chọn Tỉnh</label>
+                            <select class="form-select" id="tinhIDXa" required>
+                                <option value="">-- Chọn Tỉnh --</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="huyenIDXa" class="form-label">Chọn Huyện</label>
+                            <select class="form-select" id="huyenIDXa" required>
+                                <option value="">-- Chọn Huyện --</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tenXa" class="form-label">Tên Xã</label>
+                            <input type="text" class="form-control" id="tenXa" required />
+                        </div>
+                        <div class="d-flex">
+                            <button type="button" id="btnThemXa" class="btn btn-primary me-2">Thêm</button>
+                            <button type="button" id="btnCapNhatXa" class="btn btn-success me-2" disabled>Cập nhật</button>
+                            <button type="button" id="btnHuyXa" class="btn btn-secondary" disabled>Hủy</button>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <h6>Danh sách Xã</h6>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="filterTinhIDXa">
+                                <option value="">Tất cả Tỉnh</option>
+                            </select>
+                            <select class="form-select" id="filterHuyenIDXa">
+                                <option value="">Tất cả Huyện</option>
+                            </select>
+                            <input type="text" class="form-control" id="searchXa" placeholder="Tìm kiếm xã..." />
+                            <button class="btn btn-outline-secondary" type="button" id="btnSearchXa">Tìm</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tên Xã</th>
+                                        <th>Thuộc Huyện</th>
+                                        <th>Thuộc Tỉnh</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="danhSachXa">
+                                    <!-- Danh sách xã sẽ được load bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận xóa -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="confirmDeleteModalBody">
+                    Bạn có chắc chắn muốn xóa?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Xóa</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            loadDanhSachTinh();
+        });
+
+        function loadDanhSachTinh() {
+            $.ajax({
+                url: '/Location/GetAllTinh',
+                method: 'GET',
+                success: function (res) {
+                    if (res.success) {
+                        let html = '';
+                        $.each(res.data, function (i, item) {
+                            html += `<tr>
+                                <td>${item.tinhId}</td>
+                                <td>${item.tenTinh}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">Sửa</button>
+                                    <button class="btn btn-sm btn-danger">Xoá</button>
+                                </td>
+                            </tr>`;
+                        });
+                        $('#danhSachTinh').html(html);
+                    } else {
+                        alert(res.message);
+                    }
+                },
+                error: function () {
+                    alert('Không thể tải danh sách tỉnh');
+                }
+            });
+        }
+                $(document).ready(function () {
+            // Initial loading
+            loadDanhSachTinh();
+            loadTinhDropdowns();
+
+            // Set up event handlers
+            setupTinhHandlers();
+            setupHuyenHandlers();
+            setupXaHandlers();
+            setupSearchHandlers();
+            setupDeleteConfirmation();
+        });
+
+        // ==================== TỈNH FUNCTIONS ====================
+
+        function loadDanhSachTinh(searchTerm = "") {
+            $.ajax({
+                url: '/Location/GetAllTinh',
+                method: 'GET',
+                data: { searchTerm: searchTerm },
+                success: function (res) {
+                    if (res.success) {
+                        let html = '';
+                        $.each(res.data, function (i, item) {
+                            html += `<tr>
+                                <td>${item.tinhId}</td>
+                                <td>${item.tenTinh}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning btn-edit-tinh" data-id="${item.tinhId}">Sửa</button>
+                                    <button class="btn btn-sm btn-danger btn-delete-tinh" data-id="${item.tinhId}"
+                                        data-name="${item.tenTinh}">Xoá</button>
+                                </td>
+                            </tr>`;
+                        });
+                        $('#danhSachTinh').html(html);
+
+                        // Re-attach event handlers
+                        attachTinhEventHandlers();
+                    } else {
+                        alert(res.message || 'Không thể tải danh sách tỉnh');
+                    }
+                },
+                error: function () {
+                    alert('Không thể tải danh sách tỉnh');
+                }
+            });
+        }
+
+        function loadTinhDropdowns() {
+            $.ajax({
+                url: '/Location/GetAllTinh',
+                method: 'GET',
+                success: function (res) {
+                    if (res.success) {
+                        // Populate all province dropdowns
+                        let options = '<option value="">-- Chọn Tỉnh --</option>';
+                        let filterOptions = '<option value="">Tất cả Tỉnh</option>';
+
+                        $.each(res.data, function (i, item) {
+                            options += `<option value="${item.tinhId}">${item.tenTinh}</option>`;
+                            filterOptions += `<option value="${item.tinhId}">${item.tenTinh}</option>`;
+                        });
+
+                        $('#tinhIDHuyen').html(options);
+                        $('#tinhIDXa').html(options);
+                        $('#filterTinhIDHuyen').html(filterOptions);
+                        $('#filterTinhIDXa').html(filterOptions);
+                    }
+                }
+            });
+        }
+
+        function setupTinhHandlers() {
+            // Add new province
+            $('#btnThemTinh').click(function () {
+                const tenTinh = $('#tenTinh').val().trim();
+                if (!tenTinh) {
+                    alert('Vui lòng nhập tên tỉnh');
+                    return;
+                }
+
+                const tinhData = {
+                    tinhId: 0,
+                    tenTinh: tenTinh
+                };
+
+                $.ajax({
+                    url: '/Location/CreateTinh',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(tinhData),
+                    success: function (res) {
+                        if (res.success) {
+                            alert('Thêm tỉnh thành công');
+                            $('#tenTinh').val('');
+                            loadDanhSachTinh();
+                            loadTinhDropdowns();
+                        } else {
+                            alert(res.message || 'Thêm tỉnh thất bại');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi thêm tỉnh');
+                    }
+                });
+            });
+
+            // Update province
+            $('#btnCapNhatTinh').click(function () {
+                const tinhId = parseInt($('#tinhID').val());
+                const tenTinh = $('#tenTinh').val().trim();
+
+                if (!tenTinh) {
+                    alert('Vui lòng nhập tên tỉnh');
+                    return;
+                }
+
+                const tinhData = {
+                    tinhId: tinhId,
+                    tenTinh: tenTinh
+                };
+
+                $.ajax({
+                    url: '/Location/UpdateTinh',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(tinhData),
+                    success: function (res) {
+                        if (res.success) {
+                            alert('Cập nhật tỉnh thành công');
+                            resetTinhForm();
+                            loadDanhSachTinh();
+                            loadTinhDropdowns();
+                        } else {
+                            alert(res.message || 'Cập nhật tỉnh thất bại');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi cập nhật tỉnh');
+                    }
+                });
+            });
+
+            // Cancel editing province
+            $('#btnHuyTinh').click(function () {
+                resetTinhForm();
+            });
+        }
+
+        function resetTinhForm() {
+            $('#tinhID').val('0');
+            $('#tenTinh').val('');
+            $('#btnThemTinh').prop('disabled', false);
+            $('#btnCapNhatTinh').prop('disabled', true);
+            $('#btnHuyTinh').prop('disabled', true);
+        }
+
+        function attachTinhEventHandlers() {
+            // Edit province button
+            $('.btn-edit-tinh').click(function () {
+                const tinhId = $(this).data('id');
+
+                $.ajax({
+                    url: '/Location/GetTinhById',
+                    method: 'GET',
+                    data: { id: tinhId },
+                    success: function (res) {
+                        if (res.success) {
+                            $('#tinhID').val(res.data.tinhId);
+                            $('#tenTinh').val(res.data.tenTinh);
+                            $('#btnThemTinh').prop('disabled', true);
+                            $('#btnCapNhatTinh').prop('disabled', false);
+                            $('#btnHuyTinh').prop('disabled', false);
+                        } else {
+                            alert(res.message || 'Không thể tải thông tin tỉnh');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi tải thông tin tỉnh');
+                    }
+                });
+            });
+
+            // Delete province button
+            $('.btn-delete-tinh').click(function () {
+                const tinhId = $(this).data('id');
+                const tenTinh = $(this).data('name');
+
+                $('#confirmDeleteModalLabel').text('Xác nhận xóa Tỉnh');
+                $('#confirmDeleteModalBody').html(`Bạn có chắc chắn muốn xóa tỉnh <strong>${tenTinh}</strong>?<br/>
+                    <span class="text-danger">Lưu ý: Tất cả các huyện và xã thuộc tỉnh này cũng sẽ bị xóa!</span>`);
+
+                $('#confirmDeleteButton').data('type', 'tinh');
+                $('#confirmDeleteButton').data('id', tinhId);
+
+                $('#confirmDeleteModal').modal('show');
+            });
+        }
+
+        // ==================== HUYỆN FUNCTIONS ====================
+
+        function loadDanhSachHuyen(tinhId = "", searchTerm = "") {
+            $.ajax({
+                url: '/Location/GetAllHuyen',
+                method: 'GET',
+                data: {
+                    tinhId: tinhId || null,
+                    searchTerm: searchTerm
+                },
+                success: function (res) {
+                    if (res.success) {
+                        let html = '';
+                        $.each(res.data, function (i, item) {
+                            html += `<tr>
+                                <td>${item.huyenId}</td>
+                                <td>${item.tenHuyen}</td>
+                                <td>${item.tenTinh}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning btn-edit-huyen" data-id="${item.huyenId}">Sửa</button>
+                                    <button class="btn btn-sm btn-danger btn-delete-huyen" data-id="${item.huyenId}"
+                                        data-name="${item.tenHuyen}">Xoá</button>
+                                </td>
+                            </tr>`;
+                        });
+                        $('#danhSachHuyen').html(html);
+
+                        // Re-attach event handlers
+                        attachHuyenEventHandlers();
+                    } else {
+                        alert(res.message || 'Không thể tải danh sách huyện');
+                    }
+                },
+                error: function () {
+                    alert('Không thể tải danh sách huyện');
+                }
+            });
+        }
+
+        function setupHuyenHandlers() {
+            // Province dropdown change - for filtering districts
+            $('#filterTinhIDHuyen').change(function() {
+                const tinhId = $(this).val();
+                loadDanhSachHuyen(tinhId, $('#searchHuyen').val());
+            });
+
+            // Load districts when province selected in district form
+            $('#tinhIDHuyen').change(function() {
+                $('#huyenID').val('0');
+                $('#tenHuyen').val('');
+            });
+
+            // Add new district
+            $('#btnThemHuyen').click(function () {
+                const tinhId = $('#tinhIDHuyen').val();
+                const tenHuyen = $('#tenHuyen').val().trim();
+
+                if (!tinhId) {
+                    alert('Vui lòng chọn tỉnh');
+                    return;
+                }
+
+                if (!tenHuyen) {
+                    alert('Vui lòng nhập tên huyện');
+                    return;
+                }
+
+                const huyenData = {
+                    huyenId: 0,
+                    tinhId: parseInt(tinhId),
+                    tenHuyen: tenHuyen
+                };
+
+                $.ajax({
+                    url: '/Location/CreateHuyen',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(huyenData),
+                    success: function (res) {
+                        if (res.success) {
+                            alert('Thêm huyện thành công');
+                            $('#tenHuyen').val('');
+                            loadDanhSachHuyen($('#filterTinhIDHuyen').val(), $('#searchHuyen').val());
+                            loadHuyenDropdownsForXa(tinhId);
+                        } else {
+                            alert(res.message || 'Thêm huyện thất bại');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi thêm huyện');
+                    }
+                });
+            });
+
+            // Update district
+            $('#btnCapNhatHuyen').click(function () {
+                const huyenId = parseInt($('#huyenID').val());
+                const tinhId = $('#tinhIDHuyen').val();
+                const tenHuyen = $('#tenHuyen').val().trim();
+
+                if (!tinhId) {
+                    alert('Vui lòng chọn tỉnh');
+                    return;
+                }
+
+                if (!tenHuyen) {
+                    alert('Vui lòng nhập tên huyện');
+                    return;
+                }
+
+                const huyenData = {
+                    huyenId: huyenId,
+                    tinhId: parseInt(tinhId),
+                    tenHuyen: tenHuyen
+                };
+
+                $.ajax({
+                    url: '/Location/UpdateHuyen',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(huyenData),
+                    success: function (res) {
+                        if (res.success) {
+                            alert('Cập nhật huyện thành công');
+                            resetHuyenForm();
+                            loadDanhSachHuyen($('#filterTinhIDHuyen').val(), $('#searchHuyen').val());
+                            loadHuyenDropdownsForXa($('#tinhIDXa').val());
+                        } else {
+                            alert(res.message || 'Cập nhật huyện thất bại');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi cập nhật huyện');
+                    }
+                });
+            });
+
+            // Cancel editing district
+            $('#btnHuyHuyen').click(function () {
+                resetHuyenForm();
+            });
+        }
+
+        function resetHuyenForm() {
+            $('#huyenID').val('0');
+            $('#tinhIDHuyen').val('');
+            $('#tenHuyen').val('');
+            $('#btnThemHuyen').prop('disabled', false);
+            $('#btnCapNhatHuyen').prop('disabled', true);
+            $('#btnHuyHuyen').prop('disabled', true);
+        }
+
+        function attachHuyenEventHandlers() {
+            // Edit district button
+            $('.btn-edit-huyen').click(function () {
+                const huyenId = $(this).data('id');
+
+                $.ajax({
+                    url: '/Location/GetHuyenById',
+                    method: 'GET',
+                    data: { id: huyenId },
+                    success: function (res) {
+                        if (res.success) {
+                            $('#huyenID').val(res.data.huyenId);
+                            $('#tinhIDHuyen').val(res.data.tinhId);
+                            $('#tenHuyen').val(res.data.tenHuyen);
+                            $('#btnThemHuyen').prop('disabled', true);
+                            $('#btnCapNhatHuyen').prop('disabled', false);
+                            $('#btnHuyHuyen').prop('disabled', false);
+                        } else {
+                            alert(res.message || 'Không thể tải thông tin huyện');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi tải thông tin huyện');
+                    }
+                });
+            });
+
+            // Delete district button
+            $('.btn-delete-huyen').click(function () {
+                const huyenId = $(this).data('id');
+                const tenHuyen = $(this).data('name');
+
+                $('#confirmDeleteModalLabel').text('Xác nhận xóa Huyện');
+                $('#confirmDeleteModalBody').html(`Bạn có chắc chắn muốn xóa huyện <strong>${tenHuyen}</strong>?<br/>
+                    <span class="text-danger">Lưu ý: Tất cả các xã thuộc huyện này cũng sẽ bị xóa!</span>`);
+
+                $('#confirmDeleteButton').data('type', 'huyen');
+                $('#confirmDeleteButton').data('id', huyenId);
+
+                $('#confirmDeleteModal').modal('show');
+            });
+        }
+
+        // ==================== XÃ FUNCTIONS ====================
+
+        function loadDanhSachXa(tinhId = "", huyenId = "", searchTerm = "") {
+            $.ajax({
+                url: '/Location/GetAllXa',
+                method: 'GET',
+                data: {
+                    tinhId: tinhId || null,
+                    huyenId: huyenId || null,
+                    searchTerm: searchTerm
+                },
+                success: function (res) {
+                    if (res.success) {
+                        let html = '';
+                        $.each(res.data, function (i, item) {
+                            html += `<tr>
+                                <td>${item.xaId}</td>
+                                <td>${item.tenXa}</td>
+                                <td>${item.tenHuyen}</td>
+                                <td>${item.tenTinh}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning btn-edit-xa" data-id="${item.xaId}">Sửa</button>
+                                    <button class="btn btn-sm btn-danger btn-delete-xa" data-id="${item.xaId}"
+                                        data-name="${item.tenXa}">Xoá</button>
+                                </td>
+                            </tr>`;
+                        });
+                        $('#danhSachXa').html(html);
+
+                        // Re-attach event handlers
+                        attachXaEventHandlers();
+                    } else {
+                        alert(res.message || 'Không thể tải danh sách xã');
+                    }
+                },
+                error: function () {
+                    alert('Không thể tải danh sách xã');
+                }
+            });
+        }
+
+        function loadHuyenDropdownsForXa(tinhId = "") {
+            if (!tinhId) {
+                $('#huyenIDXa').html('<option value="">-- Chọn Huyện --</option>');
+                $('#filterHuyenIDXa').html('<option value="">Tất cả Huyện</option>');
+                return;
+            }
+
+            $.ajax({
+                url: '/Location/GetHuyensByTinhId',
+                method: 'GET',
+                data: { tinhId: tinhId },
+                success: function (res) {
+                    if (res.success) {
+                        let options = '<option value="">-- Chọn Huyện --</option>';
+                        let filterOptions = '<option value="">Tất cả Huyện</option>';
+
+                        $.each(res.data, function (i, item) {
+                            options += `<option value="${item.huyenId}">${item.tenHuyen}</option>`;
+                            filterOptions += `<option value="${item.huyenId}">${item.tenHuyen}</option>`;
+                        });
+
+                        $('#huyenIDXa').html(options);
+                        $('#filterHuyenIDXa').html(filterOptions);
+                    }
+                }
+            });
+        }
+
+        function setupXaHandlers() {
+            // Province dropdown change - for form
+            $('#tinhIDXa').change(function() {
+                const tinhId = $(this).val();
+                loadHuyenDropdownsForXa(tinhId);
+                $('#xaID').val('0');
+                $('#tenXa').val('');
+            });
+
+            // Province dropdown change - for filtering communes
+            $('#filterTinhIDXa').change(function() {
+                const tinhId = $(this).val();
+                loadHuyenDropdownsForXa(tinhId);
+                loadDanhSachXa(tinhId, $('#filterHuyenIDXa').val(), $('#searchXa').val());
+            });
+
+            // District dropdown change - for filtering communes
+            $('#filterHuyenIDXa').change(function() {
+                const tinhId = $('#filterTinhIDXa').val();
+                const huyenId = $(this).val();
+                loadDanhSachXa(tinhId, huyenId, $('#searchXa').val());
+            });
+
+            // Add new commune
+            $('#btnThemXa').click(function () {
+                const huyenId = $('#huyenIDXa').val();
+                const tenXa = $('#tenXa').val().trim();
+
+                if (!huyenId) {
+                    alert('Vui lòng chọn huyện');
+                    return;
+                }
+
+                if (!tenXa) {
+                    alert('Vui lòng nhập tên xã');
+                    return;
+                }
+
+                const xaData = {
+                    xaId: 0,
+                    huyenId: parseInt(huyenId),
+                    tenXa: tenXa
+                };
+
+                $.ajax({
+                    url: '/Location/CreateXa',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(xaData),
+                    success: function (res) {
+                        if (res.success) {
+                            alert('Thêm xã thành công');
+                            $('#tenXa').val('');
+                            loadDanhSachXa(
+                                $('#filterTinhIDXa').val(),
+                                $('#filterHuyenIDXa').val(),
+                                $('#searchXa').val()
+                            );
+                        } else {
+                            alert(res.message || 'Thêm xã thất bại');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi thêm xã');
+                    }
+                });
+            });
+
+            // Update commune
+            $('#btnCapNhatXa').click(function () {
+                const xaId = parseInt($('#xaID').val());
+                const huyenId = $('#huyenIDXa').val();
+                const tenXa = $('#tenXa').val().trim();
+
+                if (!huyenId) {
+                    alert('Vui lòng chọn huyện');
+                    return;
+                }
+
+                if (!tenXa) {
+                    alert('Vui lòng nhập tên xã');
+                    return;
+                }
+
+                const xaData = {
+                    xaId: xaId,
+                    huyenId: parseInt(huyenId),
+                    tenXa: tenXa
+                };
+
+                $.ajax({
+                    url: '/Location/UpdateXa',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(xaData),
+                    success: function (res) {
+                        if (res.success) {
+                            alert('Cập nhật xã thành công');
+                            resetXaForm();
+                            loadDanhSachXa(
+                                $('#filterTinhIDXa').val(),
+                                $('#filterHuyenIDXa').val(),
+                                $('#searchXa').val()
+                            );
+                        } else {
+                            alert(res.message || 'Cập nhật xã thất bại');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi cập nhật xã');
+                    }
+                });
+            });
+
+            // Cancel editing commune
+            $('#btnHuyXa').click(function () {
+                resetXaForm();
+            });
+        }
+
+        function resetXaForm() {
+            $('#xaID').val('0');
+            $('#tinhIDXa').val('');
+            $('#huyenIDXa').val('');
+            $('#tenXa').val('');
+            $('#btnThemXa').prop('disabled', false);
+            $('#btnCapNhatXa').prop('disabled', true);
+            $('#btnHuyXa').prop('disabled', true);
+        }
+
+        function attachXaEventHandlers() {
+            // Edit commune button
+            $('.btn-edit-xa').click(function () {
+                const xaId = $(this).data('id');
+
+                $.ajax({
+                    url: '/Location/GetXaById',
+                    method: 'GET',
+                    data: { id: xaId },
+                    success: function (res) {
+                        if (res.success) {
+                            $('#xaID').val(res.data.xaId);
+                            $('#tinhIDXa').val(res.data.tinhId).trigger('change');
+
+                            // Need to wait for district dropdown to load before setting value
+                            setTimeout(function() {
+                                $('#huyenIDXa').val(res.data.huyenId);
+                            }, 500);
+
+                            $('#tenXa').val(res.data.tenXa);
+                            $('#btnThemXa').prop('disabled', true);
+                            $('#btnCapNhatXa').prop('disabled', false);
+                            $('#btnHuyXa').prop('disabled', false);
+                        } else {
+                            alert(res.message || 'Không thể tải thông tin xã');
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi tải thông tin xã');
+                    }
+                });
+            });
+
+            // Delete commune button
+            $('.btn-delete-xa').click(function () {
+                const xaId = $(this).data('id');
+                const tenXa = $(this).data('name');
+
+                $('#confirmDeleteModalLabel').text('Xác nhận xóa Xã');
+                $('#confirmDeleteModalBody').text(`Bạn có chắc chắn muốn xóa xã ${tenXa}?`);
+
+                $('#confirmDeleteButton').data('type', 'xa');
+                $('#confirmDeleteButton').data('id', xaId);
+
+                $('#confirmDeleteModal').modal('show');
+            });
+        }
+
+        // ==================== SEARCH HANDLERS ====================
+
+        function setupSearchHandlers() {
+            // Search province
+            $('#btnSearchTinh').click(function() {
+                loadDanhSachTinh($('#searchTinh').val());
+            });
+
+            $('#searchTinh').keypress(function(e) {
+                if (e.which === 13) {
+                    loadDanhSachTinh($(this).val());
+                }
+            });
+
+            // Search district
+            $('#btnSearchHuyen').click(function() {
+                loadDanhSachHuyen($('#filterTinhIDHuyen').val(), $('#searchHuyen').val());
+            });
+
+            $('#searchHuyen').keypress(function(e) {
+                if (e.which === 13) {
+                    loadDanhSachHuyen($('#filterTinhIDHuyen').val(), $(this).val());
+                }
+            });
+
+            // Search commune
+            $('#btnSearchXa').click(function() {
+                loadDanhSachXa(
+                    $('#filterTinhIDXa').val(),
+                    $('#filterHuyenIDXa').val(),
+                    $('#searchXa').val()
+                );
+            });
+
+            $('#searchXa').keypress(function(e) {
+                if (e.which === 13) {
+                    loadDanhSachXa(
+                        $('#filterTinhIDXa').val(),
+                        $('#filterHuyenIDXa').val(),
+                        $(this).val()
+                    );
+                }
+            });
+        }
+
+        // ==================== DELETE CONFIRMATION ====================
+
+        function setupDeleteConfirmation() {
+            $('#confirmDeleteButton').click(function() {
+                const type = $(this).data('type');
+                const id = $(this).data('id');
+
+                let url = '';
+                let reloadFunction = null;
+
+                switch (type) {
+                    case 'tinh':
+                        url = '/Location/DeleteTinh';
+                        reloadFunction = function() {
+                            loadDanhSachTinh($('#searchTinh').val());
+                            loadTinhDropdowns();
+                            loadDanhSachHuyen();
+                            loadDanhSachXa();
+                        };
+                        break;
+
+                    case 'huyen':
+                        url = '/Location/DeleteHuyen';
+                        reloadFunction = function() {
+                            loadDanhSachHuyen($('#filterTinhIDHuyen').val(), $('#searchHuyen').val());
+                            loadDanhSachXa();
+                            loadHuyenDropdownsForXa($('#tinhIDXa').val());
+                        };
+                        break;
+
+                    case 'xa':
+                        url = '/Location/DeleteXa';
+                        reloadFunction = function() {
+                            loadDanhSachXa(
+                                $('#filterTinhIDXa').val(),
+                                $('#filterHuyenIDXa').val(),
+                                $('#searchXa').val()
+                            );
+                        };
+                        break;
+                }
+
+                if (url) {
+                    $.ajax({
+                        url: url,
+                        method: 'DELETE',
+                        data: { id: id },
+                        success: function (res) {
+                            if (res.success) {
+                                alert('Xóa thành công');
+                                $('#confirmDeleteModal').modal('hide');
+                                reloadFunction();
+                            } else {
+                                alert(res.message || 'Xóa thất bại');
+                            }
+                        },
+                        error: function () {
+                            alert('Có lỗi xảy ra khi xóa');
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+}
+
+    
+        

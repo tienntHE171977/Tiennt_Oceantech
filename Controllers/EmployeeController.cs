@@ -1,19 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using OfficeOpenXml;
 using Tiennthe171977_Oceanteach.Business;
 using Tiennthe171977_Oceanteach.Models;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.Drawing;
 
 namespace Tiennthe171977_Oceanteach.Controllers
 {
     public class EmployeeController : Controller
     {
         private readonly IEmployeeBusiness _employeeBusiness;
+        private readonly ILocationBusiness _locationBusiness; // Assuming you have this injected
 
-        public EmployeeController(IEmployeeBusiness employeeBusiness)
+        // Constructor with dependencies injected
+        public EmployeeController(IEmployeeBusiness employeeBusiness, ILocationBusiness locationBusiness)
         {
             _employeeBusiness = employeeBusiness;
+            _locationBusiness = locationBusiness;
         }
-        
+
         public async Task<IActionResult> Index(int page = 1)
         {
             const int pageSize = 10;
@@ -238,5 +245,137 @@ namespace Tiennthe171977_Oceanteach.Controllers
             ViewBag.DanTocList = new SelectList(await _employeeBusiness.GetDanTocsAsync(), "DanTocId", "TenDanToc");
             ViewBag.NgheNghiepList = new SelectList(await _employeeBusiness.GetNgheNghiepsAsync(), "NgheNghiepId", "TenNgheNghiep");
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ExportEmployees(string type, [FromForm] List<int> selectedIds, string searchTerm)
+        {
+            List<Employee> employees;
+
+            if (type == "selected" && selectedIds != null && selectedIds.Count > 0)
+            {
+                // Export selected employees
+                employees = await _employeeBusiness.GetEmployeesByIdsAsync(selectedIds);
+            }
+            else
+            {
+                // Export employees based on search criteria
+                employees = await _employeeBusiness.SearchEmployeesAsync(searchTerm);
+            }
+
+            // Generate and return Excel file
+            var excelPackage = await GenerateExcelFile(employees);
+            var stream = new MemoryStream();
+            await excelPackage.SaveAsAsync(stream);
+            stream.Position = 0;
+
+            string fileName = $"Employees_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+        }
+
+        private async Task<ExcelPackage> GenerateExcelFile(List<Employee> employees)
+        {
+            ExcelPackage.License.SetNonCommercialPersonal("Tiennthe171977_Oceanteach");
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Required since EPPlus 5.0
+            var excelPackage = new ExcelPackage();
+
+            // Add a new worksheet to the workbook
+            var worksheet = excelPackage.Workbook.Worksheets.Add("Employees");
+
+            // Define headers
+            var headers = new List<string>
+            {
+                "ID", "Họ Tên", "Ngày Sinh", "Tuổi", "Dân Tộc", "Nghề Nghiệp",
+                "CCCD", "Số Điện Thoại", "Tỉnh/TP", "Quận/Huyện", "Phường/Xã", "Địa Chỉ Chi Tiết"
+            };
+
+            // Add headers
+            for (int i = 0; i < headers.Count; i++)
+            {
+                worksheet.Cells[1, i + 1].Value = headers[i];
+            }
+
+            // Style headers
+            using (var range = worksheet.Cells[1, 1, 1, headers.Count])
+            {
+                range.Style.Font.Bold = true;
+                range.Style.Fill.PatternType = ExcelFillStyle.Solid;
+                range.Style.Fill.BackgroundColor.SetColor(Color.LightGray);
+                range.Style.Border.Bottom.Style = ExcelBorderStyle.Medium;
+            }
+
+            // Add data rows
+            int row = 2;
+            foreach (var emp in employees)
+            {
+                // Get location names
+                string tinhName = "Không có";
+                string huyenName = "Không có";
+                string xaName = "Không có";
+
+                if (emp.TinhId.HasValue)
+                {
+                    var tinh = await _locationBusiness.GetTinhByIdAsync(emp.TinhId.Value);
+                    tinhName = tinh?.TenTinh ?? "Không có";
+                }
+
+                if (emp.HuyenId.HasValue)
+                {
+                    var huyen = await _locationBusiness.GetHuyenByIdAsync(emp.HuyenId.Value);
+                    huyenName = huyen != null ? ((dynamic)huyen).TenHuyen : "Không có";
+                }
+
+                if (emp.XaId.HasValue)
+                {
+                    var xa = await _locationBusiness.GetXaByIdAsync(emp.XaId.Value);
+                    xaName = xa != null ? ((dynamic)xa).TenXa : "Không có";
+                }
+
+                // Get DanToc and NgheNghiep names - Add these methods to your business layer
+                string danTocName = await GetDanTocNameAsync(emp.DanTocId);
+                string ngheNghiepName = await GetNgheNghiepNameAsync(emp.NgheNghiepId);
+
+                // Add data to worksheet
+                worksheet.Cells[row, 1].Value = emp.EmployeeId;
+                worksheet.Cells[row, 2].Value = emp.HoTen;
+                worksheet.Cells[row, 3].Value = emp.NgaySinh?.ToString("dd/MM/yyyy");
+                worksheet.Cells[row, 4].Value = emp.Tuoi;
+                worksheet.Cells[row, 5].Value = danTocName;
+                worksheet.Cells[row, 6].Value = ngheNghiepName;
+                worksheet.Cells[row, 7].Value = emp.Cccd;
+                worksheet.Cells[row, 8].Value = emp.SoDienThoai;
+                worksheet.Cells[row, 9].Value = tinhName;
+                worksheet.Cells[row, 10].Value = huyenName;
+                worksheet.Cells[row, 11].Value = xaName;
+                worksheet.Cells[row, 12].Value = emp.DiaChiCuThe;
+
+                row++;
+            }
+
+            // Auto fit columns
+            worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+            return excelPackage;
+        }
+
+        // Helper methods - Add these to your business layer
+        private async Task<string> GetDanTocNameAsync(int? danTocId)
+        {
+            if (!danTocId.HasValue) return "Không có";
+
+            // Replace with your actual implementation
+            var danToc = await _employeeBusiness.GetDanTocByIdAsync(danTocId.Value);
+            return danToc?.TenDanToc ?? "Không có";
+        }
+
+        private async Task<string> GetNgheNghiepNameAsync(int? ngheNghiepId)
+        {
+            if (!ngheNghiepId.HasValue) return "Không có";
+
+            // Replace with your actual implementation
+            var ngheNghiep = await _employeeBusiness.GetNgheNghiepByIdAsync(ngheNghiepId.Value);
+            return ngheNghiep?.TenNgheNghiep ?? "Không có";
+        }
     }
 }
+

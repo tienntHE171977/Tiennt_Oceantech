@@ -13,6 +13,8 @@ builder.Services.AddDbContext<OceantechContext>(options =>
 
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeBusiness, EmployeeBusiness>();
+builder.Services.AddScoped<ILocationBusiness, LocationBusiness>();
+builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddLogging();
 var app = builder.Build();
 

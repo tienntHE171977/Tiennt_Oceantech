@@ -252,6 +252,24 @@ namespace Tiennthe171977_Oceanteach.Business
                 .FirstOrDefaultAsync(x => x.XaId == xaId && x.HuyenId == huyenId);
             return xa != null; // Trả về true nếu Xã thuộc Huyện, ngược lại false
         }
+        public async Task<List<Employee>> GetEmployeesByIdsAsync(List<int> ids)
+        {
+            return await _employeeService.GetEmployeesByIdsAsync(ids);
+        }
 
+        public async Task<List<Employee>> SearchEmployeesAsync(string searchTerm)
+        {
+            return await _employeeService.SearchEmployeesAsync(searchTerm);
+        }
+
+        public async Task<DanToc> GetDanTocByIdAsync(int id)
+        {
+            return await _employeeService.GetDanTocByIdAsync(id);
+        }
+
+        public async Task<NgheNghiep> GetNgheNghiepByIdAsync(int id)
+        {
+            return await _employeeService.GetNgheNghiepByIdAsync(id);
+        }
     }
 }

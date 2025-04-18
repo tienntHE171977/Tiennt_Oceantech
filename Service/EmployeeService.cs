@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Tiennthe171977_Oceanteach.Models;
 
 namespace Tiennthe171977_Oceanteach.Service
@@ -11,7 +12,7 @@ namespace Tiennthe171977_Oceanteach.Service
         {
             _context = context;
         }
-
+        
         public async Task<bool> CreateEmployeeAsync(Employee employee)
         {
             _context.Employees.Add(employee);
@@ -285,6 +286,44 @@ namespace Tiennthe171977_Oceanteach.Service
             _context.DanhMucTinhs.Remove(tinh);
             await _context.SaveChangesAsync();
             return true;
+        }
+        public async Task<List<Employee>> GetEmployeesByIdsAsync(List<int> ids)
+        {
+            return await _context.Employees
+                .Where(e => ids.Contains(e.EmployeeId))
+                .Include(e => e.DanToc)
+                .Include(e => e.NgheNghiep)
+                .ToListAsync();
+        }
+
+        public async Task<List<Employee>> SearchEmployeesAsync(string searchTerm)
+        {
+            var query = _context.Employees
+                .Include(e => e.DanToc)
+                .Include(e => e.NgheNghiep)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                searchTerm = searchTerm.ToLower();
+                query = query.Where(e =>
+                    e.HoTen.ToLower().Contains(searchTerm) ||
+                    e.Cccd.ToLower().Contains(searchTerm) ||
+                    e.SoDienThoai.ToLower().Contains(searchTerm)
+                );
+            }
+
+            return await query.ToListAsync();
+        }
+
+        public async Task<DanToc> GetDanTocByIdAsync(int id)
+        {
+            return await _context.DanTocs.FindAsync(id);
+        }
+
+        public async Task<NgheNghiep> GetNgheNghiepByIdAsync(int id)
+        {
+            return await _context.NgheNghieps.FindAsync(id);
         }
     }
 }
