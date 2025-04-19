@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using Tiennthe171977_Oceanteach.Business;
 using Tiennthe171977_Oceanteach.Models;
 using Tiennthe171977_Oceanteach.Service;
@@ -15,6 +16,7 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeBusiness, EmployeeBusiness>();
 builder.Services.AddScoped<ILocationBusiness, LocationBusiness>();
 builder.Services.AddScoped<ILocationService, LocationService>();
+
 builder.Services.AddLogging();
 var app = builder.Build();
 

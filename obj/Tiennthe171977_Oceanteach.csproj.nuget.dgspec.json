@@ -52,7 +52,7 @@
           "dependencies": {
             "EPPlus": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[5.8.14, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

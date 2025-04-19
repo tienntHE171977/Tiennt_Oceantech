@@ -136,8 +136,19 @@
 
         // Export all employees with current search criteria
         exportAllBtn.addEventListener('click', function() {
-            const searchTerm = document.getElementById('searchInput').value;
-            exportEmployees(null, searchTerm);
+        try {
+            const searchTerm = document.getElementById('searchInput').value || '';
+            console.log("Exporting all with search term:", searchTerm);
+
+            const url = '@Url.Action("ExportEmployees", "Employee")' +
+                '?type=search&searchTerm=' + encodeURIComponent(searchTerm);
+
+            console.log("Export URL:", url);
+            window.location.href = url;
+        } catch (error) {
+            console.error('Error triggering export:', error);
+            alert('Có lỗi xảy ra khi chuẩn bị xuất dữ liệu!');
+        }
         });
 
         // Handle search button click

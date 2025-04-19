@@ -21,15 +21,22 @@ namespace Tiennthe171977_Oceanteach.Controllers
             _locationBusiness = locationBusiness;
         }
 
-        public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1, string searchTerm = "")
         {
             const int pageSize = 10;
-            var employees = await _employeeBusiness.GetEmployeesAsync(page, pageSize);
-            int totalRecords = await _employeeBusiness.GetTotalEmployeesCountAsync();
+            var employees = string.IsNullOrEmpty(searchTerm)
+                ? await _employeeBusiness.GetEmployeesAsync(page, pageSize)
+                : await _employeeBusiness.SearchEmployeesAsync(searchTerm);
+
+            int totalRecords = string.IsNullOrEmpty(searchTerm)
+                ? await _employeeBusiness.GetTotalEmployeesCountAsync()
+                : employees.Count; // Khi tìm kiếm, tổng số bản ghi là số kết quả tìm kiếm
+
             int totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
 
             ViewBag.TotalPages = totalPages;
             ViewBag.CurrentPage = page;
+            ViewBag.SearchTerm = searchTerm;
 
             return View(employees);
         }
@@ -245,7 +252,48 @@ namespace Tiennthe171977_Oceanteach.Controllers
             ViewBag.DanTocList = new SelectList(await _employeeBusiness.GetDanTocsAsync(), "DanTocId", "TenDanToc");
             ViewBag.NgheNghiepList = new SelectList(await _employeeBusiness.GetNgheNghiepsAsync(), "NgheNghiepId", "TenNgheNghiep");
         }
+        [HttpGet]
+        public async Task<IActionResult> ExportEmployees(string type, string searchTerm)
+        {
+            List<Employee> employees;
 
+            try
+            {
+                if (type == "search")
+                {
+                    // Export employees based on search criteria
+                    employees = await _employeeBusiness.SearchEmployeesAsync(searchTerm ?? "");
+                }
+                else
+                {
+                    // Export all employees
+                    employees = await _employeeBusiness.GetEmployeesAsync(1, int.MaxValue);
+                }
+
+                if (employees == null || !employees.Any())
+                {
+                    // Trả về một file Excel trống nếu không có dữ liệu
+                    // hoặc có thể đưa ra thông báo
+                    return Content("Không có dữ liệu để xuất");
+                }
+
+                // Generate Excel file
+                var excelPackage = await GenerateExcelFile(employees);
+                var stream = new MemoryStream();
+                await excelPackage.SaveAsAsync(stream);
+                stream.Position = 0;
+
+                string fileName = $"Employees_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+                return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine($"Error in ExportEmployees: {ex.Message}");
+                // Trả về lỗi
+                return Content($"Có lỗi xảy ra: {ex.Message}");
+            }
+        }
 
         [HttpPost]
         public async Task<IActionResult> ExportEmployees(string type, [FromForm] List<int> selectedIds, string searchTerm)
@@ -275,8 +323,9 @@ namespace Tiennthe171977_Oceanteach.Controllers
 
         private async Task<ExcelPackage> GenerateExcelFile(List<Employee> employees)
         {
-            ExcelPackage.License.SetNonCommercialPersonal("Tiennthe171977_Oceanteach");
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Required since EPPlus 5.0
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            //ExcelPackage.License.SetNonCommercialPersonal("Tiennthe171977_Oceanteach");
+
             var excelPackage = new ExcelPackage();
 
             // Add a new worksheet to the workbook
@@ -331,11 +380,11 @@ namespace Tiennthe171977_Oceanteach.Controllers
                     xaName = xa != null ? ((dynamic)xa).TenXa : "Không có";
                 }
 
-                // Get DanToc and NgheNghiep names - Add these methods to your business layer
+                
                 string danTocName = await GetDanTocNameAsync(emp.DanTocId);
                 string ngheNghiepName = await GetNgheNghiepNameAsync(emp.NgheNghiepId);
 
-                // Add data to worksheet
+                
                 worksheet.Cells[row, 1].Value = emp.EmployeeId;
                 worksheet.Cells[row, 2].Value = emp.HoTen;
                 worksheet.Cells[row, 3].Value = emp.NgaySinh?.ToString("dd/MM/yyyy");
@@ -352,18 +401,18 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 row++;
             }
 
-            // Auto fit columns
+            
             worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
 
             return excelPackage;
         }
 
-        // Helper methods - Add these to your business layer
+        
         private async Task<string> GetDanTocNameAsync(int? danTocId)
         {
             if (!danTocId.HasValue) return "Không có";
 
-            // Replace with your actual implementation
+           
             var danToc = await _employeeBusiness.GetDanTocByIdAsync(danTocId.Value);
             return danToc?.TenDanToc ?? "Không có";
         }
@@ -372,7 +421,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
         {
             if (!ngheNghiepId.HasValue) return "Không có";
 
-            // Replace with your actual implementation
+            
             var ngheNghiep = await _employeeBusiness.GetNgheNghiepByIdAsync(ngheNghiepId.Value);
             return ngheNghiep?.TenNgheNghiep ?? "Không có";
         }

@@ -21,7 +21,7 @@ namespace Tiennthe171977_Oceanteach.Business
         Task<List<DanhMucHuyen>> GetHuyenByTinhAsync(int tinhId);
         Task<List<NgheNghiep>> GetNgheNghiepsAsync();
         Task<List<DanhMucXa>> GetXaByHuyenAsync(int huyenId);
-        
+        Task<bool> IsCccdExistsAsync(string cccd);
         Task<bool> ValidateLocationAsync(int? tinhId, int? huyenId, int? xaId);
         Task<bool> DeleteVanBangAsync(int employeeId, int vanBangId);
         Task<List<VanBang>> GetVanBangsByEmployeeIdAsync(int employeeId);

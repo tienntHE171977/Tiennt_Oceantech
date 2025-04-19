@@ -35,7 +35,13 @@ namespace Tiennthe171977_Oceanteach.Business
 
             return await _employeeService.CreateEmployeeAsync(employee);
         }
+        public async Task<bool> IsCccdExistsAsync(string cccd)
+        {
+            if (string.IsNullOrEmpty(cccd))
+                return false;
 
+            return await _employeeService.IsCccdExistsAsync(cccd);
+        }
         public async Task<bool> UpdateEmployeeAsync(Employee employee)
         {
             // Validate mối quan hệ tỉnh-huyện-xã
