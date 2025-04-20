@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 using Tiennthe171977_Oceanteach.Models;
 
 namespace Tiennthe171977_Oceanteach.Service
@@ -12,7 +11,7 @@ namespace Tiennthe171977_Oceanteach.Service
         {
             _context = context;
         }
-        
+
         public async Task<bool> CreateEmployeeAsync(Employee employee)
         {
             _context.Employees.Add(employee);
@@ -38,14 +37,13 @@ namespace Tiennthe171977_Oceanteach.Service
 
         public async Task<bool> DeleteEmployeeAsync(int employeeId)
         {
-            
             var vanBangs = _context.VanBangs.Where(v => v.EmployeeId == employeeId);
             _context.VanBangs.RemoveRange(vanBangs);
 
             var employee = await _context.Employees.FindAsync(employeeId);
             if (employee == null)
             {
-                return false; 
+                return false;
             }
 
             _context.Employees.Remove(employee);
@@ -91,8 +89,6 @@ namespace Tiennthe171977_Oceanteach.Service
                 throw;
             }
         }
-
-
 
         public async Task<bool> DeleteVanBangAsync(int vanBangId)
         {
@@ -225,7 +221,6 @@ namespace Tiennthe171977_Oceanteach.Service
             return employee;
         }
 
-
         public async Task<List<Employee>> GetEmployeesAsync(int page, int pageSize)
         {
             return await _context.Employees
@@ -239,6 +234,7 @@ namespace Tiennthe171977_Oceanteach.Service
         {
             return await _context.Employees.CountAsync();
         }
+
         public async Task<List<VanBang>> GetVanBangsByEmployeeIdAsync(int employeeId)
         {
             var result = await _context.VanBangs
@@ -270,6 +266,7 @@ namespace Tiennthe171977_Oceanteach.Service
             await _context.SaveChangesAsync();
             return true;
         }
+
         public async Task<bool> DeleteTinhAsync(int tinhId)
         {
             var huyenList = await _context.DanhMucHuyens.Where(h => h.TinhId == tinhId).ToListAsync();
@@ -287,6 +284,7 @@ namespace Tiennthe171977_Oceanteach.Service
             await _context.SaveChangesAsync();
             return true;
         }
+
         public async Task<List<Employee>> GetEmployeesByIdsAsync(List<int> ids)
         {
             return await _context.Employees

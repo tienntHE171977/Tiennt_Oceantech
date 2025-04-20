@@ -1,9 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Tiennthe171977_Oceanteach.Models;
+
 public partial class VanBang
 {
     [Key]
@@ -24,6 +23,7 @@ public partial class VanBang
     public int? EmployeeId { get; set; }
 
     public virtual DanhMucTinh? DonViCapNavigation { get; set; }
+
     [ForeignKey("EmployeeId")]
     public virtual Employee? Employee { get; set; }
 

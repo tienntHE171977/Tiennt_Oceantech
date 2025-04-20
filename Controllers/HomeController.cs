@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using Tiennthe171977_Oceanteach.Business;
 using Tiennthe171977_Oceanteach.Models;
@@ -21,8 +20,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
             _employeeBusiness = employeeBusiness;
         }
 
-
-
         public async Task<IActionResult> Create()
         {
             await LoadDropdownLists();
@@ -39,8 +36,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        
 
         [HttpGet]
         public async Task<IActionResult> GetHuyenByTinh(int tinhId)
@@ -86,7 +81,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
         //    }
         //    try
         //    {
-
         //        await _employeeService.CreateEmployeeAsync(employee);
         //        return RedirectToAction("Create");
         //    }
@@ -119,7 +113,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
         }
 
-
         private async Task LoadDropdownLists(int? tinhId = null, int? huyenId = null)
         {
             ViewBag.TinhList = new SelectList(await _employeeService.GetDanhMucTinhsAsync(), "TinhId", "TenTinh", tinhId);
@@ -130,6 +123,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             ViewBag.DanTocList = new SelectList(await _employeeService.GetDanTocsAsync(), "DanTocId", "TenDanToc");
             ViewBag.NgheNghiepList = new SelectList(await _employeeService.GetNgheNghiepsAsync(), "NgheNghiepId", "TenNgheNghiep");
         }
+
         //private async Task<bool> ValidateLocation(int? tinhId, int? huyenId, int? xaId)
         //{
         //    if (!tinhId.HasValue || !huyenId.HasValue || !xaId.HasValue) return false;

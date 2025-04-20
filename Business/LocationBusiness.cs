@@ -1,7 +1,5 @@
 ﻿using Tiennthe171977_Oceanteach.Models;
 using Tiennthe171977_Oceanteach.Service;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore;
 
 namespace Tiennthe171977_Oceanteach.Business
 {
@@ -60,7 +58,6 @@ namespace Tiennthe171977_Oceanteach.Business
             using var transaction = await _locationService.BeginTransactionAsync();
             try
             {
-                
                 await HandleEmployeesReferencingTinhAsync(tinhId);
                 await HandleVanBangReferencingTinhAsync(tinhId);
 
@@ -69,8 +66,6 @@ namespace Tiennthe171977_Oceanteach.Business
                 foreach (var huyen in huyens)
                 {
                     await DeleteHuyenWithDependenciesAsync(huyen.HuyenId);
-                    
-
                 }
 
                 // Cuối cùng xóa tỉnh
@@ -93,34 +88,29 @@ namespace Tiennthe171977_Oceanteach.Business
             }
         }
 
-        
         private async Task HandleEmployeesReferencingTinhAsync(int tinhId)
         {
             var employees = await _locationService.GetEmployeesByTinhIdAsync(tinhId);
 
             foreach (var employee in employees)
             {
-                await _locationService.UpdateEmployeeLocationAsync(employee.EmployeeId, null,null,null);
+                await _locationService.UpdateEmployeeLocationAsync(employee.EmployeeId, null, null, null);
             }
         }
-
 
         public async Task<bool> DeleteHuyenWithDependenciesAsync(int huyenId)
         {
             try
             {
-                
                 await HandleEmployeesReferencingHuyenAsync(huyenId);
 
                 var xas = await GetXasByHuyenIdAsync(huyenId);
 
-                
                 foreach (var xa in xas)
                 {
                     await HandleEmployeesReferencingXaAsync(xa.XaId);
                 }
 
-                
                 foreach (var xa in xas)
                 {
                     var result = await _locationService.DeleteXaAsync(xa.XaId);
@@ -130,7 +120,6 @@ namespace Tiennthe171977_Oceanteach.Business
                     }
                 }
 
-                
                 var deleteResult = await _locationService.DeleteHuyenAsync(huyenId);
                 return deleteResult;
             }
@@ -140,7 +129,7 @@ namespace Tiennthe171977_Oceanteach.Business
             }
         }
 
-        #endregion
+        #endregion Tỉnh Business Logic
 
         #region Huyện Business Logic
 
@@ -228,6 +217,7 @@ namespace Tiennthe171977_Oceanteach.Business
                 await _locationService.UpdateVanBangDonViCapAsync(vb.VanBangId, null);
             }
         }
+
         private async Task HandleEmployeesReferencingXaAsync(int xaId)
         {
             var employees = await _locationService.GetEmployeesByXaIdAsync(xaId);
@@ -246,7 +236,8 @@ namespace Tiennthe171977_Oceanteach.Business
                 await _locationService.UpdateEmployeeLocationAsync(emp.EmployeeId, emp.TinhId, null, null);
             }
         }
-        #endregion
+
+        #endregion Huyện Business Logic
 
         #region Xã Business Logic
 
@@ -340,6 +331,7 @@ namespace Tiennthe171977_Oceanteach.Business
 
             return await _locationService.UpdateXaAsync(xa);
         }
+
         public async Task<bool> DeleteXaWithDependenciesAsync(int xaId)
         {
             await using var transaction = await _locationService.BeginTransactionAsync();
@@ -373,14 +365,11 @@ namespace Tiennthe171977_Oceanteach.Business
             }
         }
 
-
-
-
         public async Task<bool> DeleteXaAsync(int id)
         {
             return await _locationService.DeleteXaAsync(id);
         }
 
-        #endregion
+        #endregion Xã Business Logic
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Tiennthe171977_Oceanteach.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Tiennthe171977_Oceanteach.Models;
 
@@ -34,9 +31,7 @@ public partial class OceantechContext : DbContext
     {
         var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
         optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
-
     }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -162,5 +157,5 @@ public partial class OceantechContext : DbContext
         OnModelCreatingPartial(modelBuilder);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    private partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

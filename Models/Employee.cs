@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Tiennthe171977_Oceanteach.Models;
 
@@ -40,6 +38,7 @@ public partial class Employee
 
     [StringLength(200, ErrorMessage = "Địa chỉ cụ thể không được vượt quá 200 ký tự")]
     public string? DiaChiCuThe { get; set; }
+
     public virtual DanToc? DanToc { get; set; }
 
     public virtual DanhMucHuyen? Huyen { get; set; }
@@ -51,6 +50,7 @@ public partial class Employee
     public virtual List<VanBang> VanBangs { get; set; } = new List<VanBang>();
 
     public virtual DanhMucXa? Xa { get; set; }
+
     public static ValidationResult? ValidateNgaySinh(DateOnly? ngaySinh, ValidationContext context)
     {
         if (!ngaySinh.HasValue)

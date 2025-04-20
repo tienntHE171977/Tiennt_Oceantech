@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OfficeOpenXml;
-using Tiennthe171977_Oceanteach.Business;
-using Tiennthe171977_Oceanteach.Models;
-using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System.Drawing;
+using Tiennthe171977_Oceanteach.Business;
+using Tiennthe171977_Oceanteach.Models;
 
 namespace Tiennthe171977_Oceanteach.Controllers
 {
@@ -62,6 +61,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             await LoadDropdownLists(employee.TinhId, employee.HuyenId);
             return View(employee);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteTinh(int tinhId)
@@ -73,6 +73,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
             return RedirectToAction("Index");
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Employee employee)
@@ -120,6 +121,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
 
             return RedirectToAction("Index");
         }
+
         [Route("Employee/EditVanBang/{employeeId:int}")]
         [HttpGet]
         public async Task<IActionResult> EditVanBang(int employeeId)
@@ -172,11 +174,9 @@ namespace Tiennthe171977_Oceanteach.Controllers
             ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
             var vanBangs = await _employeeBusiness.GetVanBangsByEmployeeIdAsync(vanBang.EmployeeId ?? 0);
             ViewBag.EmployeeId = vanBang.EmployeeId;
-            
 
             return View("EditVanBang", vanBangs);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -252,6 +252,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             ViewBag.DanTocList = new SelectList(await _employeeBusiness.GetDanTocsAsync(), "DanTocId", "TenDanToc");
             ViewBag.NgheNghiepList = new SelectList(await _employeeBusiness.GetNgheNghiepsAsync(), "NgheNghiepId", "TenNgheNghiep");
         }
+
         [HttpGet]
         public async Task<IActionResult> ExportEmployees(string type, string searchTerm)
         {
@@ -380,11 +381,9 @@ namespace Tiennthe171977_Oceanteach.Controllers
                     xaName = xa != null ? ((dynamic)xa).TenXa : "Không có";
                 }
 
-                
                 string danTocName = await GetDanTocNameAsync(emp.DanTocId);
                 string ngheNghiepName = await GetNgheNghiepNameAsync(emp.NgheNghiepId);
 
-                
                 worksheet.Cells[row, 1].Value = emp.EmployeeId;
                 worksheet.Cells[row, 2].Value = emp.HoTen;
                 worksheet.Cells[row, 3].Value = emp.NgaySinh?.ToString("dd/MM/yyyy");
@@ -401,18 +400,15 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 row++;
             }
 
-            
             worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
 
             return excelPackage;
         }
 
-        
         private async Task<string> GetDanTocNameAsync(int? danTocId)
         {
             if (!danTocId.HasValue) return "Không có";
 
-           
             var danToc = await _employeeBusiness.GetDanTocByIdAsync(danTocId.Value);
             return danToc?.TenDanToc ?? "Không có";
         }
@@ -421,10 +417,8 @@ namespace Tiennthe171977_Oceanteach.Controllers
         {
             if (!ngheNghiepId.HasValue) return "Không có";
 
-            
             var ngheNghiep = await _employeeBusiness.GetNgheNghiepByIdAsync(ngheNghiepId.Value);
             return ngheNghiep?.TenNgheNghiep ?? "Không có";
         }
     }
 }
-

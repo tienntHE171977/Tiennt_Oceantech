@@ -1,11 +1,6 @@
-﻿using Tiennthe171977_Oceanteach.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-
+using Tiennthe171977_Oceanteach.Models;
 
 namespace Tiennthe171977_Oceanteach.Service
 {
@@ -17,10 +12,12 @@ namespace Tiennthe171977_Oceanteach.Service
         {
             _dbContext = dbContext;
         }
+
         public async Task<IDbContextTransaction> BeginTransactionAsync()
         {
             return await _dbContext.Database.BeginTransactionAsync();
         }
+
         #region Tỉnh Service Operations
 
         public async Task<List<DanhMucTinh>> GetAllTinhAsync(string? searchTerm = null)
@@ -82,7 +79,7 @@ namespace Tiennthe171977_Oceanteach.Service
             return true;
         }
 
-        #endregion
+        #endregion Tỉnh Service Operations
 
         #region Huyện Service Operations
 
@@ -168,7 +165,7 @@ namespace Tiennthe171977_Oceanteach.Service
             return true;
         }
 
-        #endregion
+        #endregion Huyện Service Operations
 
         #region Xã Service Operations
 
@@ -256,7 +253,8 @@ namespace Tiennthe171977_Oceanteach.Service
             return true;
         }
 
-        #endregion
+        #endregion Xã Service Operations
+
         public async Task<List<Employee>> GetEmployeesByTinhIdAsync(int tinhId)
         {
             return await _dbContext.Employees
@@ -275,20 +273,24 @@ namespace Tiennthe171977_Oceanteach.Service
                 await _dbContext.SaveChangesAsync();
             }
         }
+
         public async Task<List<VanBang>> GetVanBangsByTinhIdAsync(int tinhId)
         {
             return await _dbContext.VanBangs
                 .Where(v => v.DonViCap == tinhId)
                 .ToListAsync();
         }
+
         public async Task<List<Employee>> GetEmployeesByXaIdAsync(int xaId)
         {
             return await _dbContext.Employees.Where(e => e.XaId == xaId).ToListAsync();
         }
+
         public async Task<List<Employee>> GetEmployeesByHuyenIdAsync(int huyenId)
         {
             return await _dbContext.Employees.Where(e => e.HuyenId == huyenId).ToListAsync();
         }
+
         public async Task UpdateVanBangDonViCapAsync(int vanBangId, int? newTinhId)
         {
             var vb = await _dbContext.VanBangs.FindAsync(vanBangId);

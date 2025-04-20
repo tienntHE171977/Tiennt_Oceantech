@@ -99,7 +99,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
         }
 
-        #endregion
+        #endregion API Tỉnh
 
         #region API Huyện
 
@@ -196,7 +196,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
         }
 
-        #endregion
+        #endregion API Huyện
 
         #region API Xã
 
@@ -293,6 +293,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
         }
 
-        #endregion
+        #endregion API Xã
     }
 }
