@@ -6,7 +6,7 @@
     <h2 class="mb-4">Quản lý Địa điểm</h2>
 
     <div class="row">
-        <!-- Quản lý Tỉnh -->
+        
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -41,7 +41,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="danhSachTinh">
-                                    <!-- Danh sách tỉnh sẽ được load bằng JavaScript -->
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <!-- Quản lý Huyện -->
+        
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -95,7 +95,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="danhSachHuyen">
-                                    <!-- Danh sách huyện sẽ được load bằng JavaScript -->
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -104,7 +104,7 @@
             </div>
         </div>
 
-        <!-- Quản lý Xã -->
+        
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -159,7 +159,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="danhSachXa">
-                                    <!-- Danh sách xã sẽ được load bằng JavaScript -->
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -169,7 +169,7 @@
         </div>
     </div>
 
-    <!-- Modal xác nhận xóa -->
+    
     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -225,11 +225,11 @@
             });
         }
                 $(document).ready(function () {
-            // Initial loading
+            
             loadDanhSachTinh();
             loadTinhDropdowns();
 
-            // Set up event handlers
+            
             setupTinhHandlers();
             setupHuyenHandlers();
             setupXaHandlers();
@@ -237,7 +237,6 @@
             setupDeleteConfirmation();
         });
 
-        // ==================== TỈNH FUNCTIONS ====================
 
         function loadDanhSachTinh(searchTerm = "") {
             $.ajax({
@@ -260,7 +259,7 @@
                         });
                         $('#danhSachTinh').html(html);
 
-                        // Re-attach event handlers
+                        
                         attachTinhEventHandlers();
                     } else {
                         alert(res.message || 'Không thể tải danh sách tỉnh');
@@ -278,7 +277,7 @@
                 method: 'GET',
                 success: function (res) {
                     if (res.success) {
-                        // Populate all province dropdowns
+                        
                         let options = '<option value="">-- Chọn Tỉnh --</option>';
                         let filterOptions = '<option value="">Tất cả Tỉnh</option>';
 
@@ -297,7 +296,7 @@
         }
 
         function setupTinhHandlers() {
-            // Add new province
+            
             $('#btnThemTinh').click(function () {
                 const tenTinh = $('#tenTinh').val().trim();
                 if (!tenTinh) {
@@ -331,7 +330,7 @@
                 });
             });
 
-            // Update province
+            
             $('#btnCapNhatTinh').click(function () {
                 const tinhId = parseInt($('#tinhID').val());
                 const tenTinh = $('#tenTinh').val().trim();
@@ -367,7 +366,7 @@
                 });
             });
 
-            // Cancel editing province
+            
             $('#btnHuyTinh').click(function () {
                 resetTinhForm();
             });
@@ -382,7 +381,7 @@
         }
 
         function attachTinhEventHandlers() {
-            // Edit province button
+            
             $('.btn-edit-tinh').click(function () {
                 const tinhId = $(this).data('id');
 
@@ -407,7 +406,7 @@
                 });
             });
 
-            // Delete province button
+            
             $('.btn-delete-tinh').click(function () {
                 const tinhId = $(this).data('id');
                 const tenTinh = $(this).data('name');
@@ -423,7 +422,7 @@
             });
         }
 
-        // ==================== HUYỆN FUNCTIONS ====================
+        
 
         function loadDanhSachHuyen(tinhId = "", searchTerm = "") {
             $.ajax({
@@ -450,7 +449,7 @@
                         });
                         $('#danhSachHuyen').html(html);
 
-                        // Re-attach event handlers
+                        
                         attachHuyenEventHandlers();
                     } else {
                         alert(res.message || 'Không thể tải danh sách huyện');
@@ -463,19 +462,19 @@
         }
 
         function setupHuyenHandlers() {
-            // Province dropdown change - for filtering districts
+            
             $('#filterTinhIDHuyen').change(function() {
                 const tinhId = $(this).val();
                 loadDanhSachHuyen(tinhId, $('#searchHuyen').val());
             });
 
-            // Load districts when province selected in district form
+            
             $('#tinhIDHuyen').change(function() {
                 $('#huyenID').val('0');
                 $('#tenHuyen').val('');
             });
 
-            // Add new district
+           
             $('#btnThemHuyen').click(function () {
                 const tinhId = $('#tinhIDHuyen').val();
                 const tenHuyen = $('#tenHuyen').val().trim();
@@ -517,7 +516,7 @@
                 });
             });
 
-            // Update district
+            
             $('#btnCapNhatHuyen').click(function () {
                 const huyenId = parseInt($('#huyenID').val());
                 const tinhId = $('#tinhIDHuyen').val();
@@ -560,7 +559,7 @@
                 });
             });
 
-            // Cancel editing district
+           
             $('#btnHuyHuyen').click(function () {
                 resetHuyenForm();
             });
@@ -576,7 +575,7 @@
         }
 
         function attachHuyenEventHandlers() {
-            // Edit district button
+            
             $('.btn-edit-huyen').click(function () {
                 const huyenId = $(this).data('id');
 
@@ -602,7 +601,7 @@
                 });
             });
 
-            // Delete district button
+            
             $('.btn-delete-huyen').click(function () {
                 const huyenId = $(this).data('id');
                 const tenHuyen = $(this).data('name');
@@ -618,7 +617,7 @@
             });
         }
 
-        // ==================== XÃ FUNCTIONS ====================
+        
 
         function loadDanhSachXa(tinhId = "", huyenId = "", searchTerm = "") {
             $.ajax({
@@ -647,7 +646,7 @@
                         });
                         $('#danhSachXa').html(html);
 
-                        // Re-attach event handlers
+                        
                         attachXaEventHandlers();
                     } else {
                         alert(res.message || 'Không thể tải danh sách xã');
@@ -688,7 +687,7 @@
         }
 
         function setupXaHandlers() {
-            // Province dropdown change - for form
+            
             $('#tinhIDXa').change(function() {
                 const tinhId = $(this).val();
                 loadHuyenDropdownsForXa(tinhId);
@@ -696,21 +695,21 @@
                 $('#tenXa').val('');
             });
 
-            // Province dropdown change - for filtering communes
+            
             $('#filterTinhIDXa').change(function() {
                 const tinhId = $(this).val();
                 loadHuyenDropdownsForXa(tinhId);
                 loadDanhSachXa(tinhId, $('#filterHuyenIDXa').val(), $('#searchXa').val());
             });
 
-            // District dropdown change - for filtering communes
+            
             $('#filterHuyenIDXa').change(function() {
                 const tinhId = $('#filterTinhIDXa').val();
                 const huyenId = $(this).val();
                 loadDanhSachXa(tinhId, huyenId, $('#searchXa').val());
             });
 
-            // Add new commune
+            
             $('#btnThemXa').click(function () {
                 const huyenId = $('#huyenIDXa').val();
                 const tenXa = $('#tenXa').val().trim();
@@ -755,7 +754,7 @@
                 });
             });
 
-            // Update commune
+            
             $('#btnCapNhatXa').click(function () {
                 const xaId = parseInt($('#xaID').val());
                 const huyenId = $('#huyenIDXa').val();
@@ -801,7 +800,7 @@
                 });
             });
 
-            // Cancel editing commune
+            
             $('#btnHuyXa').click(function () {
                 resetXaForm();
             });
@@ -818,7 +817,7 @@
         }
 
         function attachXaEventHandlers() {
-            // Edit commune button
+            
             $('.btn-edit-xa').click(function () {
                 const xaId = $(this).data('id');
 
@@ -831,7 +830,7 @@
                             $('#xaID').val(res.data.xaId);
                             $('#tinhIDXa').val(res.data.tinhId).trigger('change');
 
-                            // Need to wait for district dropdown to load before setting value
+                            
                             setTimeout(function() {
                                 $('#huyenIDXa').val(res.data.huyenId);
                             }, 500);
@@ -850,7 +849,7 @@
                 });
             });
 
-            // Delete commune button
+            
             $('.btn-delete-xa').click(function () {
                 const xaId = $(this).data('id');
                 const tenXa = $(this).data('name');
@@ -865,10 +864,10 @@
             });
         }
 
-        // ==================== SEARCH HANDLERS ====================
+   
 
         function setupSearchHandlers() {
-            // Search province
+            
             $('#btnSearchTinh').click(function() {
                 loadDanhSachTinh($('#searchTinh').val());
             });
@@ -879,7 +878,7 @@
                 }
             });
 
-            // Search district
+            
             $('#btnSearchHuyen').click(function() {
                 loadDanhSachHuyen($('#filterTinhIDHuyen').val(), $('#searchHuyen').val());
             });
@@ -890,7 +889,7 @@
                 }
             });
 
-            // Search commune
+            
             $('#btnSearchXa').click(function() {
                 loadDanhSachXa(
                     $('#filterTinhIDXa').val(),
@@ -910,7 +909,7 @@
             });
         }
 
-        // ==================== DELETE CONFIRMATION ====================
+        
 
         function setupDeleteConfirmation() {
             $('#confirmDeleteButton').click(function() {

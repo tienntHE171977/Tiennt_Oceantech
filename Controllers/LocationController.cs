@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Tiennthe171977_Oceanteach.Business;
 using Tiennthe171977_Oceanteach.Models;
+using FluentValidation;
 
 namespace Tiennthe171977_Oceanteach.Controllers
 {
@@ -17,8 +18,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
         {
             return View();
         }
-
-        #region API Tỉnh
 
         [HttpGet]
         public async Task<IActionResult> GetAllTinh(string searchTerm = null)
@@ -57,7 +56,12 @@ namespace Tiennthe171977_Oceanteach.Controllers
             try
             {
                 var createdTinh = await _locationBusiness.CreateTinhAsync(tinh);
-                return Json(new { success = true, data = createdTinh });
+                return Json(new { success = true, data = new { tinhId = createdTinh.TinhId, tenTinh = createdTinh.TenTinh } });
+
+            }
+            catch (ValidationException ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -75,6 +79,10 @@ namespace Tiennthe171977_Oceanteach.Controllers
                     return Json(new { success = false, message = "Cập nhật tỉnh thất bại" });
 
                 return Json(new { success = true });
+            }
+            catch (ValidationException ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -98,10 +106,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
-
-        #endregion API Tỉnh
-
-        #region API Huyện
 
         [HttpGet]
         public async Task<IActionResult> GetAllHuyen(int? tinhId = null, string searchTerm = null)
@@ -154,7 +158,12 @@ namespace Tiennthe171977_Oceanteach.Controllers
             try
             {
                 var createdHuyen = await _locationBusiness.CreateHuyenAsync(huyen);
-                return Json(new { success = true, data = createdHuyen });
+                return Json(new { success = true, data = new { huyenId = createdHuyen.HuyenId, tenHuyen = createdHuyen.TenHuyen } });
+
+            }
+            catch (ValidationException ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -172,6 +181,10 @@ namespace Tiennthe171977_Oceanteach.Controllers
                     return Json(new { success = false, message = "Cập nhật huyện thất bại" });
 
                 return Json(new { success = true });
+            }
+            catch (ValidationException ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -195,10 +208,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
-
-        #endregion API Huyện
-
-        #region API Xã
 
         [HttpGet]
         public async Task<IActionResult> GetAllXa(int? tinhId = null, int? huyenId = null, string searchTerm = null)
@@ -251,7 +260,12 @@ namespace Tiennthe171977_Oceanteach.Controllers
             try
             {
                 var createdXa = await _locationBusiness.CreateXaAsync(xa);
-                return Json(new { success = true, data = createdXa });
+                return Json(new { success = true, data = new { xaId = createdXa.XaId, tenXa = createdXa.TenXa } });
+
+            }
+            catch (ValidationException ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -269,6 +283,10 @@ namespace Tiennthe171977_Oceanteach.Controllers
                     return Json(new { success = false, message = "Cập nhật xã thất bại" });
 
                 return Json(new { success = true });
+            }
+            catch (ValidationException ex)
+            {
+                return Json(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -292,7 +310,5 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
-
-        #endregion API Xã
     }
 }

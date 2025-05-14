@@ -49,5 +49,6 @@ namespace Tiennthe171977_Oceanteach.Service
         Task<DanToc> GetDanTocByIdAsync(int id);
 
         Task<NgheNghiep> GetNgheNghiepByIdAsync(int id);
+        Task<bool> DeleteTinhAsync(int tinhId);
     }
 }

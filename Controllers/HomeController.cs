@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Tiennthe171977_Oceanteach.Business;
 using Tiennthe171977_Oceanteach.Models;
 using Tiennthe171977_Oceanteach.Service;
+using FluentValidation;
 
 namespace Tiennthe171977_Oceanteach.Controllers
 {
@@ -51,63 +52,33 @@ namespace Tiennthe171977_Oceanteach.Controllers
             return Json(xaList.Select(x => new { x.XaId, x.TenXa }));
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create(Employee employee)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        await LoadDropdownLists(employee.TinhId, employee.HuyenId);
-        //        return View(employee);
-        //    }
-
-        //    // Validate mối quan hệ tỉnh-huyện-xã
-        //    if (!await _employeeService.ValidateLocationAsync(employee.TinhId, employee.HuyenId, employee.XaId))
-        //    {
-        //        ModelState.AddModelError("", "Thông tin tỉnh, huyện, xã không hợp lệ.");
-        //        await LoadDropdownLists(employee.TinhId, employee.HuyenId);
-        //        return View(employee);
-        //    }
-
-        //    // Kiểm tra CCCD trùng lặp
-        //    if (!string.IsNullOrEmpty(employee.Cccd))
-        //    {
-        //        if (await _employeeService.IsCccdExistsAsync(employee.Cccd))
-        //        {
-        //            ModelState.AddModelError("Cccd", "CCCD Đã Tồn Tại.");
-        //            await LoadDropdownLists(employee.TinhId, employee.HuyenId);
-        //            return View(employee);
-        //        }
-        //    }
-        //    try
-        //    {
-        //        await _employeeService.CreateEmployeeAsync(employee);
-        //        return RedirectToAction("Create");
-        //    }
-        //    catch (Exception ex) {
-        //        ModelState.AddModelError("", "Có lỗi xảy ra khi thêm nhân viên: " + ex.Message);
-        //        await LoadDropdownLists(employee.TinhId, employee.HuyenId);
-        //        return View(employee);
-        //    }
-        //}
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Employee employee)
         {
-            if (!ModelState.IsValid)
+            try
             {
+                var result = await _employeeBusiness.CreateEmployeeAsync(employee);
+                if (result)
+                {
+                    TempData["SuccessMessage"] = "Thêm nhân viên thành công";
+                    return RedirectToAction("Create");
+                }
+
+                ModelState.AddModelError("", "Không thể thêm nhân viên");
                 await LoadDropdownLists(employee.TinhId, employee.HuyenId);
                 return View(employee);
             }
-
-            try
+            catch (ValidationException ex)
             {
-                await _employeeBusiness.CreateEmployeeAsync(employee);
-                return RedirectToAction("Create");
+                ModelState.AddModelError("", ex.Message);
+                await LoadDropdownLists(employee.TinhId, employee.HuyenId);
+                return View(employee);
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", "Có lỗi xảy ra khi thêm nhân viên: " + ex.Message);
+                _logger.LogError(ex, "Lỗi tạo mới NV");
+                ModelState.AddModelError("", ex.Message);
                 await LoadDropdownLists(employee.TinhId, employee.HuyenId);
                 return View(employee);
             }
@@ -123,18 +94,5 @@ namespace Tiennthe171977_Oceanteach.Controllers
             ViewBag.DanTocList = new SelectList(await _employeeService.GetDanTocsAsync(), "DanTocId", "TenDanToc");
             ViewBag.NgheNghiepList = new SelectList(await _employeeService.GetNgheNghiepsAsync(), "NgheNghiepId", "TenNgheNghiep");
         }
-
-        //private async Task<bool> ValidateLocation(int? tinhId, int? huyenId, int? xaId)
-        //{
-        //    if (!tinhId.HasValue || !huyenId.HasValue || !xaId.HasValue) return false;
-
-        //    var huyen = await db.DanhMucHuyens
-        //        .FirstOrDefaultAsync(h => h.HuyenId == huyenId && h.TinhId == tinhId);
-        //    if (huyen == null) return false;
-
-        //    var xa = await db.DanhMucXas
-        //        .FirstOrDefaultAsync(x => x.XaId == xaId && x.HuyenId == huyenId);
-        //    return xa != null;
-        //}
     }
 }

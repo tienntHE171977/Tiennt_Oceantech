@@ -17,7 +17,7 @@ public partial class VanBang
 
     public int? DonViCap { get; set; }
 
-    //[CustomValidation(typeof(VanBang), nameof(ValidateNgayHetHan))]
+   
     public DateOnly? NgayHetHan { get; set; }
 
     public int? EmployeeId { get; set; }
@@ -27,12 +27,5 @@ public partial class VanBang
     [ForeignKey("EmployeeId")]
     public virtual Employee? Employee { get; set; }
 
-    //public static ValidationResult? ValidateNgayHetHan(DateOnly? ngayHetHan, ValidationContext context)
-    //{
-    //    if (ngayHetHan.HasValue && ngayHetHan <= DateOnly.FromDateTime(DateTime.Now))
-    //    {
-    //        return new ValidationResult("Ngày hết hạn phải lớn hơn ngày hiện tại.");
-    //    }
-    //    return ValidationResult.Success;
-    //}
+    
 }

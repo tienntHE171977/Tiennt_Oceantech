@@ -99,7 +99,7 @@
     </form>
 </div>
 
-<!-- Modal Thêm Văn Bằng -->
+
 <div class="modal fade" id="addVanBangModal" tabindex="-1" aria-labelledby="addVanBangModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -143,7 +143,6 @@
     </div>
 </div>
 
-<!-- Modal Xóa Văn Bằng -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -172,12 +171,12 @@
         let rowIndex = @Model.Count;
 
         function addVanBang() {
-            // Hiển thị modal thêm văn bằng
+            
             const addModal = new bootstrap.Modal(document.getElementById('addVanBangModal'));
             addModal.show();
         }
 
-        // Xử lý modal xóa
+        
         document.getElementById('deleteModal').addEventListener('show.bs.modal', function (event) {
             const button = event.relatedTarget;
             const vanBangId = button.getAttribute('data-vanbangid');
@@ -187,7 +186,7 @@
             document.getElementById('deleteEmployeeId').value = employeeId;
         });
 
-        // Validation cho form
+        
         document.querySelectorAll('input[name$=".NgayCap"], input[name$=".NgayHetHan"]').forEach(input => {
             input.addEventListener('change', validateDates);
         });
@@ -202,17 +201,13 @@
                 const ngayCap = new Date(ngayCapInput.value);
                 const ngayHetHan = new Date(ngayHetHanInput.value);
 
-                // Chỉ kiểm tra ngày hết hạn phải sau ngày cấp
+                
                 if (ngayHetHan <= ngayCap) {
                     alert('Ngày hết hạn phải sau ngày cấp.');
                     ngayHetHanInput.value = '';
                 }
 
-                // Xóa phần kiểm tra với ngày hiện tại
-                // if (ngayHetHan <= today) {
-                //     alert('Ngày hết hạn phải lớn hơn ngày hiện tại.');
-                //     ngayHetHanInput.value = '';
-                // }
+                
             }
         }
     </script>

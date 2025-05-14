@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
@@ -11,9 +12,8 @@ namespace Tiennthe171977_Oceanteach.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEmployeeBusiness _employeeBusiness;
-        private readonly ILocationBusiness _locationBusiness; // Assuming you have this injected
+        private readonly ILocationBusiness _locationBusiness;
 
-        // Constructor with dependencies injected
         public EmployeeController(IEmployeeBusiness employeeBusiness, ILocationBusiness locationBusiness)
         {
             _employeeBusiness = employeeBusiness;
@@ -29,7 +29,7 @@ namespace Tiennthe171977_Oceanteach.Controllers
 
             int totalRecords = string.IsNullOrEmpty(searchTerm)
                 ? await _employeeBusiness.GetTotalEmployeesCountAsync()
-                : employees.Count; // Khi tìm kiếm, tổng số bản ghi là số kết quả tìm kiếm
+                : employees.Count;
 
             int totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
 
@@ -85,12 +85,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 return View(employee);
             }
 
-            if (!ModelState.IsValid)
-            {
-                await LoadDropdownLists(employee.TinhId, employee.HuyenId);
-                return View(employee);
-            }
-
             try
             {
                 var result = await _employeeBusiness.UpdateEmployeeAsync(employee);
@@ -101,7 +95,14 @@ namespace Tiennthe171977_Oceanteach.Controllers
                     return View(employee);
                 }
 
-                return RedirectToAction("Edit");
+                TempData["SuccessMessage"] = "Cập nhật nhân viên thành công!";
+                return RedirectToAction("Edit", new { id = employee.EmployeeId });
+            }
+            catch (ValidationException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                await LoadDropdownLists(employee.TinhId, employee.HuyenId);
+                return View(employee);
             }
             catch (Exception ex)
             {
@@ -135,8 +136,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
             var vanBangs = await _employeeBusiness.GetVanBangsByEmployeeIdAsync(employeeId);
             ViewBag.EmployeeId = employeeId;
             ViewBag.EmployeeName = employee.HoTen;
-
-            // Tải danh sách tỉnh cho dropdown
             ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
 
             return View(vanBangs ?? new List<VanBang>());
@@ -146,11 +145,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddVanBang(VanBang vanBang)
         {
-            if (!ModelState.IsValid)
-            {
-                return await HandleInvalidModelState(vanBang);
-            }
-
             try
             {
                 var result = await _employeeBusiness.AddVanBangAsync(vanBang.EmployeeId ?? 0, vanBang);
@@ -161,6 +155,11 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 }
 
                 return RedirectToAction("EditVanBang", new { employeeId = vanBang.EmployeeId });
+            }
+            catch (ValidationException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return await HandleInvalidModelState(vanBang);
             }
             catch (Exception ex)
             {
@@ -182,29 +181,27 @@ namespace Tiennthe171977_Oceanteach.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateVanBangs(int employeeId, List<VanBang> vanBangs)
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
-                ViewBag.EmployeeId = employeeId;
-                return View("EditVanBang", vanBangs);
-            }
-
             try
             {
                 foreach (var vanBang in vanBangs)
                 {
                     if (vanBang.VanBangId > 0)
                     {
-                        // Cập nhật văn bằng đã tồn tại
                         await _employeeBusiness.UpdateVanBangAsync(employeeId, vanBang);
                     }
                     else
                     {
-                        // Thêm mới văn bằng
                         vanBang.EmployeeId = employeeId;
                         await _employeeBusiness.AddVanBangAsync(employeeId, vanBang);
                     }
                 }
+            }
+            catch (ValidationException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                ViewBag.DanhSachTinh = await _employeeBusiness.GetDanhMucTinhsAsync();
+                ViewBag.EmployeeId = employeeId;
+                return View("EditVanBang", vanBangs);
             }
             catch (Exception ex)
             {
@@ -262,23 +259,18 @@ namespace Tiennthe171977_Oceanteach.Controllers
             {
                 if (type == "search")
                 {
-                    // Export employees based on search criteria
                     employees = await _employeeBusiness.SearchEmployeesAsync(searchTerm ?? "");
                 }
                 else
                 {
-                    // Export all employees
                     employees = await _employeeBusiness.GetEmployeesAsync(1, int.MaxValue);
                 }
 
                 if (employees == null || !employees.Any())
                 {
-                    // Trả về một file Excel trống nếu không có dữ liệu
-                    // hoặc có thể đưa ra thông báo
                     return Content("Không có dữ liệu để xuất");
                 }
 
-                // Generate Excel file
                 var excelPackage = await GenerateExcelFile(employees);
                 var stream = new MemoryStream();
                 await excelPackage.SaveAsAsync(stream);
@@ -289,9 +281,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception
-                Console.WriteLine($"Error in ExportEmployees: {ex.Message}");
-                // Trả về lỗi
                 return Content($"Có lỗi xảy ra: {ex.Message}");
             }
         }
@@ -303,16 +292,13 @@ namespace Tiennthe171977_Oceanteach.Controllers
 
             if (type == "selected" && selectedIds != null && selectedIds.Count > 0)
             {
-                // Export selected employees
                 employees = await _employeeBusiness.GetEmployeesByIdsAsync(selectedIds);
             }
             else
             {
-                // Export employees based on search criteria
                 employees = await _employeeBusiness.SearchEmployeesAsync(searchTerm);
             }
 
-            // Generate and return Excel file
             var excelPackage = await GenerateExcelFile(employees);
             var stream = new MemoryStream();
             await excelPackage.SaveAsAsync(stream);
@@ -325,27 +311,20 @@ namespace Tiennthe171977_Oceanteach.Controllers
         private async Task<ExcelPackage> GenerateExcelFile(List<Employee> employees)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            //ExcelPackage.License.SetNonCommercialPersonal("Tiennthe171977_Oceanteach");
-
             var excelPackage = new ExcelPackage();
-
-            // Add a new worksheet to the workbook
             var worksheet = excelPackage.Workbook.Worksheets.Add("Employees");
 
-            // Define headers
             var headers = new List<string>
             {
                 "ID", "Họ Tên", "Ngày Sinh", "Tuổi", "Dân Tộc", "Nghề Nghiệp",
                 "CCCD", "Số Điện Thoại", "Tỉnh/TP", "Quận/Huyện", "Phường/Xã", "Địa Chỉ Chi Tiết"
             };
 
-            // Add headers
             for (int i = 0; i < headers.Count; i++)
             {
                 worksheet.Cells[1, i + 1].Value = headers[i];
             }
 
-            // Style headers
             using (var range = worksheet.Cells[1, 1, 1, headers.Count])
             {
                 range.Style.Font.Bold = true;
@@ -354,11 +333,9 @@ namespace Tiennthe171977_Oceanteach.Controllers
                 range.Style.Border.Bottom.Style = ExcelBorderStyle.Medium;
             }
 
-            // Add data rows
             int row = 2;
             foreach (var emp in employees)
             {
-                // Get location names
                 string tinhName = "Không có";
                 string huyenName = "Không có";
                 string xaName = "Không có";
@@ -401,14 +378,12 @@ namespace Tiennthe171977_Oceanteach.Controllers
             }
 
             worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
-
             return excelPackage;
         }
 
         private async Task<string> GetDanTocNameAsync(int? danTocId)
         {
             if (!danTocId.HasValue) return "Không có";
-
             var danToc = await _employeeBusiness.GetDanTocByIdAsync(danTocId.Value);
             return danToc?.TenDanToc ?? "Không có";
         }
@@ -416,7 +391,6 @@ namespace Tiennthe171977_Oceanteach.Controllers
         private async Task<string> GetNgheNghiepNameAsync(int? ngheNghiepId)
         {
             if (!ngheNghiepId.HasValue) return "Không có";
-
             var ngheNghiep = await _employeeBusiness.GetNgheNghiepByIdAsync(ngheNghiepId.Value);
             return ngheNghiep?.TenNgheNghiep ?? "Không có";
         }

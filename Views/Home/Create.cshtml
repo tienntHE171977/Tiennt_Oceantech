@@ -14,6 +14,12 @@
 <a href="@Url.Action("Import", "ExcelImport")" class="btn btn-primary">
     <i class="bi bi-file-excel"></i> Import Employees
 </a>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
 
 <div class="container mt-4">
     <form asp-action="Create" method="post">
@@ -61,7 +67,6 @@
                     <label class="form-check-label" for="khongcccd">Không có CCCD</label>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <label for="sdt" class="form-label">7. Số điện thoại:</label>
                 <input type="text" class="form-control" id="sdt" asp-for="SoDienThoai" pattern="0[3579][0-9]{8}" title="Số điện thoại phải bắt đầu bằng 03, 05, 07, 09 và có 10 chữ số" />

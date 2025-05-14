@@ -50,15 +50,15 @@
                         <td>@emp.HoTen</td>
                         <td>@emp.SoDienThoai</td>
                         <td class="text-center">
-                            <!-- Nút Xem -->
+                            
                             <a class="btn btn-info btn-sm" href="@Url.Action("Detail","Employee", new { id = emp.EmployeeId })">
                                 <i class="bi bi-eye"></i> Xem
                             </a>
-                            <!-- Nút Sửa -->
+                            
                             <a class="btn btn-warning btn-sm" href="@Url.Action("Edit","Employee", new { id = emp.EmployeeId })">
                                 <i class="bi bi-pencil"></i> Sửa
                             </a>
-                            <!-- Nút Xóa -->
+                            
                             <button class="btn btn-danger btn-sm" onclick="confirmDelete(@emp.EmployeeId)">
                                 <i class="bi bi-trash"></i> Xóa
                             </button>
@@ -74,7 +74,7 @@
             }
         </tbody>
     </table>
-    <!-- Phân trang -->
+    
     <nav>
         <ul class="pagination justify-content-center">
             @for (int i = 1; i <= ViewBag.TotalPages; i++)
@@ -87,7 +87,7 @@
     </nav>
 </div>
 
-<!-- Hộp thoại xác nhận khi xóa -->
+
 <script>
     function confirmDelete(empId) {
         if (confirm("Bạn có chắc chắn muốn xóa nhân viên này không?")) {
@@ -95,7 +95,7 @@
         }
     }
 
-    // Handle checkboxes
+    
     document.addEventListener('DOMContentLoaded', function() {
         const selectAllCheckbox = document.getElementById('selectAll');
         const employeeCheckboxes = document.querySelectorAll('.employee-checkbox');
@@ -104,7 +104,7 @@
         const searchBtn = document.getElementById('searchButton');
         const searchInput = document.getElementById('searchInput');
 
-        // Select all checkboxes
+        
         selectAllCheckbox.addEventListener('change', function() {
             const isChecked = this.checked;
             employeeCheckboxes.forEach(checkbox => {
@@ -113,18 +113,18 @@
             updateExportButtonState();
         });
 
-        // Individual checkbox change
+        
         employeeCheckboxes.forEach(checkbox => {
             checkbox.addEventListener('change', updateExportButtonState);
         });
 
-        // Update export button state
+        
         function updateExportButtonState() {
             const checkedBoxes = document.querySelectorAll('.employee-checkbox:checked');
             exportSelectedBtn.disabled = checkedBoxes.length === 0;
         }
 
-        // Export selected employees
+        
         exportSelectedBtn.addEventListener('click', function() {
             const selectedIds = Array.from(document.querySelectorAll('.employee-checkbox:checked'))
                 .map(checkbox => checkbox.value);
@@ -134,7 +134,7 @@
             }
         });
 
-        // Export all employees with current search criteria
+        
         exportAllBtn.addEventListener('click', function() {
         try {
             const searchTerm = document.getElementById('searchInput').value || '';
@@ -151,20 +151,20 @@
         }
         });
 
-        // Handle search button click
+        
         searchBtn.addEventListener('click', function() {
             const searchTerm = searchInput.value;
             window.location.href = '@Url.Action("Index", "Employee")' + '?searchTerm=' + encodeURIComponent(searchTerm);
         });
 
-        // Handle search on Enter key
+        
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 searchBtn.click();
             }
         });
 
-        // Function to export employees
+        
         function exportEmployees(ids, searchTerm) {
             let url = '@Url.Action("ExportEmployees", "Employee")';
             const params = [];
@@ -196,7 +196,7 @@
                     alert('Có lỗi xảy ra khi xuất dữ liệu!');
                 });
             } else {
-                // Export via search criteria
+                
                 window.location.href = '@Url.Action("ExportEmployees", "Employee")' +
                     '?type=search&searchTerm=' + encodeURIComponent(searchTerm || '');
             }

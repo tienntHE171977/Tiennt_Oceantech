@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "US4SPNmLr5g=",
+  "dgSpecHash": "ye8IjgB/kUg=",
   "success": true,
   "projectFilePath": "D:\\LDPlayer\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach\\Tiennthe171977_Oceanteach.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPT\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\epplus\\5.8.14\\epplus.5.8.14.nupkg.sha512",
+    "C:\\Users\\FPT\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\FPT\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\FPT\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\FPT\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

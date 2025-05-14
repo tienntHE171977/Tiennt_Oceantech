@@ -21,19 +21,42 @@ namespace Tiennthe171977_Oceanteach.Service
 
         public async Task<bool> UpdateEmployeeAsync(Employee employee)
         {
-            // Kiểm tra trùng lặp CCCD, loại trừ CCCD của chính nhân viên đang được chỉnh sửa
-            bool isCccdDuplicate = await _context.Employees
-                .AnyAsync(e => e.Cccd == employee.Cccd && e.EmployeeId != employee.EmployeeId);
 
-            if (isCccdDuplicate)
+            if (!string.IsNullOrEmpty(employee.Cccd))
             {
-                throw new Exception("CCCD đã tồn tại.");
+                bool isCccdDuplicate = await _context.Employees
+                    .AnyAsync(e => e.Cccd == employee.Cccd && e.EmployeeId != employee.EmployeeId);
+
+                if (isCccdDuplicate)
+                {
+                    throw new Exception("CCCD đã tồn tại.");
+                }
             }
 
-            _context.Employees.Update(employee);
+            var existingEmployee = await _context.Employees
+                .FirstOrDefaultAsync(e => e.EmployeeId == employee.EmployeeId);
+
+            if (existingEmployee == null)
+                return false;
+
+
+            existingEmployee.HoTen = employee.HoTen;
+            existingEmployee.NgaySinh = employee.NgaySinh;
+            existingEmployee.Tuoi = employee.Tuoi;
+            existingEmployee.DanTocId = employee.DanTocId;
+            existingEmployee.NgheNghiepId = employee.NgheNghiepId;
+            existingEmployee.Cccd = employee.Cccd;
+            existingEmployee.SoDienThoai = employee.SoDienThoai;
+            existingEmployee.TinhId = employee.TinhId;
+            existingEmployee.HuyenId = employee.HuyenId;
+            existingEmployee.XaId = employee.XaId;
+            existingEmployee.DiaChiCuThe = employee.DiaChiCuThe;
+            
+
             await _context.SaveChangesAsync();
             return true;
         }
+
 
         public async Task<bool> DeleteEmployeeAsync(int employeeId)
         {
@@ -168,7 +191,7 @@ namespace Tiennthe171977_Oceanteach.Service
 
             if (existingVanBang == null) return false;
 
-            // Kiểm tra nếu từ hết hạn -> còn hạn thì cần xem số lượng văn bằng còn hạn hiện tại
+            
             bool currentlyExpired = existingVanBang.NgayHetHan.HasValue &&
                                   existingVanBang.NgayHetHan <= DateOnly.FromDateTime(DateTime.Now);
             bool willBeValid = !vanBang.NgayHetHan.HasValue ||
@@ -176,7 +199,7 @@ namespace Tiennthe171977_Oceanteach.Service
 
             if (currentlyExpired && willBeValid)
             {
-                // Kiểm tra số lượng văn bằng còn hạn
+                
                 var employee = await _context.Employees
                     .Include(e => e.VanBangs)
                     .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
@@ -191,7 +214,7 @@ namespace Tiennthe171977_Oceanteach.Service
                 }
             }
 
-            // Validate ngày cấp và ngày hết hạn
+            
             if (vanBang.NgayHetHan.HasValue && vanBang.NgayHetHan <= vanBang.NgayCap)
             {
                 throw new Exception("Ngày hết hạn phải sau ngày cấp.");
@@ -259,7 +282,7 @@ namespace Tiennthe171977_Oceanteach.Service
 
             if (vanBang == null)
             {
-                return false; // Không tìm thấy văn bằng
+                return false;
             }
 
             _context.VanBangs.Remove(vanBang);

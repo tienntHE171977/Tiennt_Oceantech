@@ -1,4 +1,6 @@
-﻿using Tiennthe171977_Oceanteach.Models;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using Tiennthe171977_Oceanteach.Models;
 using Tiennthe171977_Oceanteach.Service;
 
 namespace Tiennthe171977_Oceanteach.Business
@@ -6,13 +8,21 @@ namespace Tiennthe171977_Oceanteach.Business
     public class LocationBusiness : ILocationBusiness
     {
         private readonly ILocationService _locationService;
+        private readonly IValidator<DanhMucTinh> _tinhValidator;
+        private readonly IValidator<DanhMucHuyen> _huyenValidator;
+        private readonly IValidator<DanhMucXa> _xaValidator;
 
-        public LocationBusiness(ILocationService locationService)
+        public LocationBusiness(
+            ILocationService locationService,
+            IValidator<DanhMucTinh> tinhValidator,
+            IValidator<DanhMucHuyen> huyenValidator,
+            IValidator<DanhMucXa> xaValidator)
         {
             _locationService = locationService;
+            _tinhValidator = tinhValidator;
+            _huyenValidator = huyenValidator;
+            _xaValidator = xaValidator;
         }
-
-        #region Tỉnh Business Logic
 
         public async Task<List<DanhMucTinh>> GetAllTinhAsync(string? searchTerm = null)
         {
@@ -26,11 +36,10 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<DanhMucTinh> CreateTinhAsync(DanhMucTinh tinh)
         {
-            // Validate tên tỉnh không trùng lặp
-            var existingTinh = await _locationService.GetTinhByNameAsync(tinh.TenTinh);
-            if (existingTinh != null)
+            ValidationResult result = await _tinhValidator.ValidateAsync(tinh);
+            if (!result.IsValid)
             {
-                throw new Exception($"Tỉnh '{tinh.TenTinh}' đã tồn tại trong hệ thống");
+                throw new ValidationException(result.Errors.First().ErrorMessage);
             }
 
             return await _locationService.CreateTinhAsync(tinh);
@@ -38,11 +47,10 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<bool> UpdateTinhAsync(DanhMucTinh tinh)
         {
-            // Kiểm tra trùng tên tỉnh (ngoại trừ chính nó)
-            var existingTinh = await _locationService.GetTinhByNameExceptIdAsync(tinh.TenTinh, tinh.TinhId);
-            if (existingTinh != null)
+            ValidationResult result = await _tinhValidator.ValidateAsync(tinh);
+            if (!result.IsValid)
             {
-                throw new Exception($"Tỉnh '{tinh.TenTinh}' đã tồn tại trong hệ thống");
+                throw new ValidationException(result.Errors.First().ErrorMessage);
             }
 
             return await _locationService.UpdateTinhAsync(tinh);
@@ -61,37 +69,32 @@ namespace Tiennthe171977_Oceanteach.Business
                 await HandleEmployeesReferencingTinhAsync(tinhId);
                 await HandleVanBangReferencingTinhAsync(tinhId);
 
-                // Sau đó tiếp tục với logic xóa huyện và xã như trước
                 var huyens = await GetHuyensByTinhIdAsync(tinhId);
                 foreach (var huyen in huyens)
                 {
                     await DeleteHuyenWithDependenciesAsync(huyen.HuyenId);
                 }
 
-                // Cuối cùng xóa tỉnh
                 var result = await _locationService.DeleteTinhAsync(tinhId);
                 if (result)
                 {
                     await transaction.CommitAsync();
                     return true;
                 }
-                else
-                {
-                    await transaction.RollbackAsync();
-                    return false;
-                }
+
+                await transaction.RollbackAsync();
+                return false;
             }
             catch (Exception ex)
             {
                 await transaction.RollbackAsync();
-                throw new Exception($"Lỗi khi xóa huyện: {ex.InnerException?.Message ?? ex.Message}", ex);
+                throw new Exception($"Lỗi khi xóa tỉnh: {ex.InnerException?.Message ?? ex.Message}", ex);
             }
         }
 
         private async Task HandleEmployeesReferencingTinhAsync(int tinhId)
         {
             var employees = await _locationService.GetEmployeesByTinhIdAsync(tinhId);
-
             foreach (var employee in employees)
             {
                 await _locationService.UpdateEmployeeLocationAsync(employee.EmployeeId, null, null, null);
@@ -105,7 +108,6 @@ namespace Tiennthe171977_Oceanteach.Business
                 await HandleEmployeesReferencingHuyenAsync(huyenId);
 
                 var xas = await GetXasByHuyenIdAsync(huyenId);
-
                 foreach (var xa in xas)
                 {
                     await HandleEmployeesReferencingXaAsync(xa.XaId);
@@ -129,10 +131,6 @@ namespace Tiennthe171977_Oceanteach.Business
             }
         }
 
-        #endregion Tỉnh Business Logic
-
-        #region Huyện Business Logic
-
         public async Task<List<dynamic>> GetAllHuyenAsync(int? tinhId = null, string? searchTerm = null)
         {
             var huyens = await _locationService.GetAllHuyenAsync(tinhId, searchTerm);
@@ -140,9 +138,7 @@ namespace Tiennthe171977_Oceanteach.Business
 
             foreach (var huyen in huyens)
             {
-                // Lấy thông tin tỉnh
                 var tinh = await _locationService.GetTinhByIdAsync(huyen.TinhId ?? 0);
-
                 result.Add(new
                 {
                     huyen.HuyenId,
@@ -161,9 +157,7 @@ namespace Tiennthe171977_Oceanteach.Business
             if (huyen == null)
                 return null;
 
-            // Lấy thông tin tỉnh
             var tinh = await _locationService.GetTinhByIdAsync(huyen.TinhId ?? 0);
-
             return new
             {
                 huyen.HuyenId,
@@ -180,11 +174,10 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<DanhMucHuyen> CreateHuyenAsync(DanhMucHuyen huyen)
         {
-            // Validate tên huyện không trùng lặp trong cùng tỉnh
-            var existingHuyen = await _locationService.GetHuyenByNameAndTinhIdAsync(huyen.TenHuyen, huyen.TinhId ?? 0);
-            if (existingHuyen != null)
+            ValidationResult result = await _huyenValidator.ValidateAsync(huyen);
+            if (!result.IsValid)
             {
-                throw new Exception($"Huyện '{huyen.TenHuyen}' đã tồn tại trong tỉnh này");
+                throw new ValidationException(result.Errors.First().ErrorMessage);
             }
 
             return await _locationService.CreateHuyenAsync(huyen);
@@ -192,13 +185,10 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<bool> UpdateHuyenAsync(DanhMucHuyen huyen)
         {
-            // Kiểm tra trùng tên huyện trong cùng tỉnh (ngoại trừ chính nó)
-            var existingHuyen = await _locationService.GetHuyenByNameAndTinhIdExceptIdAsync(
-                huyen.TenHuyen, huyen.TinhId ?? 0, huyen.HuyenId);
-
-            if (existingHuyen != null)
+            ValidationResult result = await _huyenValidator.ValidateAsync(huyen);
+            if (!result.IsValid)
             {
-                throw new Exception($"Huyện '{huyen.TenHuyen}' đã tồn tại trong tỉnh này");
+                throw new ValidationException(result.Errors.First().ErrorMessage);
             }
 
             return await _locationService.UpdateHuyenAsync(huyen);
@@ -223,7 +213,6 @@ namespace Tiennthe171977_Oceanteach.Business
             var employees = await _locationService.GetEmployeesByXaIdAsync(xaId);
             foreach (var employee in employees)
             {
-                // Cập nhật lại thông tin xaID của các nhân viên liên quan
                 await _locationService.UpdateEmployeeLocationAsync(employee.EmployeeId, employee.TinhId, employee.HuyenId, null);
             }
         }
@@ -236,10 +225,6 @@ namespace Tiennthe171977_Oceanteach.Business
                 await _locationService.UpdateEmployeeLocationAsync(emp.EmployeeId, emp.TinhId, null, null);
             }
         }
-
-        #endregion Huyện Business Logic
-
-        #region Xã Business Logic
 
         public async Task<List<dynamic>> GetAllXaAsync(int? tinhId = null, int? huyenId = null, string? searchTerm = null)
         {
@@ -254,10 +239,7 @@ namespace Tiennthe171977_Oceanteach.Business
                 if (tinhId.HasValue && xa.Huyen.TinhId != tinhId.Value)
                     continue;
 
-                // Lấy thông tin huyện
                 var huyen = await _locationService.GetHuyenByIdAsync(xa.HuyenId ?? 0);
-
-                // Lấy thông tin tỉnh
                 var tinh = huyen?.TinhId.HasValue == true ?
                     await _locationService.GetTinhByIdAsync(huyen.TinhId.Value) :
                     null;
@@ -282,10 +264,7 @@ namespace Tiennthe171977_Oceanteach.Business
             if (xa == null)
                 return null;
 
-            // Lấy thông tin huyện
             var huyen = await _locationService.GetHuyenByIdAsync(xa.HuyenId ?? 0);
-
-            // Lấy thông tin tỉnh
             var tinh = huyen?.TinhId.HasValue == true ?
                 await _locationService.GetTinhByIdAsync(huyen.TinhId.Value) :
                 null;
@@ -308,11 +287,10 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<DanhMucXa> CreateXaAsync(DanhMucXa xa)
         {
-            // Validate tên xã không trùng lặp trong cùng huyện
-            var existingXa = await _locationService.GetXaByNameAndHuyenIdAsync(xa.TenXa, xa.HuyenId ?? 0);
-            if (existingXa != null)
+            ValidationResult result = await _xaValidator.ValidateAsync(xa);
+            if (!result.IsValid)
             {
-                throw new Exception($"Xã '{xa.TenXa}' đã tồn tại trong huyện này");
+                throw new ValidationException(result.Errors.First().ErrorMessage);
             }
 
             return await _locationService.CreateXaAsync(xa);
@@ -320,13 +298,10 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<bool> UpdateXaAsync(DanhMucXa xa)
         {
-            // Kiểm tra trùng tên xã trong cùng huyện (ngoại trừ chính nó)
-            var existingXa = await _locationService.GetXaByNameAndHuyenIdExceptIdAsync(
-                xa.TenXa, xa.HuyenId ?? 0, xa.XaId);
-
-            if (existingXa != null)
+            ValidationResult result = await _xaValidator.ValidateAsync(xa);
+            if (!result.IsValid)
             {
-                throw new Exception($"Xã '{xa.TenXa}' đã tồn tại trong huyện này");
+                throw new ValidationException(result.Errors.First().ErrorMessage);
             }
 
             return await _locationService.UpdateXaAsync(xa);
@@ -334,33 +309,23 @@ namespace Tiennthe171977_Oceanteach.Business
 
         public async Task<bool> DeleteXaWithDependenciesAsync(int xaId)
         {
-            await using var transaction = await _locationService.BeginTransactionAsync();
+            using var transaction = await _locationService.BeginTransactionAsync();
             try
             {
-                // 1. Gỡ liên kết với Employee
                 await HandleEmployeesReferencingXaAsync(xaId);
-
-                // 2. Xóa xã
                 var result = await _locationService.DeleteXaAsync(xaId);
                 if (result)
                 {
-                    // Nếu xóa xã thành công, commit transaction
                     await transaction.CommitAsync();
                     return true;
                 }
-                else
-                {
-                    // Nếu không thể xóa xã, rollback transaction
-                    if (transaction != null)
-                        await transaction.RollbackAsync();
-                    return false;
-                }
+
+                await transaction.RollbackAsync();
+                return false;
             }
             catch (Exception ex)
             {
-                // Xử lý exception, rollback transaction
-                if (transaction != null)
-                    await transaction.RollbackAsync();
+                await transaction.RollbackAsync();
                 throw new Exception($"Lỗi khi xóa xã: {ex.InnerException?.Message ?? ex.Message}", ex);
             }
         }
@@ -369,7 +334,5 @@ namespace Tiennthe171977_Oceanteach.Business
         {
             return await _locationService.DeleteXaAsync(id);
         }
-
-        #endregion Xã Business Logic
     }
 }

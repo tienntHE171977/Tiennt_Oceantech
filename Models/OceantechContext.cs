@@ -154,8 +154,8 @@ public partial class OceantechContext : DbContext
                 .HasConstraintName("FK__VanBang__Employe__5DCAEF64");
         });
 
-        OnModelCreatingPartial(modelBuilder);
+        
     }
 
-    private partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    
 }
